@@ -1,0 +1,17 @@
+version: "2.0"
+
+nlu:
+
+# Sección conocimiento general
+
+# Sección conocimiento wizard
+
+# Sección clases marcelo
+
+# Sección flujo de conversación
+- intent: hola
+  examples: |
+    - hola
+    - buenas
+    - que tal
+    - buenos díass
