@@ -9,9 +9,65 @@ nlu:
 # Sección clases marcelo
 
 # Sección flujo de conversación
-- intent: hola
+- intent: saludo
   examples: |
     - hola
     - buenas
     - que tal
     - buenos díass
+
+- intent: pregunta_concepto_general
+  examples: |
+    - Que es un [patrón](concepto)
+    - Que es [FDD](concepto)
+    - Qué es [Scrum](concepto)
+    - Qué son los [métodos ágiles](concepto)
+    - Qué es un [template](concepto)
+    - Qué son los [atributos de calidad](concepto)
+    - Qué es un [hook](concepto)
+    - Qué son los [requerimientos funcionales](concepto)
+    - Qué son los [requerimientos no funcionales](concepto)
+
+- synonym: patron
+  examples: |
+    - patrón
+    - Patrón
+    - pattern
+    - patron de diseño
+    - design pattern
+
+- synonym: FDD
+  examples: |
+    - fdd
+    - Feature-driven development
+
+- synonym: Scrum
+  examples: |
+    - Metodología Scrum
+
+- synonym: métodos ágiles
+  examples: |
+    - metodos agiles
+    - Agile methodologies
+    - desarrollo ágil de software
+    - desarrollo ágil
+
+- synonym: template
+  examples: |
+    - Template
+
+- synonym: atributos de calidad
+  examples: |
+    - Quality Attributes
+
+- synonym: hook
+  examples: |
+    - Hook
+
+- synonym: requerimientos funcionales
+  examples: |
+    - Functional requirements
+
+- synonym: requerimientos no funcionales
+  examples: |
+    - Non-functional Requirements

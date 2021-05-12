@@ -4,5 +4,9 @@ stories:
 
 - story: happy path
   steps:
-  - intent: greet
-  - action: utter_hola
+  - intent: saludo
+  - action: utter_saludo
+  - intent: pregunta_concepto_general
+    entities:
+    - concepto: "patron"
+  - action: action_explain_concept
