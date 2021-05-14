@@ -7,147 +7,69 @@ nlu:
     - que tal
     - buenos díass
 
+
 - intent: pregunta_concepto_general
   examples: |
   
-    - Qué es un [patrón de diseño]{"entity": "concepto", "value": "patron"}?
-    - Definime [patrón de diseño]{"entity": "concepto", "value": "patron"}
-    - No sé qué es un [patrón de diseño]{"entity": "concepto", "value": "patron"}
-    - Quiero saber qué es un [patrón de diseño]{"entity": "concepto", "value": "patron"}
-    - No entiendo qué es un [patrón de diseño]{"entity": "concepto", "value": "patron"}
-    - Decime qué es un [patrón de diseño]{"entity": "concepto", "value": "patron"}
-    
     - Qué es un [patron de diseño]{"entity": "concepto", "value": "patron"}?
-    - Definime [patron de diseño]{"entity": "concepto", "value": "patron"}
-    - No sé qué es un [patron de diseño]{"entity": "concepto", "value": "patron"}
-    - Quiero saber qué es un [patron de diseño]{"entity": "concepto", "value": "patron"}
-    - No entiendo qué es un [patron de diseño]{"entity": "concepto", "value": "patron"}
-    - Decime qué es un [patron de diseño]{"entity": "concepto", "value": "patron"}
-
-    - Qué son los [patrones de diseño]{"entity": "concepto", "value": "patron"}?
-    - Definime [patrones de diseño]{"entity": "concepto", "value": "patron"}
-    - No sé qué son los [patrones de diseño]{"entity": "concepto", "value": "patron"}
-    - Quiero saber qué son los [patrones de diseño]{"entity": "concepto", "value": "patron"}
-    - No entiendo qué son los [patrones de diseño]{"entity": "concepto", "value": "patron"}
-    - Decime qué son los [patrones de diseño]{"entity": "concepto", "value": "patron"}
-
-    - Qué es un [design pattern]{"entity": "concepto", "value": "patron"}?
     - Definime [design pattern]{"entity": "concepto", "value": "patron"}
-    - No sé qué es un [design pattern]{"entity": "concepto", "value": "patron"}
-    - Quiero saber qué es un [design pattern]{"entity": "concepto", "value": "patron"}
-    - No entiendo qué es un [design pattern]{"entity": "concepto", "value": "patron"}
-    - Decime qué es un [design pattern]{"entity": "concepto", "value": "patron"}
-    
-    - Qué son los [design patterns]{"entity": "concepto", "value": "patron"}?
-    - Definime [design patterns]{"entity": "concepto", "value": "patron"}
-    - No sé qué son los [design patterns]{"entity": "concepto", "value": "patron"}
-    - Quiero saber qué son los [design patterns]{"entity": "concepto", "value": "patron"}
-    - No entiendo qué son los [design patterns]{"entity": "concepto", "value": "patron"}
-    - Decime qué son los [design patterns]{"entity": "concepto", "value": "patron"}
+    - No sé qué es un [patron]{"entity": "concepto", "value": "patron"}
+    - Me decís qué son los [patrones de diseño]{"entity": "concepto", "value": "patron"}?
 
-    
-
-    - Qué es [Scrum]{"entity": "concepto", "value": "Scrum"}?
-    - Definime [Scrum]{"entity": "concepto", "value": "Scrum"}
-    - No sé qué es [Scrum]{"entity": "concepto", "value": "Scrum"}
-    - Quiero saber qué es [Scrum]{"entity": "concepto", "value": "Scrum"}
+    - Quiero saber qué es [scrum]{"entity": "concepto", "value": "Scrum"}
+    - Que es la [metodología Scrum]{"entity": "concepto", "value": "Scrum"}?
     - No entiendo qué es [Scrum]{"entity": "concepto", "value": "Scrum"}
-    - Decime qué es [Scrum]{"entity": "concepto", "value": "Scrum"}
 
-    - Qué es la [metodología Scrum]{"entity": "concepto", "value": "Scrum"}?
-    - Definime [metodología Scrum]{"entity": "concepto", "value": "Scrum"}
-    - No sé qué es la [metodología Scrum]{"entity": "concepto", "value": "Scrum"}
-    - Quiero saber qué es la [metodología Scrum]{"entity": "concepto", "value": "Scrum"}
-    - No entiendo qué es la [metodología Scrum]{"entity": "concepto", "value": "Scrum"}
-    - Decime qué es la [metodología Scrum]{"entity": "concepto", "value": "Scrum"}
+    - No tengo ni idea de qué es un [metodo agil]{"entity": "concepto", "value": "agil"}
+    - Sabés qué son las [metodologías ágiles]{"entity": "concepto", "value": "agil"}?
+    - Que onda los [metodos agiles]{"entity": "concepto", "value": "agil"}?
 
-    - Qué es la [metodologia Scrum]{"entity": "concepto", "value": "Scrum"}?
-    - Definime [metodologia Scrum]{"entity": "concepto", "value": "Scrum"}
-    - No sé qué es la [metodologia Scrum]{"entity": "concepto", "value": "Scrum"}
-    - Quiero saber qué es la [metodologia Scrum]{"entity": "concepto", "value": "Scrum"}
-    - No entiendo qué es la [metodologia Scrum]{"entity": "concepto", "value": "Scrum"}
-    - Decime qué es la [metodologia Scrum]{"entity": "concepto", "value": "Scrum"}
+    - Qué onda con [FDD]{"entity": "concepto", "value": "FDD"}?
+    - Necesito saber de [Feature-Driven Development]{"entity": "concepto", "value": "FDD"}
 
+    - Qué es un [template]{"entity": "concepto", "value": "template"}?
+    - Y sabés de [templates]{"entity": "concepto", "value": "template"}?
 
+    - Tenés idea de [atributo de calidad]{"entity": "concepto", "value": "atributo-de-calidad"}
+    - Tirame el concepto de [atributo de calidad]{"entity": "concepto", "value": "atributo-de-calidad"}
 
-    - Qué es un [método ágil]{"entity": "concepto", "value": "agil"}?
-    - Definime [método ágil]{"entity": "concepto", "value": "agil"}
-    - No sé qué es un [método ágil]{"entity": "concepto", "value": "agil"}
-    - Quiero saber qué es un [método ágil]{"entity": "concepto", "value": "agil"}
-    - No entiendo qué es un [método ágil]{"entity": "concepto", "value": "agil"}
-    - Decime qué es un [método ágil]{"entity": "concepto", "value": "agil"}
+    - Che ni idea de [hooks]{"entity": "concepto", "value": "hook"}
+    - Dime qué es [hook]{"entity": "concepto", "value": "hook"}
 
-    - Qué es un [metodo agil]{"entity": "concepto", "value": "agil"}?
-    - Definime [metodo agil]{"entity": "concepto", "value": "agil"}
-    - No sé qué es un [metodo agil]{"entity": "concepto", "value": "agil"}
-    - Quiero saber qué es un [metodo agil]{"entity": "concepto", "value": "agil"}
-    - No entiendo qué es un [metodo agil]{"entity": "concepto", "value": "agil"}
-    - Decime qué es un [metodo agil]{"entity": "concepto", "value": "agil"}
-
-    - Qué son los [métodos ágiles]{"entity": "concepto", "value": "agil"}?
-    - Definime [métodos ágiles]{"entity": "concepto", "value": "agil"}
-    - No sé qué son los [métodos ágiles]{"entity": "concepto", "value": "agil"}
-    - Quiero saber qué son los [métodos ágiles]{"entity": "concepto", "value": "agil"}
-    - No entiendo qué son los [métodos ágiles]{"entity": "concepto", "value": "agil"}
-    - Decime qué son los [métodos ágiles]{"entity": "concepto", "value": "agil"}
-
-    - Qué son los [metodos agiles]{"entity": "concepto", "value": "agil"}?
-    - Definime [metodos agiles]{"entity": "concepto", "value": "agil"}
-    - No sé qué son los [metodos agiles]{"entity": "concepto", "value": "agil"}
-    - Quiero saber qué son los [metodos agiles]{"entity": "concepto", "value": "agil"}
-    - No entiendo qué son los [metodos agiles]{"entity": "concepto", "value": "agil"}
-    - Decime qué son los [metodos agiles]{"entity": "concepto", "value": "agil"}
-
-    - Qué es una [metodología ágil]{"entity": "concepto", "value": "agil"}?
-    - Definime [metodología ágil]{"entity": "concepto", "value": "agil"}
-    - No sé qué es una [metodología ágil]{"entity": "concepto", "value": "agil"}
-    - Quiero saber qué es una [metodología ágil]{"entity": "concepto", "value": "agil"}
-    - No entiendo qué es una [metodología ágil]{"entity": "concepto", "value": "agil"}
-    - Decime qué es una [metodología ágil]{"entity": "concepto", "value": "agil"}
-
-    - Qué es una [metodologia agil]{"entity": "concepto", "value": "agil"}?
-    - Definime [metodologia agil]{"entity": "concepto", "value": "agil"}
-    - No sé qué es una [metodologia agil]{"entity": "concepto", "value": "agil"}
-    - Quiero saber qué es una [metodologia agil]{"entity": "concepto", "value": "agil"}
-    - No entiendo qué es una [metodologia agil]{"entity": "concepto", "value": "agil"}
-    - Decime qué es una [metodologia agil]{"entity": "concepto", "value": "agil"}
+    - Ni idea de [requerimiento funcionales]{"entity": "concepto", "value": "requerimiento-funcional"}, me ayudas?
+    - Decime qué son los [requerimiento funcionales]{"entity": "concepto", "value": "requerimiento-funcional"}
+    - Y qué es un [requerimiento funcional]{"entity": "concepto", "value": "requerimiento-funcional"}
     
-    - Qué son las [metodologías ágiles]{"entity": "concepto", "value": "agil"}?
-    - Definime [metodologías ágiles]{"entity": "concepto", "value": "agil"}
-    - No sé qué son las [metodologías ágiles]{"entity": "concepto", "value": "agil"}
-    - Quiero saber qué son las [metodologías ágiles]{"entity": "concepto", "value": "agil"}
-    - No entiendo qué son las [metodologías ágiles]{"entity": "concepto", "value": "agil"}
-    - Decime qué son las [metodologías ágiles]{"entity": "concepto", "value": "agil"}
-
-    - Qué son las [metodologias agiles]{"entity": "concepto", "value": "agil"}?
-    - Definime [metodologias agiles]{"entity": "concepto", "value": "agil"}
-    - No sé qué son las [metodologias agiles]{"entity": "concepto", "value": "agil"}
-    - Quiero saber qué son las [metodologias agiles]{"entity": "concepto", "value": "agil"}
-    - No entiendo qué son las [metodologias agiles]{"entity": "concepto", "value": "agil"}
-    - Decime qué son las [metodologias agiles]{"entity": "concepto", "value": "agil"}
-
-
-    - Qué es [FDD]{"entity": "concepto", "value": "FDD"}
-
-    - Qué es un [template]{"entity": "concepto", "value": "template"}
-
-    - Qué es un [atributo de calidad]{"entity": "concepto", "value": "atributo-de-calidad"}
-
-    - Qué es un [hook]{"entity": "concepto", "value": "hook"}
-
-    - Qué es un [requerimiento funcional]{"entity": "concepto", "value": "requerimiento-funcional"}
-
-    - Qué es un [requerimiento no funcional]{"entity": "concepto", "value": "requerimiento-no-funcional"}
+    - Che no sé nada de [requerimientos no funcionales]{"entity": "concepto", "value": "requerimiento-no-funcional"}
+    - Sabés qué es un [requerimiento no funcional]{"entity": "concepto", "value": "requerimiento-no-funcional"}?
 
 
 - synonym: patron
   examples: |
-    - "patron de diseño"
-    - "patrón de diseño"
-    - "patrones de diseño"
-    - "design pattern"
-    - "design patterns"
+    - patrón
+    - patrones
+    - patron de diseño
+    - patrón de diseño
+    - patrones de diseño
+    - design pattern
+    - design patterns
 
+- synonym: scrum
+  examples: |
+    - Scrum
+    - metodologia Scrum
+    - metodología Scrum
+
+- synonym: agil
+  examples: |
+    - metodo agil
+    - método ágil
+    - metodos agiles
+    - métodos ágiles
+    - metodologia agil
+    - metodología ágil
+    - metodologias agiles
+    - metodologías ágiles
 
 - synonym: FDD
   examples: |
@@ -156,18 +78,22 @@ nlu:
 
 - synonym: template
   examples: |
-    - Template
-- synonym: atributos de calidad
+    - templates
+
+- synonym: atributo-de-calidad
   examples: |
+    - atributos de calidad
     - Quality Attributes
+
 - synonym: hook
   examples: |
     - Hook
+    - hooks
+
 - synonym: requerimiento funcional
   examples: |
     - requerimientos funcionales
-    - Functional requirements
+
 - synonym: requerimiento no funcional
   examples: |
     - requerimientos no funcionales
-    - Non-functional Requirements

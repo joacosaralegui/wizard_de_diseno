@@ -27,17 +27,17 @@ responses:
   utter_concepto_agil:
   - text: 'Las metodologías ágiles son un conjunto de métodos que permiten adaptar el modo de trabajo a las condiciones del proyecto, aportando flexibilidad, eficiencia y, por lo tanto, logrando un mejor producto a menor coste.'
   utter_concepto_FDD:
-  - text: ''
+  - text: 'Aca va la definicion de FDD xd'
   utter_concepto_template:
-  - text: ''
+  - text: 'Aca va el concepto de template xd '
   utter_concepto_atributo-de-calidad:
-  - text: ''
+  - text: 'Aca explico qué es un atributo de calidad xd'
   utter_concepto_hook:
-  - text: ''
+  - text: 'Ponele que te estoy explicando qué es hook'
   utter_concepto_requerimiento-funcional:
-  - text: ''
+  - text: 'Un requerimiento funcional es tal y tal cosa'
   utter_concepto_requerimiento-no-funcional:
-  - text: ''
+  - text: 'Un requerimiento no funcional es tal y tal otra cosa'
 
 actions:
   - action_explain_concept
