@@ -72,8 +72,8 @@ nlu:
     - Porque Marcelo habla de los centennial
 
 - intent: objetivo_clase_marcelo
- examples: |
-	  - Cual es el objetivo de la clase de Marcelo
+  examples: |
+    - Cual es el objetivo de la clase de Marcelo
     - Cual es el objetivo de la clase de diseño de software
     - Cual es el fin de la clase de diseño de software
     - Cual es el fin de la clase de Marcelo
