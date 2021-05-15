@@ -1,12 +1,62 @@
-version: "2.0"
+version: '2.0'
+config:
+  store_entities_as_slots: true
 
-intents:
-  - hola
-
-responses:
-  utter_hola:
-  - text: "Hola, cómo andas?"
-  
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
+
+intents:
+- saludo:
+    use_entities: true
+- pregunta_concepto_patron:
+    use_entities: true
+- pregunta_concepto_scrum:
+    use_entities: true
+- pregunta_concepto_agil:
+    use_entities: true
+- pregunta_concepto_fdd:
+    use_entities: true
+- pregunta_concepto_template:
+    use_entities: true
+- pregunta_concepto_atr_calidad:
+    use_entities: true
+- pregunta_concepto_hook:
+    use_entities: true
+- pregunta_concepto_req_func:
+    use_entities: true
+- pregunta_concepto_req_no_func:
+    use_entities: true
+
+entities:
+- concepto
+
+slots: {}
+
+responses:
+  utter_saludo:
+  - text: 'Hola! Soy DesignWizard. Qué te pinta hacer hoy?'
+  utter_concepto_patron:
+  - text: 'Los patrones de diseño (design patterns) son soluciones habituales a problemas comunes en el diseño de software. Cada patrón es como un plano que se puede personalizar para resolver un problema de diseño particular de tu código.'
+  utter_concepto_scrum:
+  - text: 'La metodología Scrum es un framework que se utiliza dentro de equipos que manejan proyectos complejos. Es decir, se trata de una metodología de trabajo ágil que tiene como finalidad la entrega de valor en períodos cortos de tiempo y para ello se basa en tres pilares: la transparencia, inspección y adaptación.'
+  utter_concepto_agil:
+  - text: 'Las metodologías ágiles son un conjunto de métodos que permiten adaptar el modo de trabajo a las condiciones del proyecto, aportando flexibilidad, eficiencia y, por lo tanto, logrando un mejor producto a menor coste.'
+  utter_concepto_FDD:
+  - text: 'Aca va la definicion de FDD xd'
+  utter_concepto_template:
+  - text: 'Aca va el concepto de template xd '
+  utter_concepto_atributo-de-calidad:
+  - text: 'Aca explico qué es un atributo de calidad xd'
+  utter_concepto_hook:
+  - text: 'Ponele que te estoy explicando qué es hook'
+  utter_concepto_requerimiento-funcional:
+  - text: 'Un requerimiento funcional es tal y tal cosa'
+  utter_concepto_requerimiento-no-funcional:
+  - text: 'Un requerimiento no funcional es tal y tal otra cosa'
+
+actions:
+  - action_explain_concept
+
+forms: {}
+e2e_actions: []

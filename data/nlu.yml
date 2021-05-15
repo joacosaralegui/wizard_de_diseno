@@ -1,9 +1,5 @@
 version: "2.0"
-
 nlu:
-
-# Sección conocimiento general
-
 # Sección conocimiento wizard
 
 # Sección clases marcelo
@@ -80,10 +76,113 @@ nlu:
     - Para que sirve la clase de Marcelo 
     - Para que sirve la clase de diseño de software
 
-# Sección flujo de conversación
-- intent: hola
+# Sección conocimiento general
+
+- intent: pregunta_concepto_patron
+  examples: |  
+    - Qué es un [patron de diseño]{"entity": "concepto", "value": "patron"}?
+    - Definime [design pattern]{"entity": "concepto", "value": "patron"}
+    - No sé qué es un [patron]{"entity": "concepto", "value": "patron"}
+    - Me decís qué son los [patrones de diseño]{"entity": "concepto", "value": "patron"}?
+    - Che estoy re perdido con esto de los [patrones]{"entity": "concepto", "value": "patron"}?
+
+- intent: pregunta_concepto_scrum
+  examples: |  
+    - Quiero saber qué es [scrum]{"entity": "concepto", "value": "scrum"}
+    - Que es la [metodología Scrum]{"entity": "concepto", "value": "scrum"}?
+    - No entiendo qué es [Scrum]{"entity": "concepto", "value": "scrum"}
+
+- intent: pregunta_concepto_agil
+  examples: |  
+    - No tengo ni idea de qué es un [metodo agil]{"entity": "concepto", "value": "agil"}
+    - Sabés qué son las [metodologías ágiles]{"entity": "concepto", "value": "agil"}?
+    - Que onda los [metodos agiles]{"entity": "concepto", "value": "agil"}?
+
+- intent: pregunta_concepto_fdd
+  examples: |  
+    - Qué onda con [FDD]{"entity": "concepto", "value": "FDD"}?
+    - Necesito saber de [Feature-Driven Development]{"entity": "concepto", "value": "fdd"}
+    - Estoy perdido con lo de [fdd]{"entity": "concepto", "value": "fdd"}
+
+- intent: pregunta_concepto_template
+  examples: |  
+    - Qué es un [template]{"entity": "concepto", "value": "template"}?
+    - Y sabés de [templates]{"entity": "concepto", "value": "template"}?
+
+- intent: pregunta_concepto_atr_calidad
+  examples: |  
+    - Tenés idea de [atributo de calidad]{"entity": "concepto", "value": "atributo-de-calidad"}
+    - Tirame el concepto de [atributo de calidad]{"entity": "concepto", "value": "atributo-de-calidad"}
+    - Tirame data de los [QA]{"entity": "concepto", "value": "atributo-de-calidad"}
+
+- intent: pregunta_concepto_hook
+  examples: |  
+    - Che ni idea de [hooks]{"entity": "concepto", "value": "hook"}
+    - Dime qué es [hook]{"entity": "concepto", "value": "hook"}
+
+- intent: pregunta_concepto_req_func
+  examples: |  
+    - Ni idea de [requerimiento funcionales]{"entity": "concepto", "value": "requerimiento-funcional"}, me ayudas?
+    - Decime qué son los [requerimiento funcionales]{"entity": "concepto", "value": "requerimiento-funcional"}
+    - Y qué es un [requerimiento funcional]{"entity": "concepto", "value": "requerimiento-funcional"}
+
+- intent: pregunta_concepto_req_no_func
+  examples: |  
+    - Che no sé nada de [requerimientos no funcionales]{"entity": "concepto", "value": "requerimiento-no-funcional"}
+    - Sabés qué es un [requerimiento no funcional]{"entity": "concepto", "value": "requerimiento-no-funcional"}?
+
+- synonym: patron
   examples: |
-    - hola
-    - buenas
-    - que tal
-    - buenos díass
+    - patrón
+    - patrones
+    - patron de diseño
+    - patrón de diseño
+    - patrones de diseño
+    - design pattern
+    - design patterns
+
+- synonym: scrum
+  examples: |
+    - Scrum
+    - metodologia Scrum
+    - metodología Scrum
+
+- synonym: agil
+  examples: |
+    - metodo agil
+    - método ágil
+    - metodos agiles
+    - métodos ágiles
+    - metodologia agil
+    - metodología ágil
+    - metodologias agiles
+    - metodologías ágiles
+
+- synonym: fdd
+  examples: |
+    - fdd
+    - FDD
+    - Feature-driven development
+
+- synonym: template
+  examples: |
+    - templates
+
+- synonym: atributo-de-calidad
+  examples: |
+    - atributos de calidad
+    - Quality Attributes
+    - QA
+
+- synonym: hook
+  examples: |
+    - Hook
+    - hooks
+
+- synonym: requerimiento funcional
+  examples: |
+    - requerimientos funcionales
+
+- synonym: requerimiento no funcional
+  examples: |
+    - requerimientos no funcionales

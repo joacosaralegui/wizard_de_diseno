@@ -1,8 +1,47 @@
 version: "2.0"
 
-#rules:
+rules:
+- rule: Responder pregunta patrones
+  steps:
+  - intent: pregunta_concepto_patron
+  - action: utter_concepto_patron
 
-#- rule: Say goodbye anytime the user says goodbye
-#  steps:
-#  - intent: goodbye
-#  - action: utter_goodbye
+- rule: Responder pregunta scrum
+  steps:
+  - intent: pregunta_concepto_scrum
+  - action: utter_concepto_scrum
+
+- rule: Responder pregunta metodos agiles
+  steps:
+  - intent: pregunta_concepto_agil
+  - action: utter_concepto_agil
+
+- rule: Responder pregunta fdd
+  steps:
+  - intent: pregunta_concepto_fdd
+  - action: utter_concepto_FDD
+
+- rule: Responder pregunta tempaltes
+  steps:
+  - intent: pregunta_concepto_template
+  - action: utter_concepto_template
+
+- rule: Responder pregunta atributos de calidad
+  steps:
+  - intent: pregunta_concepto_atr_calidad
+  - action: utter_concepto_atributo-de-calidad
+
+- rule: Responder pregunta hooks
+  steps:
+  - intent: pregunta_concepto_hook
+  - action: utter_concepto_hook
+
+- rule: Responder pregunta req funcionales
+  steps:
+  - intent: pregunta_concepto_req_func
+  - action: utter_concepto_requerimiento-funcional
+
+- rule: Responder pregunta reqs no funcionales
+  steps:
+  - intent: pregunta_concepto_req_no_func
+  - action: utter_concepto_requerimiento-no-funcional
