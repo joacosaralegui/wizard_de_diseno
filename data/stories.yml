@@ -6,7 +6,7 @@ stories:
   steps:
   - intent: saludo
   - action: utter_saludo
-  - intent: pregunta_concepto_general
+  - intent: pregunta_concepto_patron
     entities:
     - concepto: "patron"
-  - action: action_explain_concept
+  - action: utter_concepto_patron

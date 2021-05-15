@@ -9,7 +9,23 @@ session_config:
 intents:
 - saludo:
     use_entities: true
-- pregunta_concepto_general:
+- pregunta_concepto_patron:
+    use_entities: true
+- pregunta_concepto_scrum:
+    use_entities: true
+- pregunta_concepto_agil:
+    use_entities: true
+- pregunta_concepto_fdd:
+    use_entities: true
+- pregunta_concepto_template:
+    use_entities: true
+- pregunta_concepto_atr_calidad:
+    use_entities: true
+- pregunta_concepto_hook:
+    use_entities: true
+- pregunta_concepto_req_func:
+    use_entities: true
+- pregunta_concepto_req_no_func:
     use_entities: true
 
 entities:
