@@ -1,0 +1,75 @@
+version: "2.0"
+nlu:
+# Sección clases marcelo
+- intent: ayuda_transparencia
+  examples: |
+    - Cual es el estilo ideal para realizar una transparencia
+    - Como realizar una buena filmina
+    - Como hacer una buena transparencia
+    - Como hacer la transparencia perfecta para dar una presentacion 
+    - Necesito ayuda con la presentacion, como hago una filmina o transparencia
+    - Como armar una transparencia, que sea correcta para presentar 
+    - No se armar una transparencia para la presentancion de la clase de Marcelo, me podes ayudar ?
+    - Que color de fimlima usar en una presentancion
+    - Que organizacion usar en una transparencia
+    - Que estilo usar en una transparencia
+    - Que programa usar para armar transparencia
+    - Que consejo me das para armar una transparencia ?
+    - Estoy intentando hacer unas filminas para una presentancion, que tengo que hacer ?
+    
+- intent: ayuda_presentacion_transparencia
+  examples: |
+    - Como realizar una buena presentacion de filminas
+    - Cual es el tiempo ideal de presentancion de transparencia
+    - Como hacer una buena presentancion
+    - Como dar una buena leccion oral en la presentacion de transparencias
+    - Como presentar una transparencia
+    - Que consejo me das para presentar las transparencias
+    - Que le gusta a Marcelo para las presentanciones
+    - Tengo que hablar mucho o poco en una presentacion
+    - Cual es la manera de hablar en una presentacion
+    - Como tengo que dar la presentacion frente a Marcelo
+
+- intent: concepto_transparencia
+  examples: | 
+    - Que es una transparencia
+    - Que es una filmina
+    - No se que es una transparencia
+    - Que significa transparencia
+    - Es lo mismo transparencia y filmina ?
+    - Necesito ayuda para entender que es una transparencia
+    - Marcelo me mando a hacer una transparencia, que seria eso ?
+    - Che me decis que es una transparencia porque nunca escuchce eso
+    - Las transparencia son las filminas de power point ?
+
+- intent: clase_marcelo 
+  examples: | 
+    - No entiendo la clase de Marcelo
+    - Estoy intentando entender lo que explica Marcelo
+    - Estoy intentando entender la clase de Marcelo
+    - No entiendo mucho lo que explica Marcelo
+    - Estoy medio perdido con algunos conceptos de los que habla Marcelo
+    - Me podes explicar lo que dice Marcelo
+    - Me ayudar a entender lo que explica Marcelo 
+    - Estoy perdido con las clases de Marcelo, me ayuda un poco 
+
+- intent: concepto_millenial
+  examples: |
+    - Que es ser millenial
+    - Yo soy millenial ?
+    - Porque Marcelo habla de los millenial
+    
+- intent: concepto_centennial
+  examples: |
+    - Que es ser centennial
+    - Yo soy centennial ?
+    - Porque Marcelo habla de los centennial
+
+- intent: objetivo_clase_marcelo
+  examples: |
+    - Cual es el objetivo de la clase de Marcelo
+    - Cual es el objetivo de la clase de diseño de software
+    - Cual es el fin de la clase de diseño de software
+    - Cual es el fin de la clase de Marcelo
+    - Para que sirve la clase de Marcelo 
+    - Para que sirve la clase de diseño de software

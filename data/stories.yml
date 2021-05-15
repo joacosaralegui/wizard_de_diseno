@@ -6,7 +6,12 @@ stories:
   steps:
   - intent: saludo
   - action: utter_saludo
-  - intent: pregunta_concepto_patron
-    entities:
-    - concepto: "patron"
-  - action: utter_concepto_patron
+  - intent: bien
+  - action: utter_mood_bien
+
+- story: sad path
+  steps:
+  - intent: saludo
+  - action: utter_saludo
+  - intent: mal
+  - action: utter_mood_bien

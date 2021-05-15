@@ -7,26 +7,43 @@ session_config:
   carry_over_slots_to_new_session: true
 
 intents:
-- saludo:
-    use_entities: true
-- pregunta_concepto_patron:
-    use_entities: true
-- pregunta_concepto_scrum:
-    use_entities: true
-- pregunta_concepto_agil:
-    use_entities: true
-- pregunta_concepto_fdd:
-    use_entities: true
-- pregunta_concepto_template:
-    use_entities: true
-- pregunta_concepto_atr_calidad:
-    use_entities: true
-- pregunta_concepto_hook:
-    use_entities: true
-- pregunta_concepto_req_func:
-    use_entities: true
-- pregunta_concepto_req_no_func:
-    use_entities: true
+  - saludo:
+      use_entities: true
+  - pregunta_concepto_patron:
+      use_entities: true
+  - pregunta_concepto_scrum:
+      use_entities: true
+  - pregunta_concepto_agil:
+      use_entities: true
+  - pregunta_concepto_fdd:
+      use_entities: true
+  - pregunta_concepto_template:
+      use_entities: true
+  - pregunta_concepto_atr_calidad:
+      use_entities: true
+  - pregunta_concepto_hook:
+      use_entities: true
+  - pregunta_concepto_req_func:
+      use_entities: true
+  - pregunta_concepto_req_no_func:
+      use_entities: true
+  - afirmacion
+  - negacion
+  - despedida
+  - gracias
+  - entendio
+  - no_entendio
+  - bien
+  - mal
+  - aburrido
+  - cansado
+  - ayuda_transparencia
+  - ayuda_presentacion_transparencia
+  - concepto_transparencia
+  - clase_marcelo
+  - concepto_millenial
+  - concepto_centennial
+  - objetivo_clase_marcelo
 
 entities:
 - concepto
@@ -54,6 +71,8 @@ responses:
   - text: 'Un requerimiento funcional es tal y tal cosa'
   utter_concepto_requerimiento-no-funcional:
   - text: 'Un requerimiento no funcional es tal y tal otra cosa'
+  utter_mood_bien:
+  - text: 'Me alegro boludo'
 
 actions:
   - action_explain_concept
