@@ -1,14 +1,6 @@
 version: "2.0"
-
 nlu:
-
-# Sección conocimiento general
-
-# Sección conocimiento wizard
-
-# Sección clases marcelo
-
-# Sección flujo de conversación
+# Sección flujo de conversacion
 - intent: hola
   examples: |
     - hola genio
@@ -202,3 +194,187 @@ nlu:
     - hecho pelota no doy mas
     - totalmente hecha pelota
     
+# Sección clases marcelo
+- intent: ayuda_transparencia
+  examples: |
+    - Cual es el estilo ideal para realizar una transparencia
+    - Como realizar una buena filmina
+    - Como hacer una buena transparencia
+    - Como hacer la transparencia perfecta para dar una presentacion 
+    - Necesito ayuda con la presentacion, como hago una filmina o transparencia
+    - Como armar una transparencia, que sea correcta para presentar 
+    - No se armar una transparencia para la presentancion de la clase de Marcelo, me podes ayudar ?
+    - Que color de fimlima usar en una presentancion
+    - Que organizacion usar en una transparencia
+    - Que estilo usar en una transparencia
+    - Que programa usar para armar transparencia
+    - Que consejo me das para armar una transparencia ?
+    - Estoy intentando hacer unas filminas para una presentancion, que tengo que hacer ?
+    
+- intent: ayuda_presentacion_transparencia
+   examples: |
+    - Como realizar una buena presentacion de filminas
+    - Cual es el tiempo ideal de presentancion de transparencia
+    - Como hacer una buena presentancion
+    - Como dar una buena leccion oral en la presentacion de transparencias
+    - Como presentar una transparencia
+    - Que consejo me das para presentar las transparencias
+    - Que le gusta a Marcelo para las presentanciones
+    - Tengo que hablar mucho o poco en una presentacion
+    - Cual es la manera de hablar en una presentacion
+    - Como tengo que dar la presentacion frente a Marcelo
+
+- intent: concepto_transparencia
+  examples: | 
+    - Que es una transparencia
+    - Que es una filmina
+    - No se que es una transparencia
+    - Que significa transparencia
+    - Es lo mismo transparencia y filmina ?
+    - Necesito ayuda para entender que es una transparencia
+    - Marcelo me mando a hacer una transparencia, que seria eso ?
+    - Che me decis que es una transparencia porque nunca escuchce eso
+    - Las transparencia son las filminas de power point ?
+
+- intent: clase_marcelo 
+  examples: | 
+    - No entiendo la clase de Marcelo
+    - Estoy intentando entender lo que explica Marcelo
+    - Estoy intentando entender la clase de Marcelo
+    - No entiendo mucho lo que explica Marcelo
+    - Estoy medio perdido con algunos conceptos de los que habla Marcelo
+    - Me podes explicar lo que dice Marcelo
+    - Me ayudar a entender lo que explica Marcelo 
+    - Estoy perdido con las clases de Marcelo, me ayuda un poco 
+
+- intent: concepto_millenial
+  examples: |
+    - Que es ser millenial
+    - Yo soy millenial ?
+    - Porque Marcelo habla de los millenial
+    
+- intent: concepto_centennial
+  examples: |
+    - Que es ser centennial
+    - Yo soy centennial ?
+    - Porque Marcelo habla de los centennial
+
+- intent: objetivo_clase_marcelo
+  examples: |
+    - Cual es el objetivo de la clase de Marcelo
+    - Cual es el objetivo de la clase de diseño de software
+    - Cual es el fin de la clase de diseño de software
+    - Cual es el fin de la clase de Marcelo
+    - Para que sirve la clase de Marcelo 
+    - Para que sirve la clase de diseño de software
+
+# Sección conocimiento general
+
+- intent: pregunta_concepto_patron
+  examples: |  
+    - Qué es un [patron de diseño]{"entity": "concepto", "value": "patron"}?
+    - Definime [design pattern]{"entity": "concepto", "value": "patron"}
+    - No sé qué es un [patron]{"entity": "concepto", "value": "patron"}
+    - Me decís qué son los [patrones de diseño]{"entity": "concepto", "value": "patron"}?
+    - Che estoy re perdido con esto de los [patrones]{"entity": "concepto", "value": "patron"}?
+
+- intent: pregunta_concepto_scrum
+  examples: |  
+    - Quiero saber qué es [scrum]{"entity": "concepto", "value": "scrum"}
+    - Que es la [metodología Scrum]{"entity": "concepto", "value": "scrum"}?
+    - No entiendo qué es [Scrum]{"entity": "concepto", "value": "scrum"}
+
+- intent: pregunta_concepto_agil
+  examples: |  
+    - No tengo ni idea de qué es un [metodo agil]{"entity": "concepto", "value": "agil"}
+    - Sabés qué son las [metodologías ágiles]{"entity": "concepto", "value": "agil"}?
+    - Que onda los [metodos agiles]{"entity": "concepto", "value": "agil"}?
+
+- intent: pregunta_concepto_fdd
+  examples: |  
+    - Qué onda con [FDD]{"entity": "concepto", "value": "FDD"}?
+    - Necesito saber de [Feature-Driven Development]{"entity": "concepto", "value": "fdd"}
+    - Estoy perdido con lo de [fdd]{"entity": "concepto", "value": "fdd"}
+
+- intent: pregunta_concepto_template
+  examples: |  
+    - Qué es un [template]{"entity": "concepto", "value": "template"}?
+    - Y sabés de [templates]{"entity": "concepto", "value": "template"}?
+
+- intent: pregunta_concepto_atr_calidad
+  examples: |  
+    - Tenés idea de [atributo de calidad]{"entity": "concepto", "value": "atributo-de-calidad"}
+    - Tirame el concepto de [atributo de calidad]{"entity": "concepto", "value": "atributo-de-calidad"}
+    - Tirame data de los [QA]{"entity": "concepto", "value": "atributo-de-calidad"}
+
+- intent: pregunta_concepto_hook
+  examples: |  
+    - Che ni idea de [hooks]{"entity": "concepto", "value": "hook"}
+    - Dime qué es [hook]{"entity": "concepto", "value": "hook"}
+
+- intent: pregunta_concepto_req_func
+  examples: |  
+    - Ni idea de [requerimiento funcionales]{"entity": "concepto", "value": "requerimiento-funcional"}, me ayudas?
+    - Decime qué son los [requerimiento funcionales]{"entity": "concepto", "value": "requerimiento-funcional"}
+    - Y qué es un [requerimiento funcional]{"entity": "concepto", "value": "requerimiento-funcional"}
+
+- intent: pregunta_concepto_req_no_func
+  examples: |  
+    - Che no sé nada de [requerimientos no funcionales]{"entity": "concepto", "value": "requerimiento-no-funcional"}
+    - Sabés qué es un [requerimiento no funcional]{"entity": "concepto", "value": "requerimiento-no-funcional"}?
+
+- synonym: patron
+  examples: |
+    - patrón
+    - patrones
+    - patron de diseño
+    - patrón de diseño
+    - patrones de diseño
+    - design pattern
+    - design patterns
+
+- synonym: scrum
+  examples: |
+    - Scrum
+    - metodologia Scrum
+    - metodología Scrum
+
+- synonym: agil
+  examples: |
+    - metodo agil
+    - método ágil
+    - metodos agiles
+    - métodos ágiles
+    - metodologia agil
+    - metodología ágil
+    - metodologias agiles
+    - metodologías ágiles
+
+- synonym: fdd
+  examples: |
+    - fdd
+    - FDD
+    - Feature-driven development
+
+- synonym: template
+  examples: |
+    - templates
+
+- synonym: atributo-de-calidad
+  examples: |
+    - atributos de calidad
+    - Quality Attributes
+    - QA
+
+- synonym: hook
+  examples: |
+    - Hook
+    - hooks
+
+- synonym: requerimiento funcional
+  examples: |
+    - requerimientos funcionales
+
+- synonym: requerimiento no funcional
+  examples: |
+    - requerimientos no funcionales
