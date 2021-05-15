@@ -15,3 +15,16 @@ stories:
   - action: utter_saludo
   - intent: mal
   - action: utter_mood_bien
+
+- story: clases marcelo + concepto 1
+  steps:
+  - intent: saludo
+  - action: utter_saludo
+  - intent: clase_marcelo
+  - action: utter_ask_more_depth
+  - intent: pregunta_concepto_template
+    entities:
+    - concepto: template
+  - action: utter_concepto_template
+  - intent: gracias
+  - action: utter_de_nada

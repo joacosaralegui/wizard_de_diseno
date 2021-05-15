@@ -1,0 +1,14 @@
+version: "2.0"
+nlu:
+- intent: saludo
+  examples: |
+    - hola
+- intent: clase_marcelo
+  examples: |
+    - Estoy perdido con la ultima clase de Marcelo
+- intent: pregunta_concepto_template
+  examples: |
+    - No entiendo esto de los [templates]{"entity": "concepto", "value": "template"}
+- intent: gracias
+  examples: |
+    - Joya, muchas gracias!

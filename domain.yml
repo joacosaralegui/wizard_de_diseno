@@ -73,6 +73,10 @@ responses:
   - text: 'Un requerimiento no funcional es tal y tal otra cosa'
   utter_mood_bien:
   - text: 'Me alegro boludo'
+  utter_ask_more_depth:
+  - text: 'Che que parte te complico más?'
+  utter_de_nada:
+  - text: 'No hay porque salamin'
 
 actions:
   - action_explain_concept
