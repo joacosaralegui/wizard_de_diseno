@@ -1,7 +1,5 @@
 version: "2.0"
-
 nlu:
-
 # Sección conocimiento general
 
 # Sección conocimiento wizard
@@ -14,8 +12,6 @@ nlu:
     -Decime algún dato
     -Tira una data
     -Dame info
-    -...
-    -...
 
 - intent: wizard_knowledge_specific 
 # (mi idea es que en el ambiguo el usuario no está queriendo saber exactamente las skills del wizard,por lo que pinta descansarlo)
@@ -64,8 +60,6 @@ nlu:
     - ¿Qué pensas del clima?
     - ¿Qué opinas de la economía del país?
     - ¿Sabes matemática?
-    - ...
-    - ... 
 
 - intent: wizard_challenge_intelligence
   examples: |
@@ -130,9 +124,15 @@ nlu:
 # Sección clases marcelo
 
 # Sección flujo de conversación
-- intent: hola
+- intent: saludo
   examples: |
     - hola
-    - buenas
-    - que tal
-    - buenos díass
+- intent: clase_marcelo
+  examples: |
+    - Estoy perdido con la ultima clase de Marcelo
+- intent: pregunta_concepto_template
+  examples: |
+    - No entiendo esto de los [templates]{"entity": "concepto", "value": "template"}
+- intent: gracias
+  examples: |
+    - Joya, muchas gracias!

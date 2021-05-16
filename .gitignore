@@ -131,3 +131,8 @@ dmypy.json
 # Rasa ignores
 models/
 
+events.db
+events.db-shm
+events.db-wal
+rasa.sb
+story_graph.dot
