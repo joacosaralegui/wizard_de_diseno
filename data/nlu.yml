@@ -1,5 +1,129 @@
 version: "2.0"
 nlu:
+# Sección conocimiento general
+
+# Sección conocimiento wizard
+- intent: wizard_knowledge_ambiguous
+  examples: |
+    -Hablemos de la vida
+    -Quiero charlar
+    -¿Pinta hablar de algo?
+    -Contame algo
+    -Decime algún dato
+    -Tira una data
+    -Dame info
+
+- intent: wizard_knowledge_specific 
+# (mi idea es que en el ambiguo el usuario no está queriendo saber exactamente las skills del wizard,por lo que pinta descansarlo)
+  examples: |
+    - ¿Qué podes hacer?
+    - ¿En qué me podes ayudar?
+    - ¿En qué la tenés clara?
+    - ¿De qué sos capaz?
+    - ¿En qué sos bueno?
+    - ¿Con qué te puedo molestar?
+    - ¿Qué te puedo pedir?
+    - ¿Qué podes resolver?
+    - ¿De qué me podes hablar?
+    - ¿Qué conocimiento tenes?
+    - ¿De qué podemos charlar?
+    - ¿Qué te puedo preguntar?
+    - ¿Qué me podes contar?
+    - ¿Qué sabes?
+
+- intent: wizard_help_request  #Specific help request
+  examples: |
+    - Quiero tu opinión
+    - Quiero analizar un problema
+    - Quiero que me ayudes
+    - Ayudame
+    - Necesito ayuda para resolver un problema
+    - ¿Me podrías ayudar?
+    - Necesito asesoramiento
+    - Necesito de tus ideas
+    - Quiero preguntarte algo
+    - ¿Te puedo preguntar algo?
+    - ¿Me podés ayudar?
+    - ¿Me das una mano?
+    - ¿Te puedo preguntar cualquier cosa?
+
+- intent: wizard_name
+  examples: |
+    - ¿Cómo te llamas?
+    - ¿Cuál es tu nombre?
+    - ¿Tenés nombre?
+    - ¿Como me puedo referir a vos?
+    - ¿Cómo te nombro?
+
+- intent: wizard_knowledge_not_specific   #(Debatir que piensan de esto, si es válido creo que se puede llenar con respuestas genéricas como "dale salamín, hablemos de diseño")
+  examples: |
+    - ¿Qué pensas del clima?
+    - ¿Qué opinas de la economía del país?
+    - ¿Sabes matemática?
+
+- intent: wizard_challenge_intelligence
+  examples: |
+    - Me dijeron que sabes mucho
+    - Se dice que sos muy inteligente
+    - Dicen que la tenes clara
+    - ¿Tan sabio vas a ser?
+    - No creo que seas tan inteligente
+
+- intent: wizard_challenge_name
+  examples: |
+    - ¿Por qué te dicen wizard?
+    - Así que te dicen "El mago"
+
+- intent: wizard_creation
+  examples: |
+    - ¿Cuándo naciste?
+    - ¿Cuándo te crearon?
+    - ¿Cuándo comenzaste a vivir?
+
+- intent: wizard_birth
+  examples: |
+    - ¿Cuándo cumplís años?
+    - ¿Cuál es tu fecha de nacimiento?
+
+- intent: wizard_year_specific 
+  examples: |
+    - ¿Cuántos años tenes?
+    - ¿Qué edad tenes?
+    - ¿Cuál es tu edad?
+
+- intent: wizard_year_non_specific_older
+  examples: |
+    - ¿Sos viejo?
+    - ¿Sos anciano?
+    - ¿Sos adulto?
+    - ¿Qué tan viejo sos?
+
+- intent: wizard_year_non_specific_younger
+  examples: |
+    - ¿Sos joven?
+    - ¿Sos adolescente?
+    - ¿Sos un niño?
+    - ¿Qué tan joven sos?
+
+- intent: wizard_genre
+  examples: |
+    - ¿Sos hombre?
+    - ¿Sos mujer?
+    - ¿Cuál es tu género?
+    - ¿Qué género sos?
+
+- intent: wizard_parents
+  examples: |
+    - ¿Quién te creó?
+    - ¿Quiénes te crearon?
+    - ¿Sos producto de alguien?
+    - ¿Quienes son tus padres?
+    - ¿Quienes son tus dueños?
+    - ¿Tenes padres?
+    - ¿Tenes dueños?
+# Sección clases marcelo
+
+# Sección flujo de conversación
 - intent: saludo
   examples: |
     - hola
