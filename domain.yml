@@ -51,8 +51,11 @@ entities:
 slots: {}
 
 responses:
+# Flujo
   utter_saludo:
   - text: 'Hola! Soy DesignWizard. Qué te pinta hacer hoy?'
+  
+# Conceptos  
   utter_concepto_patron:
   - text: 'Los patrones de diseño (design patterns) son soluciones habituales a problemas comunes en el diseño de software. Cada patrón es como un plano que se puede personalizar para resolver un problema de diseño particular de tu código.'
   utter_concepto_scrum:
@@ -77,6 +80,10 @@ responses:
   - text: 'Che que parte te complico más?'
   utter_de_nada:
   - text: 'No hay porque salamin'
+# Clases marcelo
+
+# Concimiento wizard
+
 
 actions:
   - action_explain_concept
