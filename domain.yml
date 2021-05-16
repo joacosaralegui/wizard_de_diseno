@@ -7,8 +7,7 @@ session_config:
   carry_over_slots_to_new_session: true
 
 intents:
-  - saludo:
-      use_entities: true
+# Conceptos
   - pregunta_concepto_patron:
       use_entities: true
   - pregunta_concepto_scrum:
@@ -27,6 +26,8 @@ intents:
       use_entities: true
   - pregunta_concepto_req_no_func:
       use_entities: true
+# Flujo
+  - saludo
   - afirmacion
   - negacion
   - despedida
@@ -37,6 +38,7 @@ intents:
   - mal
   - aburrido
   - cansado
+# Clases marcelo
   - ayuda_transparencia
   - ayuda_presentacion_transparencia
   - concepto_transparencia
@@ -44,6 +46,21 @@ intents:
   - concepto_millenial
   - concepto_centennial
   - objetivo_clase_marcelo
+# Autoconocimiento
+  - wizard_knowledge_ambiguous
+  - wizard_knowledge_specific
+  - wizard_help_request
+  - wizard_name
+  - wizard_knowledge_not_specific
+  - wizard_challenge_intelligence
+  - wizard_challenge_name
+  - wizard_creation
+  - wizard_birth
+  - wizard_year_specific
+  - wizard_year_non_specific_older
+  - wizard_year_non_specific_younger
+  - wizard_genre
+  - wizard_parents
 
 entities:
 - concepto
@@ -80,13 +97,13 @@ responses:
   - text: 'Che que parte te complico más?'
   utter_de_nada:
   - text: 'No hay porque salamin'
+
 # Clases marcelo
 
 # Concimiento wizard
 
-
-actions:
-  - action_explain_concept
+#actions:
+#  - action_explain_concept
 
 forms: {}
 e2e_actions: []
