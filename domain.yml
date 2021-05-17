@@ -80,17 +80,23 @@ responses:
   utter_concepto_agil:
   - text: 'Las metodologías ágiles son un conjunto de métodos que permiten adaptar el modo de trabajo a las condiciones del proyecto, aportando flexibilidad, eficiencia y, por lo tanto, logrando un mejor producto a menor coste.'
   utter_concepto_FDD:
-  - text: 'Aca va la definicion de FDD xd'
+  - text: 'Feature-driven development (FDD) es un proceso para desarrollo de software de forma iterativa e incremental\nEl proceso comienza por los requerimientos y el modelado, siguiendo por el diseño y construcción en base a incrementos'
   utter_concepto_template:
-  - text: 'Aca va el concepto de template xd '
+  - text: 'Aca va el concepto de template viste'
   utter_concepto_atributo-de-calidad:
-  - text: 'Aca explico qué es un atributo de calidad xd'
+  - text: 'Los atributos de calidad (también cualidades del software) son características no funcionales que se consideran deseables en un sistema de software.'
   utter_concepto_hook:
   - text: 'Ponele que te estoy explicando qué es hook'
   utter_concepto_requerimiento-funcional:
-  - text: 'Un requerimiento funcional es tal y tal cosa'
+  - text: 'Los requerimientos funcionales de un sistema son aquellos que describen cualquier actividad/servicio que éste deba realizar.'
+  utter_concepto_requerimiento-funcional_ejemplo:
+  - text: 'Un ejemplo de requerimiento funcional, sería:\nEl sistema permitirá a los usuarios autorizados ingresar planes y cronogramas de proyecto'
+  - text: 'Por ejemplo,\nEl sistema permitirá el envío automatizado de cartas de entrega de órdenes directamente al almacén.'
   utter_concepto_requerimiento-no-funcional:
-  - text: 'Un requerimiento no funcional es tal y tal otra cosa'
+  - text: 'Los requerimientos no funcionales representan características generales y restricciones de la aplicación o sistema que se esté desarrollando.'
+  - text: 'Se trata de requisitos que no se refieren directamente a las funciones específicas suministradas por el sistema (características de usuario), sino a las propiedades del sistema: rendimiento, seguridad, disponibilidad.'
+  utter_concepto_requerimiento-no-funcional_ejemplo:
+  - text: 'Por ejemplo,\nTodas las comunicaciones externas entre los servidores de datos, la aplicación y el cliente del sistema deben estar cifradas utilizando el algoritmo RSA.\nes un ejemplo de RNF de Seguridad.'
   utter_mood_bien:
   - text: 'Me alegro boludo'
   utter_ask_more_depth:
