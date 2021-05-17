@@ -71,6 +71,52 @@ responses:
 # Flujo
   utter_saludo:
   - text: 'Hola! Soy DesignWizard. Qué te pinta hacer hoy?'
+  - text: 'Hola! Soy DesignWizard y estoy para ayudarte, por donde queres empezar?'
+  - text: 'Me llamo DesignWizard y soy un genio en lo que de disenio se trate, en que te puedo ayudar?'
+  - text: 'Buenas, mi nombre es DesignWizard, en que te puedo ayudar?'
+
+  utter_despedida:
+  - text: 'Hasta luego, un gusto hablar contigo'
+  - text: 'Hasta la proxima'
+  - text: 'Nos vemos, cualquier cosita ya sabes que estoy aqui'
+  - text: 'Espero haberte ayudado en algo, chauu'
+
+  utter_gracias:
+  - text: 'A vos!'
+  - text: 'Por nada, estoy para ayudarte'
+  - text: 'Por nada, siempre y cuando pueda ayudarte lo hare'
+  - text: 'Gracias a vos!'
+
+  utter_no_entendio:
+  - text: 'Podrias decirme exactamente que es lo que no entiendes?'
+  - text: 'Que es lo que no entendes?'
+  - text: 'Dime que es lo que no entendiste, quizas pueda ayudarte de otra menera'
+  - text: 'Con que te quedaron dudas?'
+
+  utter_bien:
+  - text: 'Me alegro mucho...'
+  - text: 'Mejor asi entonces'
+  - text: 'Buenisimo que asi sea'
+  - text: 'Esa es la actitud!!'
+
+  utter_mal:
+  - text: 'Tranqui, siempre se puede estar peor'
+  - text: 'Uhh que lastima, espero con mi ayuda estes un poco mejor'
+  - text: 'Uhh bajon, ya estaras mejor!'
+  - text: 'Trata de pensar en cosas positivas, eso ayuda a sentirse mejor' 
+
+  utter_aburrido:
+  - text: 'Tranqui, ya encontraras algo para hacer'
+  - text: 'Espero poder entretenerte un rato entonces'
+  - text: 'Si no tenes nada para hacer, ponete a investigar sobre patrones de diseño, ya que es muy importante'
+  - text: 'Hablemos de patrones de diseño y nos entretenemos un ratito'
+
+  utter_cansado:
+  - text: 'Cuando puedas intenta descansar para luego estar con mas energia'
+  - text: 'Tomate un cafe, eso te puede ayudar'
+  - text: 'Somos dos, yo tambien estoy cansado, he charlado con mucha gente hoy'
+  - text: 'Ya habra tiempo para descansar, ahora es momento de seguir aprendiendo'
+
   
 # Conceptos  
   utter_concepto_patron:
