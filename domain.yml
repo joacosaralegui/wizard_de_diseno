@@ -26,6 +26,62 @@ intents:
       use_entities: true
   - pregunta_concepto_req_no_func:
       use_entities: true
+  - pregunta_concepto_req_no_func_ejemplo:
+      use_entities: true
+  - pregunta_concepto_req_func_ejemplo:
+      use_entities: true
+  - pregunta_diferencia_req_func_no_func:
+      use_entities: true
+  - pregunta_concepto_patron_listado:
+      use_entities: true
+
+  # Patrones especificos
+  - pregunta_patron_abstract-factory:
+      use_entities: true
+  - pregunta_patron_factory-method:
+      use_entities: true
+  - pregunta_patron_builder:
+      use_entities: true
+  - pregunta_patron_prototype:
+      use_entities: true
+  - pregunta_patron_singleton:
+      use_entities: true
+  - pregunta_patron_adapter:
+      use_entities: true
+  - pregunta_patron_bridge:
+      use_entities: true
+  - pregunta_patron_composite:
+      use_entities: true
+  - pregunta_patron_decorator:
+      use_entities: true
+  - pregunta_patron_facade:
+      use_entities: true
+  - pregunta_patron_flyweigth:
+      use_entities: true
+  - pregunta_patron_proxy:
+      use_entities: true
+  - pregunta_patron_chain-of-responsibility:
+      use_entities: true
+  - pregunta_patron_command:
+      use_entities: true
+  - pregunta_patron_memento:
+      use_entities: true
+  - pregunta_patron_iterator:
+      use_entities: true
+  - pregunta_patron_mediator:
+      use_entities: true
+  - pregunta_patron_observer:
+      use_entities: true
+  - pregunta_patron_state:
+      use_entities: true
+  - pregunta_patron_strategy:
+      use_entities: true
+  - pregunta_patron_template-method:
+      use_entities: true
+  - pregunta_patron_visitor:
+      use_entities: true
+  
+
 # Flujo
   - saludo
   - afirmacion
@@ -64,6 +120,7 @@ intents:
 
 entities:
 - concepto
+- patron
 
 slots: {}
 
@@ -103,6 +160,53 @@ responses:
   - text: 'Che que parte te complico más?'
   utter_de_nada:
   - text: 'No hay porque salamin'
+
+  # Patrones especificos
+  utter_patron_abstract-factory:
+  - text: 
+  utter_patron_factory-method:
+  - text: 
+  utter_patron_builder:
+  - text: 
+  utter_patron_prototype:
+  - text: 
+  utter_patron_singleton:
+  - text: 
+  utter_patron_adapter:
+  - text: 
+  utter_patron_bridge:
+  - text: 
+  utter_patron_composite:
+  - text: 
+  utter_patron_decorator:
+  - text: 
+  utter_patron_facade:
+  - text: 
+  utter_patron_flyweight:
+  - text: 
+  utter_patron_proxy:
+  - text: 
+  utter_patron_chain-of-responsibility:
+  - text: 'Chain of Responsibility es un patrón de diseño de comportamiento que te permite pasar solicitudes a lo largo de una cadena de manejadores. Al recibir una solicitud, cada manejador decide si la procesa o si la pasa al siguiente manejador de la cadena.'
+  utter_patron_command:
+  - text: 
+  utter_patron_memento:
+  - text: 
+  utter_patron_iterator:
+  - text: 
+  utter_patron_mediator:
+  - text: 
+  utter_patron_observer:
+  - text: 
+  utter_patron_state:
+  - text: 
+  utter_patron_strategy:
+  - text: 
+  utter_patron_template-method:
+  - text: 'Template Method es un patrón de diseño de comportamiento que define el esqueleto de un algoritmo en la superclase pero permite que las subclases sobrescriban pasos del algoritmo sin cambiar su estructura.'
+  utter_patron_visitor:
+  - text:
+
 
 # Clases marcelo
 
