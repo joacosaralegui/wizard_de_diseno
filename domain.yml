@@ -113,6 +113,11 @@ responses:
   - text: 'El objetivo o fin de la clase de Marcelo, sobre de diseño de software, es aprender todo sobre los conceptos en el entorno de diseñar un sistema, tales como patrones de diseño, atributos funcionales y no funcionales entre otros. \ \n La idea es poder llevarse el aprendizaje de como se trabaja un sistema de principio a fin. \ \n Esta clase se complementa con la de Ingeniería de Software, donde se profundiza más en lo realizado en diseño.'
   utter_modo_evaluacion:
   -text: 'Para aprobar la materia Diseño de Software es necesario participar de un proyecto en grupos de varios o pocos integrantes, elegidos por Marcelo, en base a los perfiles de cada alumno.\ \n La idea es llevar a cabo lo que propone Marcelo como proyecto, ademas de realizar una o varias presentaciones sobre temas también elegidos por él.'
+  utter_clase_marcelo:
+  -text: | 'En que concepto o tema te puedo ayudar ?'
+  -text: | 'En que te puedo ayudar de todo ?'
+  -text: | 'Que parte no entendes de las clases ?'
+  -text: | 'Podes especificarme que tema, parte o concepto de las clases no entendes ?'
 # Concimiento wizard
 
 #actions:
