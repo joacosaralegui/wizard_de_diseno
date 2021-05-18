@@ -3,6 +3,9 @@ nlu:
 
 # Sección conocimiento general
 
+
+########## CONCEPTOS ##########
+
 - intent: pregunta_concepto_patron
   examples: |  
     - Qué es un [patron de diseño]{"entity": "concepto", "value": "patron"}?
@@ -21,6 +24,7 @@ nlu:
     - design pattern
     - design patterns
 
+
 - intent: pregunta_concepto_scrum
   examples: |  
     - Quiero saber qué es [scrum]{"entity": "concepto", "value": "scrum"}
@@ -32,6 +36,7 @@ nlu:
     - Scrum
     - metodologia Scrum
     - metodología Scrum
+
 
 - intent: pregunta_concepto_agil
   examples: |  
@@ -50,6 +55,7 @@ nlu:
     - metodologias agiles
     - metodologías ágiles
 
+
 - intent: pregunta_concepto_fdd
   examples: |  
     - Qué onda con [FDD]{"entity": "concepto", "value": "FDD"}?
@@ -61,6 +67,7 @@ nlu:
     - fdd
     - FDD
     - Feature-driven development
+
 
 - intent: pregunta_concepto_atr_calidad
   examples: |  
@@ -74,6 +81,7 @@ nlu:
     - Quality Attributes
     - QA
 
+
 - intent: pregunta_concepto_hook
   examples: |  
     - Che ni idea de [hooks]{"entity": "concepto", "value": "hook"}
@@ -83,6 +91,7 @@ nlu:
   examples: |
     - Hook
     - hooks
+
 
 - intent: pregunta_concepto_req_func
   examples: |  
@@ -94,6 +103,7 @@ nlu:
   examples: |
     - requerimientos funcionales
 
+
 - intent: pregunta_concepto_req_no_func
   examples: |  
     - Che no sé nada de [requerimientos no funcionales]{"entity": "concepto", "value": "requerimiento no funcional"}
@@ -102,6 +112,7 @@ nlu:
 - synonym: requerimiento no funcional
   examples: |
     - requerimientos no funcionales
+
 
 - intent: pregunta_concepto_req_no_func_ejemplo
   examples: |  
@@ -138,7 +149,9 @@ nlu:
     - Me decis que [design patterns]{"entity": "concepto", "value": "patron"} conoces?
     - Listame los [patrones]{"entity": "concepto", "value": "patron"} que sabes
 
-#creacionales
+
+########## PATRONES ESPECIFICOS ##########
+# Creacionales
 - intent: pregunta_patron_abstract-factory
   examples: |
     - Conocés el patrón [Abstract Factory]{"entity": "patron", "value": "abstract factory"}
@@ -151,15 +164,17 @@ nlu:
     - Abstract Factory
     - Abstract factory
 
+
 - intent: pregunta_patron_factory-method
   examples: |
     - Que sabes de [factory method]{"entity": "patron", "value": "factory method"}?
-    - Que es [factory method]{"entity": "patron", "value": "factory method"}?
+    - Que es [Factory method]{"entity": "patron", "value": "factory method"}?
 
 - synonym: factory method
   examples: |
     - Factory Method
     - Factory method
+
 
 - intent: pregunta_patron_builder
   examples: |
@@ -170,6 +185,7 @@ nlu:
   examples: |
     - Builder
 
+
 - intent: pregunta_patron_prototype
   examples: |
     - Me contas sobre [prototype]{"entity": "patron", "value": "prototype"}?
@@ -178,6 +194,7 @@ nlu:
 - synonym: prototype
   examples: |
     - Prototype
+
 
 - intent: pregunta_patron_singleton
   examples: |
@@ -189,15 +206,16 @@ nlu:
     - Singleton
     
 
-#estructurales
+# Estructurales
 - intent: pregunta_patron_adapter
   examples: |
     - Por favor ayudame a entender el patron [adapter]{"entity": "patron", "value": "adapter"}
-    - Cual es la funcion de [adapter]{"entity": "patron", "value": "adapter"}
+    - Cual es la funcion de [Adapter]{"entity": "patron", "value": "adapter"}
 
 - synonym: adapter
   examples: |
     - Adapter
+
 
 - intent: pregunta_patron_bridge
   examples: |
@@ -208,6 +226,7 @@ nlu:
   examples: |
     - Bridge
 
+
 - intent: pregunta_patron_composite
   examples: |
     - Che no entiendo el patron de diseño [composite]{"entity": "patron", "value": "composite"}
@@ -217,14 +236,16 @@ nlu:
   examples: |
     - Composite
     
+
 - intent: pregunta_patron_decorator
   examples: |
     - No entiendo para que se usas [Decorator]{"entity": "patron", "value": "decorator"}
-    - Decime que es el patron de diseño[decorator]{"entity": "patron", "value": "decorator"}
+    - Decime que es el patron de diseño [decorator]{"entity": "patron", "value": "decorator"}
 
 - synonym: decorator
   examples: |
     - Decorator 
+
 
 - intent: pregunta_patron_facade
   examples: |
@@ -235,6 +256,7 @@ nlu:
   examples: |
     - Facade
 
+
 - intent: pregunta_patron_flyweigth
   examples: |
     - Me parece que no entiendo [flyweigth]{"entity": "patron", "value": "flyweigth"}, me explicas?
@@ -243,6 +265,7 @@ nlu:
 - synonym: flyweight
   examples: |
     - Flyweight
+
 
 - intent: pregunta_patron_proxy
   examples: |
@@ -253,16 +276,19 @@ nlu:
   examples: |
     - Proxy
 
-#comportamieno
+
+# Comportamiento
 - intent: pregunta_patron_chain-of-responsibility
   examples: |
-    - No entiendo que es [chain of responsibility]{"entity": "patron", "value": "chain of responsibility}
-    - Me decis para que se usa [Chain Of Responsibility]{"entity": "patron", "value": "chain of responsibility}
+    - No entiendo que es [chain of responsibility]{"entity": "patron", "value": "chain of responsibility"}
+    - Me decis para que se usa [Chain of Responsibility]{"entity": "patron", "value": "chain of responsibility"}
 
-- synonym: chain of responsabilitylity
+- synonym: chain of responsability
   examples: |
-    - Chain Of Responsability
+    - Chain of Responsibility
+    - Chain of responsibility
    
+
 - intent: pregunta_patron_command
   examples: |
     - Cual es la funcionalidad de [command]{"entity": "patron", "value": "command"}
@@ -272,6 +298,7 @@ nlu:
   examples: |
     - Command
    
+
 - intent: pregunta_patron_memento
   examples: |
     - Explicame que es [memento]{"entity": "patron", "value": "memento"}
@@ -280,6 +307,7 @@ nlu:
 - synonym: memento
   examples: |
     - Memento   
+
 
 - intent: pregunta_patron_iterator
   examples: |
@@ -290,6 +318,7 @@ nlu:
   examples: |
     - Iterator 
 
+
 - intent: pregunta_patron_mediator
   examples: |
     - No me doy cuenta que es [mediator]{"entity": "patron", "value": "mediator"}
@@ -299,25 +328,52 @@ nlu:
   examples: |
     - Mediator 
 
+
 - intent: pregunta_patron_observer
   examples: |
     - Desconozco sobre el patron [observer]{"entity": "patron", "value": "observer"}
     - Me das una mano para comprender el patron de diseño [Observer]{"entity": "patron", "value": "observer"}?
 
+- synonym: observer
+  examples: |
+    - Observer 
+
+
 - intent: pregunta_patron_state
   examples: |
     - Me ayudas a dejar claro el patrón [state]{"entity": "patron", "value": "state"}
-    - Cual es el proposito de [state]{"entity": "patron", "value": "state"}?
+    - Cual es el proposito de [State]{"entity": "patron", "value": "state"}?
+
+- synonym: state
+  examples: |
+    - State 
+
 
 - intent: pregunta_patron_strategy
   examples: |
-    - No comprendo que es el patron de diseño [strategy]{"entity": "patron", "value": "strategy"}
-    - 
+    - No comprendo el patron de diseño [strategy]{"entity": "patron", "value": "strategy"}
+
+- synonym: strategy
+  examples: |
+    - Strategy 
+
 
 - intent: pregunta_patron_templete-method
   examples: |
-    - 
+    - Me explicas como es [Template method]{"entity": "patron", "value": "template"}?
+
+- synonym: template-method
+  examples: |
+    - Template method
+    - Template
+    - template
+    - Template Method 
+
 
 - intent: pregunta_patron_visitor
   examples: |
-    - 
+    - Que onda el patron [visitor]{"entity": "patron", "value": "state"}?
+
+- synonym: visitor
+  examples: |
+    - Visitor 
