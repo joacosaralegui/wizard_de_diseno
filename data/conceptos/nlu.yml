@@ -377,7 +377,7 @@ nlu:
 
 
 
-# Atributos de calidad
+########## PATRONES ESPECIFICOS ##########
 
 - intent: pregunta_atr-calidad_listado
   examples: |
@@ -388,26 +388,31 @@ nlu:
 
 - intent: pregunta_atr-calidad_tolerancia-a-fallos
   examples: |
-    - blablabla [tolerancia a fallos]{"entity": "atr-calidad", "value": "tolerancia a fallos"}
-# usar los diferentes sinonimos
+    - Que es [tolerancia a fallos]{"entity": "atr-calidad", "value": "tolerancia a fallos"}?
+    - Me podes ecxplicar lo que es [Tolerancia a fallos]{"entity": "atr-calidad", "value": "tolerancia a fallos"}?
+    - che, que es [fault tolerance]{"entity": "atr-calidad", "value": "tolerancia a fallos"}?
 
 - intent: pregunta_atr-calidad_tolerancia-a-fallos_ejemplo
   examples: |
     - me das un ejemplo de [tolerancia a fallos]{"entity": "atr-calidad", "value": "tolerancia a fallos"}
+    - No entiedo,me das un ejemplo de [fault tolerance]{"entity": "atr-calidad", "value": "tolerancia a fallos"}?
 #aca le darias (en el utter) un REQNF que se encasille en ese atributo de calidad
 
 - synonym: tolerancia a fallos
   examples: |
     - Tolerancia a fallos
-    - Fault tolerance 
+    - fault tolerance 
 
 
 - intent: pregunta_atr-calidad_disponibilidad
   examples: |
+    - Me pode explicar que es [disponibilidad]{"entity": "atr-calidad", "value": "disponibilidad"}
+    - A que hace referencia el atributo de calidad [availability]{"entity": "atr-calidad", "value": "disponibilidad"}
 
 - intent: pregunta_atr-calidad_disponibilidad_ejemplo
   examples: |
-    - me das un ejemplo de [disponibilidad]{"entity": "atr-calidad", "value": "disponibilidad"}
+    - me das ejemplo de [disponibilidad]{"entity": "atr-calidad", "value": "disponibilidad"}
+    - Quiero una ejemplificacion de [availability]{"entity": "atr-calidad", "value": "disponibilidad"}
 
 - synonym: disponibilidad
   examples: |
@@ -418,10 +423,13 @@ nlu:
 
 - intent: pregunta_atr-calidad_mantenibilidad
   examples: |
+    - No tengo conocimiento de [mantenibilidad]{"entity": "atr-calidad", "value": "mantenibilidad"}
+    - Me decis que sabes de [Mantainability]{"entity": "atr-calidad", "value": "mantenibilidad"}
 
 - intent: pregunta_atr-calidad_mantenibilidad_ejemplo
   examples: |
     - me das un ejemplo de [mantenibilidad]{"entity": "atr-calidad", "value": "mantenibilidad"}
+    - Tenes algun ejemplo de [Mantainability]{"entity": "atr-calidad", "value": "mantenibilidad"}
 
 - synonym: mantenibilidad
   examples: |
@@ -431,10 +439,13 @@ nlu:
 
 - intent: pregunta_atr-calidad_performance
   examples: |
+    - Sabes que es [performance]{"entity": "atr-calidad", "value": "performance"}
+    - No entiendo [rendimiento]{"entity": "atr-calidad", "value": "performance"}, me explicas?
 
 - intent: pregunta_atr-calidad_performance_ejemplo
   examples: |
-    - me das un ejemplo de [performance]{"entity": "atr-calidad", "value": "performance"}
+    - ayudame con un ejemplo a saber como implemtar [performance]{"entity": "atr-calidad", "value": "performance"}
+    - Que ejemplo me podes dar de  [rendimiento]{"entity": "atr-calidad", "value": "performance"}
 
 - synonym: performance
   examples: |
@@ -445,10 +456,13 @@ nlu:
 
 - intent: pregunta_atr-calidad_escalabilidad
   examples: |
+    - Por favor me explicas cual es el atributo de calidad  [escalabilidad]{"entity": "atr-calidad", "value": "escalabilidad"}?
+    - No entiendo nada che, que es  [scalability]{"entity": "atr-calidad", "value": "escalabilidad"}?
 
 - intent: pregunta_atr-calidad_escalabilidad_ejemplo
   examples: |
-    - me das un ejemplo de [escalabilidad]{"entity": "atr-calidad", "value": "escalabilidad"}
+    - dame un ejemplo de [escalabilidad]{"entity": "atr-calidad", "value": "escalabilidad"}
+    - Ejemplificame el atributo [Scalability]{"entity": "atr-calidad", "value": "escalabilidad"}
 
 - synonym: escalabilidad
   examples: |
@@ -459,10 +473,13 @@ nlu:
 
 - intent: pregunta_atr-calidad_seguridad
   examples: |
+    - help, cual es la definicion del atributo [seguridad]{"entity": "atr-calidad", "value": "seguridad"}
+    - Que se entinde por el atributo de calidad [security]{"entity": "atr-calidad", "value": "seguridad"}?
 
 - intent: pregunta_atr-calidad_seguridad_ejemplo
   examples: |
-    - me das un ejemplo de [seguridad]{"entity": "atr-calidad", "value": "seguridad"}
+    - Dame un ejemplo [seguridad]{"entity": "atr-calidad", "value": "seguridad"}
+    - Conoces algun ejemplo de [security]{"entity": "atr-calidad", "value": "seguridad"}?
 
 - synonym: seguridad
   examples: |
@@ -473,11 +490,13 @@ nlu:
 
 - intent: pregunta_atr-calidad_usabilidad
   examples: |
+    - Me ayudas a comprender que es [usabilidad]{"entity": "atr-calidad", "value": "usabilidad"}?
+    - Nesecito saber que es [usability]{"entity": "atr-calidad", "value": "usabilidad"}
 
 - intent: pregunta_atr-calidad_usabilidad_ejemplo
   examples: |
     - me das un ejemplo de [usabilidad]{"entity": "atr-calidad", "value": "usabilidad"}
-
+    - ilustrame un ejemplo de [usability]{"entity": "atr-calidad", "value": "usabilidad"}
 - synonym: usabilidad
   examples: |
     - Usabilidad
@@ -487,10 +506,13 @@ nlu:
 
 - intent: pregunta_atr-calidad_portabilidad
   examples: |
+    - Cuál es el concepto de [portabilidad]{"entity": "atr-calidad", "value": "portabilidad"}?
+    - No me doy cuenta que es [portability]{"entity": "atr-calidad", "value": "portabilidad"}
 
 - intent: pregunta_atr-calidad_portabilidad_ejemplo
   examples: |
-    - me das un ejemplo de [portabilidad]{"entity": "atr-calidad", "value": "portabilidad"}
+    - me facilitas un ejemplo de [portabilidad]{"entity": "atr-calidad", "value": "portabilidad"}
+    - proporcioname un ejemplo de [portability]{"entity": "atr-calidad", "value": "portabilidad"}
 
 - synonym: portabilidad
   examples: |
@@ -501,10 +523,13 @@ nlu:
 
 - intent: pregunta_atr-calidad_interoperabilidad
   examples: |
+  che, decime que es [interoperabilidad]{"entity": "atr-calidad", "value": "interoperabilidad"}
+  ayudame a chamuyar sobre [interoperability]{"entity": "atr-calidad", "value": "interoperabilidad"}
 
 - intent: pregunta_atr-calidad_interoperabilidad_ejemplo
   examples: |
     - me das un ejemplo de [interoperabilidad]{"entity": "atr-calidad", "value": "interoperabilidad"}
+    - tenes ejemplo de [interoperability]{"entity": "atr-calidad", "value": "interoperabilidad"}
 
 - synonym: interoperabilidad
   examples: |
