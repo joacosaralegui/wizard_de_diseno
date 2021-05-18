@@ -23,7 +23,7 @@ rules:
 
 - rule: Responder pregunta atributos de calidad
   steps:
-  - intent: pregunta_concepto_atr_calidad
+  - intent: pregunta_concepto_atr-calidad
   - action: utter_concepto_atributo-de-calidad
 
 - rule: Responder pregunta hooks

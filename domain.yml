@@ -16,7 +16,7 @@ intents:
       use_entities: true
   - pregunta_concepto_fdd:
       use_entities: true
-  - pregunta_concepto_atr_calidad:
+  - pregunta_concepto_atr-calidad:
       use_entities: true
   - pregunta_concepto_hook:
       use_entities: true
@@ -119,6 +119,7 @@ intents:
 entities:
 - concepto
 - patron
+- atr-calidad
 
 slots: {}
 
@@ -144,6 +145,7 @@ responses:
   - text: 'Feature-driven development (FDD) es un proceso para desarrollo de software de forma iterativa e incremental\nEl proceso comienza por los requerimientos y el modelado, siguiendo por el diseño y construcción en base a incrementos'
   utter_concepto_atributo-de-calidad:
   - text: 'Los atributos de calidad (también cualidades del software) son características no funcionales que se consideran deseables en un sistema de software.'
+  - text: 'Un atributo de calidad es una propiedad medible de un sistema, que indica qué tan bien el sistema satisface las necesidades de las partes interesadas.'
   utter_concepto_hook:
   - text: 'Hooking is a concept that allows modifying the behavior of a program. It’s the chance that code gives you to change the original behavior of something without changing your code of the corresponding class. This is done by overwriting the hook methods.'
   utter_concepto_requerimiento-funcional:
@@ -156,7 +158,12 @@ responses:
   - text: 'Se trata de requisitos que no se refieren directamente a las funciones específicas suministradas por el sistema (características de usuario), sino a las propiedades del sistema: rendimiento, seguridad, disponibilidad.'
   utter_concepto_requerimiento-no-funcional_ejemplo:
   - text: 'Por ejemplo,\nTodas las comunicaciones externas entre los servidores de datos, la aplicación y el cliente del sistema deben estar cifradas utilizando el algoritmo RSA.\nEs un ejemplo de RNF que puede encasillarse en el atributo de calidad de Seguridad.'
-
+  utter_diferencia_req_func_no_func:
+  - text: ''
+  utter_concepto_patron_tipos:
+  - text: ''
+  utter_concepto_patron_listado:
+  - text: ''
 
 # Patrones especificos
   utter_patron_abstract-factory:
