@@ -22,9 +22,9 @@ stories:
   - action: utter_saludo
   - intent: clase_marcelo
   - action: utter_ask_more_depth
-  - intent: pregunta_concepto_template
+  - intent: pregunta_concepto_patron
     entities:
-    - concepto: template
-  - action: utter_concepto_template
+    - concepto: patron
+  - action: utter_concepto_patron
   - intent: gracias
   - action: utter_de_nada

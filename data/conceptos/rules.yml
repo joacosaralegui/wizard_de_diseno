@@ -21,14 +21,9 @@ rules:
   - intent: pregunta_concepto_fdd
   - action: utter_concepto_FDD
 
-- rule: Responder pregunta tempaltes
-  steps:
-  - intent: pregunta_concepto_template
-  - action: utter_concepto_template
-
 - rule: Responder pregunta atributos de calidad
   steps:
-  - intent: pregunta_concepto_atr_calidad
+  - intent: pregunta_concepto_atr-calidad
   - action: utter_concepto_atributo-de-calidad
 
 - rule: Responder pregunta hooks
