@@ -28,3 +28,11 @@ stories:
   - action: utter_concepto_patron
   - intent: gracias
   - action: utter_de_nada
+
+# Flujo de conversación
+
+# Conocimiento General
+
+# Clases Marcelo
+
+# Conocimiento Wizard
