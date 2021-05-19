@@ -33,8 +33,6 @@ class ActionExplainConcept(Action):
             dispatcher.utter_message(response="utter_concepto_agil")
         elif last_entity_value == 'FDD':
             dispatcher.utter_message(response="utter_concepto_FDD")
-        elif last_entity_value == 'template':
-            dispatcher.utter_message(response="utter_concepto_template")
         elif last_entity_value == 'atributo-de-calidad':
             dispatcher.utter_message(response="utter_concepto_atributo-de-calidad")
         elif last_entity_value == 'hook':

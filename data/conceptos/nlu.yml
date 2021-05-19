@@ -3,6 +3,9 @@ nlu:
 
 # Sección conocimiento general
 
+
+########## CONCEPTOS ##########
+
 - intent: pregunta_concepto_patron
   examples: |  
     - Qué es un [patron de diseño]{"entity": "concepto", "value": "patron"}?
@@ -10,51 +13,6 @@ nlu:
     - No sé qué es un [patron]{"entity": "concepto", "value": "patron"}
     - Me decís qué son los [patrones de diseño]{"entity": "concepto", "value": "patron"}?
     - Che estoy re perdido con esto de los [patrones]{"entity": "concepto", "value": "patron"}?
-
-- intent: pregunta_concepto_scrum
-  examples: |  
-    - Quiero saber qué es [scrum]{"entity": "concepto", "value": "scrum"}
-    - Que es la [metodología Scrum]{"entity": "concepto", "value": "scrum"}?
-    - No entiendo qué es [Scrum]{"entity": "concepto", "value": "scrum"}
-
-- intent: pregunta_concepto_agil
-  examples: |  
-    - No tengo ni idea de qué es un [metodo agil]{"entity": "concepto", "value": "agil"}
-    - Sabés qué son las [metodologías ágiles]{"entity": "concepto", "value": "agil"}?
-    - Que onda los [metodos agiles]{"entity": "concepto", "value": "agil"}?
-
-- intent: pregunta_concepto_fdd
-  examples: |  
-    - Qué onda con [FDD]{"entity": "concepto", "value": "FDD"}?
-    - Necesito saber de [Feature-Driven Development]{"entity": "concepto", "value": "fdd"}
-    - Estoy perdido con lo de [fdd]{"entity": "concepto", "value": "fdd"}
-
-- intent: pregunta_concepto_template
-  examples: |  
-    - Qué es un [template]{"entity": "concepto", "value": "template"}?
-    - Y sabés de [templates]{"entity": "concepto", "value": "template"}?
-
-- intent: pregunta_concepto_atr_calidad
-  examples: |  
-    - Tenés idea de [atributo de calidad]{"entity": "concepto", "value": "atributo de calidad"}
-    - Tirame el concepto de [atributo de calidad]{"entity": "concepto", "value": "atributo decalidad"}
-    - Tirame data de los [QA]{"entity": "concepto", "value": "atributo de calidad"}
-
-- intent: pregunta_concepto_hook
-  examples: |  
-    - Che ni idea de [hooks]{"entity": "concepto", "value": "hook"}
-    - Dime qué es [hook]{"entity": "concepto", "value": "hook"}
-
-- intent: pregunta_concepto_req_func
-  examples: |  
-    - Ni idea de [requerimiento funcionales]{"entity": "concepto", "value": "requerimiento funcional"}, me ayudas?
-    - Decime qué son los [requerimiento funcionales]{"entity": "concepto", "value": "requerimiento funcional"}
-    - Y qué es un [requerimiento funcional]{"entity": "concepto", "value": "requerimiento funcional"}
-
-- intent: pregunta_concepto_req_no_func
-  examples: |  
-    - Che no sé nada de [requerimientos no funcionales]{"entity": "concepto", "value": "requerimiento no funcional"}
-    - Sabés qué es un [requerimiento no funcional]{"entity": "concepto", "value": "requerimiento no funcional"}?
 
 - synonym: patron
   examples: |
@@ -66,11 +24,25 @@ nlu:
     - design pattern
     - design patterns
 
+
+- intent: pregunta_concepto_scrum
+  examples: |  
+    - Quiero saber qué es [scrum]{"entity": "concepto", "value": "scrum"}
+    - Que es la [metodología Scrum]{"entity": "concepto", "value": "scrum"}?
+    - No entiendo qué es [Scrum]{"entity": "concepto", "value": "scrum"}
+
 - synonym: scrum
   examples: |
     - Scrum
     - metodologia Scrum
     - metodología Scrum
+
+
+- intent: pregunta_concepto_agil
+  examples: |  
+    - No tengo ni idea de qué es un [metodo agil]{"entity": "concepto", "value": "agil"}
+    - Sabés qué son las [metodologías ágiles]{"entity": "concepto", "value": "agil"}?
+    - Que onda los [metodos agiles]{"entity": "concepto", "value": "agil"}?
 
 - synonym: agil
   examples: |
@@ -83,15 +55,25 @@ nlu:
     - metodologias agiles
     - metodologías ágiles
 
+
+- intent: pregunta_concepto_fdd
+  examples: |  
+    - Qué onda con [FDD]{"entity": "concepto", "value": "FDD"}?
+    - Necesito saber de [Feature-Driven Development]{"entity": "concepto", "value": "fdd"}
+    - Estoy perdido con lo de [fdd]{"entity": "concepto", "value": "fdd"}
+
 - synonym: fdd
   examples: |
     - fdd
     - FDD
     - Feature-driven development
 
-- synonym: template
-  examples: |
-    - templates
+
+- intent: pregunta_concepto_atr-calidad
+  examples: |  
+    - Tenés idea de [atributo de calidad]{"entity": "concepto", "value": "atributo de calidad"}
+    - Tirame el concepto de [atributos de calidad]{"entity": "concepto", "value": "atributo decalidad"}
+    - Tirame data de los [QA]{"entity": "concepto", "value": "atributo de calidad"}
 
 - synonym: atributo de calidad
   examples: |
@@ -99,15 +81,458 @@ nlu:
     - Quality Attributes
     - QA
 
+
+- intent: pregunta_concepto_hook
+  examples: |  
+    - Che ni idea de [hooks]{"entity": "concepto", "value": "hook"}
+    - Dime qué es [hook]{"entity": "concepto", "value": "hook"}
+
 - synonym: hook
   examples: |
     - Hook
     - hooks
 
+
+- intent: pregunta_concepto_req_func
+  examples: |  
+    - Ni idea de [requerimiento funcionales]{"entity": "concepto", "value": "requerimiento funcional"}, me ayudas?
+    - Decime qué son los [requerimiento funcionales]{"entity": "concepto", "value": "requerimiento funcional"}
+    - Y qué es un [requerimiento funcional]{"entity": "concepto", "value": "requerimiento funcional"}
+
 - synonym: requerimiento funcional
   examples: |
     - requerimientos funcionales
 
+
+- intent: pregunta_concepto_req_no_func
+  examples: |  
+    - Che no sé nada de [requerimientos no funcionales]{"entity": "concepto", "value": "requerimiento no funcional"}
+    - Sabés qué es un [requerimiento no funcional]{"entity": "concepto", "value": "requerimiento no funcional"}?
+
 - synonym: requerimiento no funcional
   examples: |
     - requerimientos no funcionales
+
+
+- intent: pregunta_concepto_req_no_func_ejemplo
+  examples: |  
+    - Dame ejemplo de [requerimientos no funcionales]{"entity": "concepto", "value": "requerimiento no funcional"}
+    - Che, me decir ejemplos de [requerimiento no funcional]{"entity": "concepto", "value": "requerimiento no funcional"}
+    - Ejemplificame los [requerimiento no funcional]{"entity": "concepto", "value": "requerimiento no funcional"}
+
+- intent: pregunta_concepto_req_func_ejemplo
+  examples: |  
+    - Quiero ejemplo de [requerimientos funcionales]{"entity": "concepto", "value": "requerimiento no funcional"}
+    - Che, que ejemplos hay de [requerimiento funcional]{"entity": "concepto", "value": "requerimiento no funcional"}
+    - Capaz entiendo mejor si me decis ejemplos de un [requerimiento funcional]{"entity": "concepto", "value": "requerimiento no funcional"}
+
+- intent: pregunta_diferencia_req_func_no_func
+  examples: |
+    - Que diferencia hay entre [requerimientos funcionales]{"entity": "concepto", "value": "requerimiento no funcional"} y [requerimiento no funcional]{"entity": "concepto", "value": "requerimiento no funcional"}?
+    - Comparame por favor [requerimientos funcionales]{"entity": "concepto", "value": "requerimiento no funcional"} y [requerimiento no funcional]{"entity": "concepto", "value": "requerimiento no funcional"}
+    - No entiendo la diferencia entre [requerimientos funcionales]{"entity": "concepto", "value": "requerimiento no funcional"} y [requerimiento no funcional]{"entity": "concepto", "value": "requerimiento no funcional"}
+    - Cuál es la diferencia entre [requerimientos funcionales]{"entity": "concepto", "value": "requerimiento no funcional"} y [requerimiento no funcional]{"entity": "concepto", "value": "requerimiento no funcional"}?
+    - No distingo entre [requerimientos funcionales]{"entity": "concepto", "value": "requerimiento no funcional"} y [requerimiento no funcional]{"entity": "concepto", "value": "requerimiento no funcional"}
+
+- intent: pregunta_concepto_patron_tipos
+  examples: |
+    - Qué tipos de [patrones]{"entity": "concepto", "value": "patron"} existen?
+    - Hay alguna clasificación para los [design patterns]{"entity": "concepto", "value": "patron"}?
+    - Cómo se agrupan los [patrones de diseño]{"entity": "concepto", "value": "patron"}?
+
+- intent: pregunta_concepto_patron_listado
+  examples: |
+    - Que [patrones de diseño]{"entity": "concepto", "value": "patron"} existen?
+    - Cuales son los distintos [design patterns]{"entity": "concepto", "value": "patron"} que hay?
+    - Che, me listas los [patrones de diseño]{"entity": "concepto", "value": "patron"}?
+
+
+########## PATRONES ESPECIFICOS ##########
+# Creacionales
+- intent: pregunta_patron_abstract-factory
+  examples: |
+    - Conocés el patrón [Abstract Factory]{"entity": "patron", "value": "abstract factory"}
+    - Que onda el patrón de diseño [abstract factory]{"entity": "patron", "value": "abstract factory"}
+    - Decime que es [abstract factory]{"entity": "patron", "value": "abstract factory"}
+    - Por favor me explicas el patron de diseño [Abstract Factory]{"entity": "patron", "value": "abstract factory"}
+
+- synonym: abstract factory
+  examples: |
+    - Abstract Factory
+    - Abstract factory
+
+
+- intent: pregunta_patron_factory-method
+  examples: |
+    - Que sabes de [factory method]{"entity": "patron", "value": "factory method"}?
+    - Que es [Factory method]{"entity": "patron", "value": "factory method"}?
+
+- synonym: factory method
+  examples: |
+    - Factory Method
+    - Factory method
+
+
+- intent: pregunta_patron_builder
+  examples: |
+    - Me explicas sobre el patron [builder]{"entity": "patron", "value": "builder"}
+    - En los dintintos patrones de diseño que existen, cual es el [Builder]{"entity": "patron", "value": "builder"}?
+
+- synonym: builder
+  examples: |
+    - Builder
+
+
+- intent: pregunta_patron_prototype
+  examples: |
+    - Me contas sobre [prototype]{"entity": "patron", "value": "prototype"}?
+    - Por favor, me contas sobre el patron sobre [Prototype]{"entity": "patron", "value": "prototype"}?
+
+- synonym: prototype
+  examples: |
+    - Prototype
+
+
+- intent: pregunta_patron_singleton
+  examples: |
+    - Me ayudas a entender el patron de diseño sobre [Singleton]{"entity": "patron", "value": "singleton"}?
+    - Explicame sobre [singleton]{"entity": "patron", "value": "singleton"}
+    
+- synonym: singleton
+  examples: |
+    - Singleton
+    
+
+# Estructurales
+- intent: pregunta_patron_adapter
+  examples: |
+    - Por favor ayudame a entender el patron [adapter]{"entity": "patron", "value": "adapter"}
+    - Cual es la funcion de [Adapter]{"entity": "patron", "value": "adapter"}
+
+- synonym: adapter
+  examples: |
+    - Adapter
+
+
+- intent: pregunta_patron_bridge
+  examples: |
+    - Cual es el proposito de [bridge]{"entity": "patron", "value": "bridge"}
+    - Y que es [Bridge]{"entity": "patron", "value": "bridge"}?
+
+- synonym: bridge
+  examples: |
+    - Bridge
+
+
+- intent: pregunta_patron_composite
+  examples: |
+    - Che no entiendo el patron de diseño [composite]{"entity": "patron", "value": "composite"}
+    - Que pueso hacer con [Composite]{"entity": "patron", "value": "composite"}
+
+- synonym: composite
+  examples: |
+    - Composite
+    
+
+- intent: pregunta_patron_decorator
+  examples: |
+    - No entiendo para que se usas [Decorator]{"entity": "patron", "value": "decorator"}
+    - Decime que es el patron de diseño [decorator]{"entity": "patron", "value": "decorator"}
+
+- synonym: decorator
+  examples: |
+    - Decorator 
+
+
+- intent: pregunta_patron_facade
+  examples: |
+    - Cual es la utilidada de [facade]{"entity": "patron", "value": "facade"}?
+    - che, no entiendo para que sirve [Facade]{"entity": "patron", "value": "facade"}
+
+- synonym: facade
+  examples: |
+    - Facade
+
+
+- intent: pregunta_patron_flyweigth
+  examples: |
+    - Me parece que no entiendo [flyweigth]{"entity": "patron", "value": "flyweigth"}, me explicas?
+    - Explicame, por favor, el patron [Flyweigth]{"entity": "patron", "value": "flyweigth"}
+    
+- synonym: flyweight
+  examples: |
+    - Flyweight
+
+
+- intent: pregunta_patron_proxy
+  examples: |
+    - Ayudame, quiero saber sobre [proxy]{"entity": "patron", "value": "proxy"}
+    - Me poder contar hacerca del patron [Proxy]{"entity": "patron", "value": "proxy"}
+
+- synonym: proxy
+  examples: |
+    - Proxy
+
+
+# Comportamiento
+- intent: pregunta_patron_chain-of-responsibility
+  examples: |
+    - No entiendo que es [chain of responsibility]{"entity": "patron", "value": "chain of responsibility"}
+    - Me decis para que se usa [Chain of Responsibility]{"entity": "patron", "value": "chain of responsibility"}
+
+- synonym: chain of responsability
+  examples: |
+    - Chain of Responsibility
+    - Chain of responsibility
+   
+
+- intent: pregunta_patron_command
+  examples: |
+    - Cual es la funcionalidad de [command]{"entity": "patron", "value": "command"}
+    - Contame sobre el patrn de diseño [command]{"entity": "patron", "value": "command"}
+
+- synonym: command
+  examples: |
+    - Command
+   
+
+- intent: pregunta_patron_memento
+  examples: |
+    - Explicame que es [memento]{"entity": "patron", "value": "memento"}
+    - Cual es la utlidad de [Memento]{"entity": "patron", "value": "memento"}?
+
+- synonym: memento
+  examples: |
+    - Memento   
+
+
+- intent: pregunta_patron_iterator
+  examples: |
+    - Me decis la funcionalidad del patron [iterator]{"entity": "patron", "value": "iterator"}
+    - Che, contame sobre [Iterator]{"entity": "patron", "value": "iterator"}
+
+- synonym: iterator
+  examples: |
+    - Iterator 
+
+
+- intent: pregunta_patron_mediator
+  examples: |
+    - No me doy cuenta que es [mediator]{"entity": "patron", "value": "mediator"}
+    - Me ayudas a entender mas sobre el patron [Mediator]{"entity": "patron", "value": "mediator"}?
+
+- synonym: mediator
+  examples: |
+    - Mediator 
+
+
+- intent: pregunta_patron_observer
+  examples: |
+    - Desconozco sobre el patron [observer]{"entity": "patron", "value": "observer"}
+    - Me das una mano para comprender el patron de diseño [Observer]{"entity": "patron", "value": "observer"}?
+
+- synonym: observer
+  examples: |
+    - Observer 
+
+
+- intent: pregunta_patron_state
+  examples: |
+    - Me ayudas a dejar claro el patrón [state]{"entity": "patron", "value": "state"}
+    - Cual es el proposito de [State]{"entity": "patron", "value": "state"}?
+
+- synonym: state
+  examples: |
+    - State 
+
+
+- intent: pregunta_patron_strategy
+  examples: |
+    - No comprendo el patron de diseño [strategy]{"entity": "patron", "value": "strategy"}
+
+- synonym: strategy
+  examples: |
+    - Strategy 
+
+
+- intent: pregunta_patron_templete-method
+  examples: |
+    - Me explicas como es [Template method]{"entity": "patron", "value": "template"}?
+
+- synonym: template-method
+  examples: |
+    - Template method
+    - Template
+    - template
+    - Template Method 
+
+
+- intent: pregunta_patron_visitor
+  examples: |
+    - Que onda el patron [visitor]{"entity": "patron", "value": "state"}?
+
+- synonym: visitor
+  examples: |
+    - Visitor 
+
+
+
+########## PATRONES ESPECIFICOS ##########
+
+- intent: pregunta_atr-calidad_listado
+  examples: |
+    - Contame qué otros [atributos de calidad]{"entity": "concepto", "value": "atributo de calidad"} hay
+    - Me decis que [Quality Atributtes]{"entity": "concepto", "value": "atributo de calidad"} conoces?
+    - Listame los [atributos de calidad]{"entity": "concepto", "value": "atributo de calidad"} que sabes
+
+
+- intent: pregunta_atr-calidad_tolerancia-a-fallos
+  examples: |
+    - Que es [tolerancia a fallos]{"entity": "atr-calidad", "value": "tolerancia a fallos"}?
+    - Me podes ecxplicar lo que es [Tolerancia a fallos]{"entity": "atr-calidad", "value": "tolerancia a fallos"}?
+    - Che, que es [fault tolerance]{"entity": "atr-calidad", "value": "tolerancia a fallos"}?
+
+- intent: pregunta_atr-calidad_tolerancia-a-fallos_ejemplo
+  examples: |
+    - Me das un ejemplo de [tolerancia a fallos]{"entity": "atr-calidad", "value": "tolerancia a fallos"}
+    - No entiedo,me das un ejemplo de [fault tolerance]{"entity": "atr-calidad", "value": "tolerancia a fallos"}?
+
+- synonym: tolerancia a fallos
+  examples: |
+    - Tolerancia a fallos
+    - fault tolerance 
+
+
+- intent: pregunta_atr-calidad_disponibilidad
+  examples: |
+    - Me podes explicar que es [disponibilidad]{"entity": "atr-calidad", "value": "disponibilidad"}
+    - A que hace referencia el atributo de calidad [availability]{"entity": "atr-calidad", "value": "disponibilidad"}
+
+- intent: pregunta_atr-calidad_disponibilidad_ejemplo
+  examples: |
+    - Me das ejemplo de [disponibilidad]{"entity": "atr-calidad", "value": "disponibilidad"}
+    - Quiero una ejemplificacion de [availability]{"entity": "atr-calidad", "value": "disponibilidad"}
+
+- synonym: disponibilidad
+  examples: |
+    - availability
+    - Disponibilidad
+    - Availability
+
+
+- intent: pregunta_atr-calidad_mantenibilidad
+  examples: |
+    - No tengo conocimiento de [mantenibilidad]{"entity": "atr-calidad", "value": "mantenibilidad"}
+    - Me decis que sabes de [Mantainability]{"entity": "atr-calidad", "value": "mantenibilidad"}
+
+- intent: pregunta_atr-calidad_mantenibilidad_ejemplo
+  examples: |
+    - Me das un ejemplo de [mantenibilidad]{"entity": "atr-calidad", "value": "mantenibilidad"}
+    - Tenes algun ejemplo de [Mantainability]{"entity": "atr-calidad", "value": "mantenibilidad"}
+
+- synonym: mantenibilidad
+  examples: |
+    - Mantenibilidad
+    - Mantainability 
+
+
+- intent: pregunta_atr-calidad_performance
+  examples: |
+    - Sabes que es [performance]{"entity": "atr-calidad", "value": "performance"}
+    - No entiendo [rendimiento]{"entity": "atr-calidad", "value": "performance"}, me explicas?
+
+- intent: pregunta_atr-calidad_performance_ejemplo
+  examples: |
+    - Ayudame con un ejemplo a saber como implemtar [performance]{"entity": "atr-calidad", "value": "performance"}
+    - Que ejemplo me podes dar de  [rendimiento]{"entity": "atr-calidad", "value": "performance"}
+
+- synonym: performance
+  examples: |
+    - rendimiento
+    - Rendimiento
+    - Performance 
+
+
+- intent: pregunta_atr-calidad_escalabilidad
+  examples: |
+    - Por favor me explicas cual es el atributo de calidad  [escalabilidad]{"entity": "atr-calidad", "value": "escalabilidad"}?
+    - No entiendo nada che, que es  [scalability]{"entity": "atr-calidad", "value": "escalabilidad"}?
+
+- intent: pregunta_atr-calidad_escalabilidad_ejemplo
+  examples: |
+    - Dame un ejemplo de [escalabilidad]{"entity": "atr-calidad", "value": "escalabilidad"}
+    - Ejemplificame el atributo [Scalability]{"entity": "atr-calidad", "value": "escalabilidad"}
+
+- synonym: escalabilidad
+  examples: |
+    - Escalabilidad
+    - scalability
+    - Scalability 
+
+
+- intent: pregunta_atr-calidad_seguridad
+  examples: |
+    - Help, cual es la definicion del atributo [seguridad]{"entity": "atr-calidad", "value": "seguridad"}
+    - Que se entinde por el atributo de calidad [security]{"entity": "atr-calidad", "value": "seguridad"}?
+
+- intent: pregunta_atr-calidad_seguridad_ejemplo
+  examples: |
+    - Dame un ejemplo [seguridad]{"entity": "atr-calidad", "value": "seguridad"}
+    - Conoces algun ejemplo de [security]{"entity": "atr-calidad", "value": "seguridad"}?
+
+- synonym: seguridad
+  examples: |
+    - Seguridad
+    - security
+    - Security
+
+
+- intent: pregunta_atr-calidad_usabilidad
+  examples: |
+    - Me ayudas a comprender que es [usabilidad]{"entity": "atr-calidad", "value": "usabilidad"}?
+    - Nesecito saber que es [usability]{"entity": "atr-calidad", "value": "usabilidad"}
+
+- intent: pregunta_atr-calidad_usabilidad_ejemplo
+  examples: |
+    - Me das un ejemplo de [usabilidad]{"entity": "atr-calidad", "value": "usabilidad"}
+    - Ilustrame un ejemplo de [usability]{"entity": "atr-calidad", "value": "usabilidad"}
+
+- synonym: usabilidad
+  examples: |
+    - Usabilidad
+    - usability
+    - Usability
+
+
+- intent: pregunta_atr-calidad_portabilidad
+  examples: |
+    - Cuál es el concepto de [portabilidad]{"entity": "atr-calidad", "value": "portabilidad"}?
+    - No me doy cuenta que es [portability]{"entity": "atr-calidad", "value": "portabilidad"}
+
+- intent: pregunta_atr-calidad_portabilidad_ejemplo
+  examples: |
+    - Me facilitas un ejemplo de [portabilidad]{"entity": "atr-calidad", "value": "portabilidad"}
+    - Proporcioname un ejemplo de [portability]{"entity": "atr-calidad", "value": "portabilidad"}
+
+- synonym: portabilidad
+  examples: |
+    - Portabilidad
+    - portability
+    - Portability 
+
+
+- intent: pregunta_atr-calidad_interoperabilidad
+  examples: |
+    - Che, decime que es [interoperabilidad]{"entity": "atr-calidad", "value": "interoperabilidad"}
+    - Ayudame a chamuyar sobre [interoperability]{"entity": "atr-calidad", "value": "interoperabilidad"}
+
+- intent: pregunta_atr-calidad_interoperabilidad_ejemplo
+  examples: |
+    - Me das un ejemplo de [interoperabilidad]{"entity": "atr-calidad", "value": "interoperabilidad"}
+    - Tenes ejemplo de [interoperability]{"entity": "atr-calidad", "value": "interoperabilidad"}
+
+- synonym: interoperabilidad
+  examples: |
+    - Interoperabilidad
+    - interoperability
+    - Interoperability 
