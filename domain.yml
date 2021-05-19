@@ -256,48 +256,48 @@ responses:
   utter_atr-calidad_tolerancia-a-fallos:
   - text: 'Es la capacidad del sistema o componente para operar según lo previsto en presencia de fallos hardware o software.'
   utter_atr-calidad_tolerancia-a-fallos_ejemplo:
-  - text: 'Por ejemplo: El producto tendrá tolerancia a fallas mediante el uso de técnicas de recuperación, transacciones compensatorias y enrutamiento en caso de fallas.'
-  - text: 'Por ejemplo: Debe ser posible que se trate de forma independiente una falla de software del sistema'
+  - text: 'Por ejemplo, un requerimiento no funcional que se encasilla en Tolerancia a fallos puede ser:\nEl producto tendrá tolerancia a fallas mediante el uso de técnicas de recuperación, transacciones compensatorias y enrutamiento en caso de fallas.'
+  - text: 'Por ejemplo, un requerimiento no funcional que se encasilla en Tolerancia a fallos puede ser:\nDebe ser posible que se trate de forma independiente una falla de software del sistema'
   utter_disponibilidad:
   - text: 'Capacidad del sistema o componente de estar operativo y accesible para su uso cuando se requiere.'
   utter_atr-calidad_disponibilidad_ejemplo:
-  - text: 'Por ejemplo: Es relevante que el sistema este disponible las 24 horas del día durante todo el año'
-  - text: 'Por ejemplo: El sistema debe estar inactivo un tiempo relativamente corto por año.'
+  - text: 'Por ejemplo, un requerimiento no funcional que se encasilla en Disponibilidad puede ser:\nEs relevante que el sistema este disponible las 24 horas del día durante todo el año'
+  - text: 'Por ejemplo, un requerimiento no funcional que se encasilla en Disponibilidad puede ser:\nEl sistema debe estar inactivo un tiempo relativamente corto por año.'
   utter_atr-calidad_mantenibilidad:
   - text: 'Esta característica representa la capacidad del producto software para ser modificado efectiva y eficientemente, debido a necesidades evolutivas, correctivas o perfectivas.'
   utter_atr-calidad_mantenibilidad_ejem:
-  - text: 'Por ejemplo: Los componentes del sistema deben poder intercambiarse sin afectar el funcionamiento del programa'
-  - text: 'Por ejemplo: El sistema debe ser fácil de actualizar'
+  - text: 'Por ejemplo, un requerimiento no funcional que se encasilla en Mantenibilidad puede ser:\nLos componentes del sistema deben poder intercambiarse sin afectar el funcionamiento del programa'
+  - text: 'Por ejemplo, un requerimiento no funcional que se encasilla en Mantenibilidad puede ser:\nEl sistema debe ser fácil de actualizar'
   utter_atr-calidad_performance:
   - text: 'Esta característica representa el desempeño relativo a la cantidad de recursos utilizados bajo determinadas condiciones'
   utter_atr-calidad_performance_ejemplo:
-  - text: 'Por ejemplo: Es importante que el sistema traiga resultados de búsqueda en un tiempo aceptable'
-  - text: 'Por ejemplo: El tiempo de espera para que un usuario navegue de una pantalla será inmediato'
+  - text: 'Por ejemplo, un requerimiento no funcional que se encasilla en Performance puede ser:\nEs importante que el sistema traiga resultados de búsqueda en un tiempo aceptable'
+  - text: 'Por ejemplo, un requerimiento no funcional que se encasilla en Performance puede ser:\nEl tiempo de espera para que un usuario navegue de una pantalla será inmediato'
   utter_atr-calidad_escalabilidad:
   - text: 'Es la capacidad de un sistema para funcionar bien cuando se presentan cambios en la demanda o en la carga del mismo. '
   utter_atr-calidad_escalabilidad_ejemplo:
-  - text: 'Por ejemplo: El producto debe ser capaz de soportar y administrar 1000 usuarios simultáneos y remotos'
-  - text: 'Por ejemplo: El sistema de manejo de cuentas debera soportar un número ilimitado de clientes, cuentas y transacciones'
+  - text: 'Por ejemplo, un requerimiento no funcional que se encasilla en Escalabilidad puede ser:\nEl producto debe ser capaz de soportar y administrar 1000 usuarios simultáneos y remotos'
+  - text: 'Por ejemplo, un requerimiento no funcional que se encasilla en Escalabilidad puede ser:\nEl sistema de manejo de cuentas debera soportar un número ilimitado de clientes, cuentas y transacciones'
   utter_atr-calidad_seguridad:
   - text: 'Capacidad de protección de la información y los datos de manera que personas o sistemas no autorizados no puedan leerlos o modificarlos. '
   utter_atr-calidad_seguridad_ejemplo:
-  - text: 'Por ejemplo: Es importante que el sistema traiga autorización de usuarios y almacenamiento seguro de contraseñas'
-  - text: 'Por ejemplo: No se introducirán datos inválidos en el sistema'
+  - text: 'Por ejemplo, un requerimiento no funcional que se encasilla en Seguridad puede ser:\nEs importante que el sistema traiga autorización de usuarios y almacenamiento seguro de contraseñas'
+  - text: 'Por ejemplo, un requerimiento no funcional que se encasilla en Seguridad puede ser:\nNo se introducirán datos inválidos en el sistema'
   utter_atr-calidad_usabilidad:
   - text: 'Es la capacidad del producto software para ser entendido, aprendido, usado y resultar atractivo para el usuario, cuando se usa bajo determinadas condiciones. '
   utter_atr-calidad_usabilidad_ejemplo:
-  - text: 'Por ejemplo: Es importante que el sistema sea intuitivo y de fácil comprensión'
-  - text: 'Por ejemplo: La navegación debe diseñarse para ayudar a los usuarios a comprender dónde se encuentran, dónde han estado y adónde pueden ir a continuación'
+  - text: 'Por ejemplo, un requerimiento no funcional que se encasilla en Usabilidad puede ser:\nEs importante que el sistema sea intuitivo y de fácil comprensión'
+  - text: 'Por ejemplo, un requerimiento no funcional que se encasilla en Usabilidad puede ser:\nLa navegación debe diseñarse para ayudar a los usuarios a comprender dónde se encuentran, dónde han estado y adónde pueden ir a continuación'
   utter_atr-calidad_portabilidad:
   - text: 'Es la capacidad del producto o componente de ser transferido de forma efectiva y eficiente de un entorno hardware, software, operacional o de utilización a otro'
   utter_atr-calidad_portabilidad_ejemplo:
-  - text: 'Por ejemplo: El sistema debe funcionar en más de una plataforma móvil (Android, iOS)'
-  - text: 'Por ejemplo: El producto debe correr en más de un sistema operativo (Windows, Linux, macOS)'
+  - text: 'Por ejemplo, un requerimiento no funcional que se encasilla en Portabilidad puede ser:\nEl sistema debe funcionar en más de una plataforma móvil (Android, iOS)'
+  - text: 'Por ejemplo, un requerimiento no funcional que se encasilla en Portabilidad puede ser:\nEl producto debe correr en más de un sistema operativo (Windows, Linux, macOS)'
   utter_atr-calidad_interoperabilidad:
   - text: 'Es la capacidad de dos o más sistemas o componentes para intercambiar información y/o llevar a cabo sus funciones requeridas cuando comparten el mismo entorno hardware o software'
   utter_atr-calidad_interoperabilidad_ejemplo:
-  - text: 'Por ejemplo: El producto debe tener la capacidad de interpretar correctamente los datos que se intercambian'
-  - text: 'Por ejemplo: El sistema debe poder comunicarse fácilmente con otros servicios'
+  - text: 'Por ejemplo, un requerimiento no funcional que se encasilla en Interoperabilidad puede ser:\nEl producto debe tener la capacidad de interpretar correctamente los datos que se intercambian'
+  - text: 'Por ejemplo, un requerimiento no funcional que se encasilla en Interoperabilidad puede ser:\nEl sistema debe poder comunicarse fácilmente con otros servicios'
   
 # Clases marcelo
 
