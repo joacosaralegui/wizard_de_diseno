@@ -194,9 +194,9 @@ stories:
   
 - story: relizar_transparencia
   steps:
-	- intent: ayuda_transparencia
-	- action: utter_como_hacer_transparencias
-	- intent: gracias
+  - intent: ayuda_transparencia
+  - action: utter_como_hacer_transparencias
+  - intent: gracias
   - action: utter_de_nada
 
 - story: concepto, ayuda transparencia
