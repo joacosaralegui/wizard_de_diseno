@@ -72,7 +72,7 @@ nlu:
 - intent: pregunta_concepto_atr-calidad
   examples: |  
     - Tenés idea de [atributo de calidad]{"entity": "concepto", "value": "atributo de calidad"}
-    - Tirame el concepto de [atributos de calidad]{"entity": "concepto", "value": "atributo decalidad"}
+    - Tirame el concepto de [atributos de calidad]{"entity": "concepto", "value": "atributo de calidad"}
     - Tirame data de los [QA]{"entity": "concepto", "value": "atributo de calidad"}
 
 - synonym: atributo de calidad
@@ -280,7 +280,7 @@ nlu:
     - No entiendo que es [chain of responsibility]{"entity": "patron", "value": "chain of responsibility"}
     - Me decis para que se usa [Chain of Responsibility]{"entity": "patron", "value": "chain of responsibility"}
 
-- synonym: chain of responsability
+- synonym: chain of responsibility
   examples: |
     - Chain of Responsibility
     - Chain of responsibility
@@ -349,15 +349,16 @@ nlu:
 - intent: pregunta_patron_strategy
   examples: |
     - No comprendo el patron de diseño [strategy]{"entity": "patron", "value": "strategy"}
+    - Guacho que onda [Strategy]{"entity": "patron", "value": "strategy"}
 
 - synonym: strategy
   examples: |
     - Strategy 
 
 
-- intent: pregunta_patron_templete-method
+- intent: pregunta_patron_template-method
   examples: |
-    - Me explicas como es [Template method]{"entity": "patron", "value": "template"}?
+    - Me explicas como es [Template method]{"entity": "patron", "value": "template-method"}?
 
 - synonym: template-method
   examples: |
@@ -369,7 +370,8 @@ nlu:
 
 - intent: pregunta_patron_visitor
   examples: |
-    - Que onda el patron [visitor]{"entity": "patron", "value": "state"}?
+    - Que onda el patron [visitor]{"entity": "patron", "value": "visitor"}?
+    - Y [Visitor]{"entity": "patron", "value": "visitor"}? Cómo es?
 
 - synonym: visitor
   examples: |

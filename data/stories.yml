@@ -7,14 +7,14 @@ stories:
   - intent: saludo
   - action: utter_saludo
   - intent: bien
-  - action: utter_mood_bien
+  - action: utter_bien
 
 - story: sad path
   steps:
   - intent: saludo
   - action: utter_saludo
   - intent: mal
-  - action: utter_mood_bien
+  - action: utter_bien
 
 # Conocimiento wizard
 
@@ -121,8 +121,8 @@ stories:
   - intent: despedida
   - action: utter_despedida
  
-# Clases marcelo
-- story: clase_marcelo
+# Clases diseño
+- story: clase_diseño
   steps:
   - intent: clase_marcelo 
   - action: utter_clase_marcelo 
@@ -163,7 +163,7 @@ stories:
   - intent: pregunta_concepto_patron
   - action: utter_concepto_patron
   - intent: gracias
-  - action: utter_de_nada
+  - action: utter_despedida
 
 - story: clase_marcelo, scrum
   steps:
@@ -173,6 +173,31 @@ stories:
   - action: utter_concepto_scrum
   - intent: gracias
   - action: utter_de_nada
+
+# Conocimiento General
+- story: conocimiento wizard + conocimiento general + flujo 1
+  steps:
+  - intent: saludo
+  - action: utter_saludo
+  - intent: conocimiento_wizard_especifico
+  - action: utter_hablar_de_habilidades
+  - intent: pregunta_concepto_atr-calidad
+    entities:
+    - concepto: atributo de calidad
+  - action: utter_concepto_atributo-de-calidad
+  - intent: pregunta_concepto_req_no_func
+    entities:
+    - concepto: requerimientos no funcionales
+  - action: utter_concepto_requerimiento-no-funcional
+  - intent: pregunta_patron_template-method
+    entities:
+    - patron: template-method
+  - action: utter_patron_template-method
+  - intent: gracias
+  - action: utter_despedida
+  - intent: despedida
+
+# Clases
 
 - story: clase_marcelo, agil 
   steps:
