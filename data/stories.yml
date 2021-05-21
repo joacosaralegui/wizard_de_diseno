@@ -16,6 +16,8 @@ stories:
   - intent: mal
   - action: utter_mood_bien
 
+# Clases Marcelo
+
 - story: clases marcelo + concepto 1
   steps:
   - intent: saludo
@@ -252,3 +254,8 @@ stories:
   - intent: gracias
   -  action: utter_de_nada
   
+# Flujo de conversación
+
+# Conocimiento General
+
+# Conocimiento Wizard
