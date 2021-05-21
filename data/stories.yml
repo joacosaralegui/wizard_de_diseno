@@ -383,3 +383,32 @@ stories:
   - action: utter_modo_evaluacion
   - intent: gracias
   -  action: utter_de_nada
+
+- story: interactive_story_1
+  steps:
+  - intent: saludo
+  - action: utter_saludo
+  - intent: conocimiento_wizard_no_especifico
+  - action: utter_no_me_tomes_el_pelo
+  - intent: negacion
+  - action: utter_despedida
+  - intent: despedida
+
+- story: interactive_story_1
+  steps:
+  - intent: saludo
+  - action: utter_saludo
+  - intent: conocimiento_wizard_ambiguo
+  - action: utter_hablar_de_disenio
+  - intent: conocimiento_wizard_especifico
+    entities:
+    - concepto: diseño
+  - action: utter_hablar_de_habilidades
+  - intent: pregunta_concepto_patron
+    entities:
+    - concepto: patron
+  - action: utter_concepto_patron
+  - intent: pregunta_concepto_patron_listado
+  - action: utter_concepto_patron_listado
+  - intent: gracias
+  - action: utter_de_nada
