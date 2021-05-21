@@ -16,6 +16,8 @@ stories:
   - intent: mal
   - action: utter_mood_bien
 
+# Clases Marcelo
+
 - story: clases marcelo + concepto 1
   steps:
   - intent: saludo
@@ -28,11 +30,232 @@ stories:
   - action: utter_concepto_patron
   - intent: gracias
   - action: utter_de_nada
+  
+- story: clase_marcelo
+  steps:
+  - intent: clase_marcelo 
+  - action: utter_clase_marcelo 
 
+- story: clase_marcelo, transparencia
+  steps:
+  - intent: clase_marcelo 
+  - action: utter_clase_marcelo 
+  - intent: concepto_transparencia
+  - action: utter_que_es_una_transparencia
+  - intent: ayuda_transparencia
+  - action: utter_como_hacer_transparencias  
+  - intent: gracias
+  - action: utter_de_nada
+
+- story: clase_marcelo, millenials
+  steps:
+  - intent: clase_marcelo 
+  - action: utter_clase_marcelo 
+  - intent: concepto_millenial
+  - action: utter_concepto_millenial
+  - intent: gracias
+  - action: utter_de_nada
+
+- story: clase_marcelo, centennials
+  steps:
+  - intent: clase_marcelo 
+  - action: utter_clase_marcelo 
+  - intent: concepto_centennial
+  - action: utter_concepto_centennial
+  - intent: gracias
+  - action: utter_de_nada
+
+- story: clase_marcelo, patrones
+  steps:
+  - intent: clase_marcelo 
+  - action: utter_clase_marcelo 
+  - intent: pregunta_concepto_patron
+  - action: utter_concepto_patron
+  - intent: gracias
+  - action: utter_de_nada
+
+- story: clase_marcelo, scrum
+  steps:
+  - intent: clase_marcelo 
+  - action: utter_clase_marcelo 
+  - intent: pregunta_concepto_scrum
+  - action: utter_concepto_scrum
+  - intent: gracias
+  - action: utter_de_nada
+
+- story: clase_marcelo, agil 
+  steps:
+  - intent: clase_marcelo 
+  - action: utter_clase_marcelo 
+  - intent: pregunta_concepto_agil
+  - action: utter_concepto_agil
+  - intent: gracias
+  - action: utter_de_nada
+
+- story: clase_marcelo, fdd
+  steps:
+  - intent: clase_marcelo 
+  - action: utter_clase_marcelo 
+  - intent: pregunta_concepto_fdd
+  - action: utter_concepto_FDD
+  - intent: gracias
+  - action: utter_de_nada
+
+- story: clase_marcelo, template
+  steps:
+  - intent: clase_marcelo 
+  - action: utter_clase_marcelo 
+  - intent: pregunta_concepto_template
+  - action: utter_concepto_template
+  - intent: gracias
+  - action: utter_de_nada
+
+- story: clase_marcelo, atributo de calidad
+  steps:
+  - intent: clase_marcelo 
+  - action: utter_clase_marcelo 
+  - intent: pregunta_concepto_atr_calidad
+  - action: utter_concepto_atributo-de-calidad
+  - intent: gracias
+  - action: utter_de_nada
+
+- story: clase_marcelo, hook
+  steps:
+  - intent: clase_marcelo 
+  - action: utter_clase_marcelo 
+  - intent: pregunta_concepto_hook
+  - action: utter_concepto_hook
+  - intent: gracias
+  - action: utter_de_nada
+
+- story: clase_marcelo, req funcional
+  steps:
+  - intent: clase_marcelo 
+  - action: utter_clase_marcelo 
+  - intent: pregunta_concepto_req_func
+  - action: utter_concepto_requerimiento-funcional
+  - intent: gracias
+  - action: utter_de_nada
+
+- story: clase_marcelo, req no funcional
+  steps:
+  - intent: clase_marcelo 
+  - action: utter_clase_marcelo 
+  - intent: pregunta_concepto_req_no_func
+  - action: utter_concepto_requerimiento-no-funcional
+  - intent: gracias
+  - action: utter_de_nada
+
+- story: clase_marcelo, patrones , requerimientos 
+  steps:
+  - intent: clase_marcelo 
+  - action: utter_clase_marcelo 
+  - intent: pregunta_concepto_patron
+  - action: utter_concepto_patron
+  - intent: pregunta_concepto_req_func
+  - action: utter_concepto_requerimiento-funcional 
+  - intent: pregunta_concepto_req_no_func
+  - action: utter_concepto_requerimiento-no-funcional
+  - intent: gracias
+  - action: utter_de_nada
+
+- story: clase_marcelo, atributo de calidad, req no funcional
+  steps:
+  - intent: clase_marcelo 
+  - action: utter_clase_marcelo 
+  - intent: pregunta_concepto_atr_calidad
+  - action: utter_concepto_atributo-de-calidad
+  - intent: pregunta_concepto_req_no_func
+  - action: utter_concepto_requerimiento-no-funcional
+  - intent: gracias
+  - action: utter_de_nada
+
+- story: clase_marcelo, atributo de calidad, req no funcional
+  steps:
+  - intent: clase_marcelo 
+  - action: utter_clase_marcelo 
+  - intent: pregunta_concepto_atr_calidad
+  - action: utter_concepto_atributo-de-calidad
+  - intent: pregunta_concepto_req_no_func
+  - action: utter_concepto_requerimiento-no-funcional
+  - intent: gracias
+  - action: utter_de_nada
+
+- story: clase_marcelo, agil, scrum fdd
+  steps:
+  - intent: clase_marcelo 
+  - action: utter_clase_marcelo 
+  - intent: pregunta_concepto_agil
+  - action: utter_concepto_agil
+  - intent: pregunta_concepto_scrum
+  - action: utter_concepto_scrum
+  - intent: pregunta_concepto_fdd
+  - action: utter_concepto_FDD
+  - intent: gracias
+  - action: utter_de_nada
+  
+- story: relizar_transparencia
+  steps:
+  - intent: ayuda_transparencia
+  - action: utter_como_hacer_transparencias
+  - intent: gracias
+  - action: utter_de_nada
+
+- story: concepto, ayuda transparencia
+  steps:
+  - intent: concepto_transparencia
+  - action: utter_que_es_una_transparencia
+  - intent: ayuda_transparencia
+  - action: utter_como_hacer_transparencias
+  - intent: gracias
+  - action: utter_de_nada  
+  
+- story: ayuda presentacion transparencia
+  steps:
+  - intent: ayuda_presentacion_transparencia
+  - action: utter_como_hacer_una_transparencia  
+  - intent: gracias
+  - action: utter_de_nada  
+  
+- story: concepto transparencia
+  steps:
+  - intent: concepto_transparencia
+  - action: utter_que_es_una_transparencia
+  - intent: gracias
+  - action: utter_de_nada
+  
+- story: concepto millenial
+  steps:
+  - intent: concepto_millenial
+  - action: utter_concepto_millenial 
+  - intent: gracias
+  - action: utter_de_nada
+  
+- story: concepto millenial
+  steps:
+  - intent: concepto_centennial
+  - action: utter_concepto_centennial 
+  - intent: gracias
+  - action: utter_de_nada
+  
+- story: objetivo clase diseño
+  steps:
+  - intent: objetivo_clase_marcelo
+  - action: utter_objetivo_clase_marcelo
+  - intent: modo_de_evaluacion 
+  - action: utter_modo_evaluacion
+  - intent: gracias
+  - action: utter_de_nada
+  
+- story: objetivo clase diseño
+  steps:
+  - intent: modo_de_evaluacion 
+  - action: utter_modo_evaluacion
+  - intent: gracias
+  -  action: utter_de_nada
+  
 # Flujo de conversación
 
 # Conocimiento General
-
-# Clases Marcelo
 
 # Conocimiento Wizard
