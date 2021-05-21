@@ -136,3 +136,5 @@ events.db-shm
 events.db-wal
 rasa.sb
 story_graph.dot
+
+.DS_Store
