@@ -240,15 +240,6 @@ stories:
   - intent: gracias
   - action: utter_de_nada
 
-- story: clase_marcelo, template
-  steps:
-  - intent: clase_marcelo 
-  - action: utter_clase_marcelo 
-  - intent: pregunta_concepto_template
-  - action: utter_concepto_template
-  - intent: gracias
-  - action: utter_de_nada
-
 - story: clase_marcelo, atributo de calidad
   steps:
   - intent: clase_marcelo 
