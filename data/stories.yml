@@ -16,21 +16,112 @@ stories:
   - intent: mal
   - action: utter_mood_bien
 
-# Clases Marcelo
+# Conocimiento wizard
 
-- story: clases marcelo + concepto 1
+#(charla que comienza con pregunta ambigua de conocimiento y lo orientamos al diseño, acepta y comienza la charla)
+- story: saludo + pregunta ambigua sobre autoconocimiento + ofrecer ayuda/hablar de diseño + afirmacion + ... + gracias + despedida
   steps:
   - intent: saludo
   - action: utter_saludo
-  - intent: clase_marcelo
-  - action: utter_ask_more_depth
-  - intent: pregunta_concepto_patron
-    entities:
-    - concepto: patron
-  - action: utter_concepto_patron
+  - intent: wizard_conocimiento_ambiguo
+  - action: utter_hablar_de_disenio
+  - intent: afirmacion
+  - action: utter_hablar_de_habilidades          
+  #...Agregar pedidos de otras ramas 
+  #...Agregar pedidos de otras ramas
   - intent: gracias
   - action: utter_de_nada
+  - intent: despedida
+  - action: utter_despedida
+
+#(charla que comienza con pregunta especifica de conocimiento y lo orientamos al diseño, acepta y comienza la charla)
+- story: saludo + pregunta específica sobre autoconocimiento + ofrecer ayuda/hablar de diseño + afirmacion + ... + gracias + despedida
+  steps:
+  - intent: saludo
+  - action: utter_saludo
+  - intent: wizard_conocimiento_especifico
+  - action: utter_hablar_de_disenio
+  - intent: afirmacion
+  - action: utter_hablar_de_habilidades          
+  #...Agregar pedidos de otras ramas 
+  #...Agregar pedidos de otras ramas
+  - intent: gracias
+  - action: utter_de_nada
+  - intent: despedida
+  - action: utter_despedida
   
+  #(charla que comienza con cualquier cosa y lo orientamos al diseño y se niega a charlar, lo despedimos)
+- story: saludo + pregunta ambigua sobre autoconocimiento + ofrecer ayuda/hablar de diseño + negacion + despedida
+  steps:
+  - intent: saludo
+  - action: utter_saludo
+  - intent: wizard_conocimiento_ambiguo
+  - action: utter_hablar_de_disenio
+  - intent: negacion
+  - action: utter_despedida         
+  
+  #(charla que comienza con pedido de ayuda y aceptamos ayudarlo, nos cuenta su problema)
+- story: saludo + pedido de ayuda + ofrecer ayuda/hablar de diseño + ... + gracias + despedida
+  steps:
+  - intent: saludo
+  - action: utter_saludo
+  - intent: wizard_pedido_ayuda
+  - action: utter_aceptacion_ayuda        
+  #...Agregar pedidos de otras ramas 
+  #...Agregar pedidos de otras ramas
+  - intent: gracias
+  - action: utter_de_nada
+  - intent: despedida
+  - action: utter_despedida
+
+# Hacer variantes de esto
+- story: saludo + charla sobre el bot + conocimiento fuera del alcance del chatbot + no me tomes el pelo + despedida
+  steps:
+  - intent: saludo
+  - action: utter_saludo
+  - intent: wizard_nombre
+  - action: utter_nombre       
+  - intent: wizard_creacion
+  - action: utter_no_se
+  - intent: wizard_desafio_inteligencia
+  - action: utter_inteligencia
+  - intent: wizard_genero
+  - action: utter_genero
+  - intent: wizard_padres
+  - action: utter_familia
+  - intent: wizard_edad_especifico
+  - action: utter_edad
+  - intent: conocimiento_wizard_no_especifico
+  - action: utter_no_me_tomes_el_pelo
+  - intent: despedida
+  - action: utter_despedida
+  
+  - story: saludo + charla sobre el bot + conocimiento fuera del alcance del chatbot + no me tomes el pelo + charla de diseño + despedida
+  steps:
+  - intent: saludo
+  - action: utter_saludo
+  - intent: wizard_nombre
+  - action: utter_nombre       
+  - intent: wizard_creacion
+  - action: utter_no_se
+  - intent: wizard_desafio_inteligencia
+  - action: utter_inteligencia
+  - intent: wizard_genero
+  - action: utter_genero
+  - intent: wizard_padres
+  - action: utter_familia
+  - intent: wizard_edad_especifico
+  - action: utter_edad
+  - intent: conocimiento_wizard_no_especifico
+  - action: utter_no_me_tomes_el_pelo
+  - intent: despedida
+  - action: utter_despedida
+  #...
+  #...
+  - intent: despedida
+  - action: utter_despedida
+ 
+# Clases marcelo
 - story: clase_marcelo
   steps:
   - intent: clase_marcelo 
@@ -253,9 +344,3 @@ stories:
   - action: utter_modo_evaluacion
   - intent: gracias
   -  action: utter_de_nada
-  
-# Flujo de conversación
-
-# Conocimiento General
-
-# Conocimiento Wizard
