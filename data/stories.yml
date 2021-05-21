@@ -197,6 +197,29 @@ stories:
   - action: utter_despedida
   - intent: despedida
 
+- story: interactive_story_1
+  steps:
+  - intent: saludo
+  - action: utter_saludo
+  - intent: wizard_nombre
+  - action: utter_nombre
+  - intent: conocimiento_wizard_especifico
+  - action: utter_hablar_de_habilidades
+  - intent: pregunta_concepto_agil
+    entities:
+    - concepto: agil
+  - action: utter_concepto_agil
+  - intent: pregunta_concepto_scrum
+    entities:
+    - concepto: scrum
+  - action: utter_concepto_scrum
+  - intent: clase_marcelo
+  - action: utter_clase_marcelo
+  - intent: ayuda_transparencia
+  - action: utter_como_hacer_transparencias
+  - intent: gracias
+  - action: utter_despedida
+
 # Clases
 
 - story: clase_marcelo, agil 
