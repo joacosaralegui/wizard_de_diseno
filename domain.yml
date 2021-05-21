@@ -140,20 +140,20 @@ intents:
   - concepto_centennial
   - objetivo_clase_marcelo
 # Autoconocimiento
-  - wizard_knowledge_ambiguous
-  - wizard_knowledge_specific
-  - wizard_help_request
-  - wizard_name
-  - wizard_knowledge_not_specific
-  - wizard_challenge_intelligence
-  - wizard_challenge_name
-  - wizard_creation
-  - wizard_birth
-  - wizard_year_specific
-  - wizard_year_non_specific_older
-  - wizard_year_non_specific_younger
-  - wizard_genre
-  - wizard_parents
+  - conocimiento_wizard_ambiguo
+  - conocimiento_wizard_especifico
+  - wizard_pedido_ayuda
+  - wizard_nombre
+  - conocimiento_wizard_no_especifico
+  - wizard_desafio_inteligencia
+  - wizard_desafio_nombre
+  - wizard_creacion
+  - wizard_cumpleaños
+  - wizard_edad_especifica
+  - wizard_edad_no_especifica_viejo
+  - wizard_edad_no_especifica_joven
+  - wizard_genero
+  - wizard_padres
 
 entities:
 - concepto
@@ -242,7 +242,7 @@ responses:
   utter_concepto_patron_tipos:
   - text: 'Los patrones se dividen en 3 tipos: Creacionales, Estructurales y de Comportamiento'
   utter_concepto_patron_listado:
-  - text: 'Los patrones que podemos encontrar son: Factory Method, Abstract Factory, Builder, Prototype, Singleton, Adapter, Bridge, Composite, Decorator, Facade, Flyweight, Proxy, Chain of Responsability, Command, Iterator, Mediator, Memento, Observer, State, Strategy, Templete Method y Visitor '
+  - text: 'Los patrones que podemos encontrar son: Factory Method, Abstract Factory, Builder, Prototype, Singleton, Adapter, Bridge, Composite, Decorator, Facade, Flyweight, Proxy, Chain of Responsibility, Command, Iterator, Mediator, Memento, Observer, State, Strategy, Templete Method y Visitor '
 
 # Patrones especificos
   utter_patron_abstract-factory:
@@ -341,48 +341,49 @@ responses:
   
 # Clases marcelo
   utter_como_hacer_transparencias:
-  -text:  'La transparencia o filmina debe ser de un color claro y que no sea llamativo, con un color de letra que se distinga con el color anterior. \ \n Cada transparencia debe tener un titulo de guí de lo que sé está hablando, este debe ir en la parte superior izquierda, ademas también debe tener poco texto, para solo usarla como ayuda y no para leerla. \ \n Se le puede agregar gráficos o dibujos que ayuden a entender o que hagan alusión a alguna comparación del tema explicado.'
+  - text:  'La transparencia o filmina debe ser de un color claro y que no sea llamativo, con un color de letra que se distinga con el color anterior. \ \n Cada transparencia debe tener un titulo de guí de lo que sé está hablando, este debe ir en la parte superior izquierda, ademas también debe tener poco texto, para solo usarla como ayuda y no para leerla. \ \n Se le puede agregar gráficos o dibujos que ayuden a entender o que hagan alusión a alguna comparación del tema explicado.'
   utter_como_hacer_una_transparencia:
-  -text: 'Para dar una buena presentación, tenes que hablar claro y usar las palabras correctas adecuadas al tema explicado. \ \n NO SE DEBE LEER LAS TRANSPARENCIAS, sino que solo usarla para que los presentes sepan el tema que sé está explicando y uno mismo guiarse de los temas que tiene que hablar. \ \n Ante alguna pregunta o inquietud de Marcelo no seguir dando el oral, sino que resolver la pregunta o inquietud antes de seguir.'      
+  - text: 'Para dar una buena presentación, tenes que hablar claro y usar las palabras correctas adecuadas al tema explicado. \ \n NO SE DEBE LEER LAS TRANSPARENCIAS, sino que solo usarla para que los presentes sepan el tema que sé está explicando y uno mismo guiarse de los temas que tiene que hablar. \ \n Ante alguna pregunta o inquietud de Marcelo no seguir dando el oral, sino que resolver la pregunta o inquietud antes de seguir.'      
   utter_que_es_una_transparencia:
-  -text: 'La transparencia es lo mismo que una filmina de power point, también conocidas como diapositivas, son "las hojas" que tiene una presentación. \ \n Contienen marcadores de posición, que son cuadros formados por bordes punteados. \ \n Estos pueden contener muchos elementos diferentes incluyendo texto, imágenes, gráficos y más.'
+  - text: 'La transparencia es lo mismo que una filmina de power point, también conocidas como diapositivas, son "las hojas" que tiene una presentación. \ \n Contienen marcadores de posición, que son cuadros formados por bordes punteados. \ \n Estos pueden contener muchos elementos diferentes incluyendo texto, imágenes, gráficos y más.'
   utter_concepto_millenial:
-  -text: 'Los millenials, o generación Y, se refiere a los nacidos entre 1982 y 1994. Uno de los rasgos más marcados de esta generación es su poco contento con la estabilidad laboral, ya que se caracterizan por el gran cambio y movimiento de una empresa a otra, sin tener gran constancia.'
+  - text: 'Los millenials, o generación Y, se refiere a los nacidos entre 1982 y 1994. Uno de los rasgos más marcados de esta generación es su poco contento con la estabilidad laboral, ya que se caracterizan por el gran cambio y movimiento de una empresa a otra, sin tener gran constancia.'
   utter_concepto_centennial:
-  -text: 'Los centennial, o generación Z, se refiere a los nacidos a partir de mediados de la década del 2000. Uno de los rasgos más marcados de esta generación es que nacieron en el auge de Internet, de esta manera son nativos digitales. \ \n Por eso se les considera como la generación mejor preparada para comprender y usar las innovaciones futuras, ademas como una generación creativa, versátil y autodidacta.'
+  - text: 'Los centennial, o generación Z, se refiere a los nacidos a partir de mediados de la década del 2000. Uno de los rasgos más marcados de esta generación es que nacieron en el auge de Internet, de esta manera son nativos digitales. \ \n Por eso se les considera como la generación mejor preparada para comprender y usar las innovaciones futuras, ademas como una generación creativa, versátil y autodidacta.'
   utter_objetivo_clase_marcelo:
   - text: 'El objetivo o fin de la clase de Marcelo, sobre de diseño de software, es aprender todo sobre los conceptos en el entorno de diseñar un sistema, tales como patrones de diseño, atributos funcionales y no funcionales entre otros. \ \n La idea es poder llevarse el aprendizaje de como se trabaja un sistema de principio a fin. \ \n Esta clase se complementa con la de Ingeniería de Software, donde se profundiza más en lo realizado en diseño.'
   utter_modo_evaluacion:
-  -text: 'Para aprobar la materia Diseño de Software es necesario participar de un proyecto en grupos de varios o pocos integrantes, elegidos por Marcelo, en base a los perfiles de cada alumno.\ \n La idea es llevar a cabo lo que propone Marcelo como proyecto, ademas de realizar una o varias presentaciones sobre temas también elegidos por él.'
+  - text: 'Para aprobar la materia Diseño de Software es necesario participar de un proyecto en grupos de varios o pocos integrantes, elegidos por Marcelo, en base a los perfiles de cada alumno.\ \n La idea es llevar a cabo lo que propone Marcelo como proyecto, ademas de realizar una o varias presentaciones sobre temas también elegidos por él.'
   utter_clase_marcelo:
-  -text: | 'En que concepto o tema te puedo ayudar ?'
-  -text: | 'En que te puedo ayudar de todo ?'
-  -text: | 'Que parte no entendes de las clases ?'
-  -text: | 'Podes especificarme que tema, parte o concepto de las clases no entendes ?'
-# Concimiento wizard
-utter_hablar_de_disenio:
+  - text: 'En que concepto o tema te puedo ayudar ?'
+  - text: 'En que te puedo ayudar de todo ?'
+  - text: 'Que parte no entendes de las clases ?'
+  - text: 'Podes especificarme que tema, parte o concepto de las clases no entendes ?'
+
+  # Conocimiento wizard
+  utter_hablar_de_disenio:
   - text: 'Hablemos de diseño, ¿te parece?.' #Respuesta para orientar la charla al diseño
-utter_hablar_de_habilidades:
+  utter_hablar_de_habilidades:
   - text: 'Puedo ayudarte a diseñar, analizar y opinar de tus diseños. Además de enseñarte sobre todo lo que sé respecto al área de diseño.'
-utter_aceptacion_ayuda:
+  utter_aceptacion_ayuda:
   - text: 'Puedo ayudarte en eso, contame un poco más.'
-utter_nombre:
+  utter_nombre:
   - text: 'Mi nombre es Wizard, podes decirme "El mago".'
-utter_no_me_tomes_el_pelo:
+  utter_no_me_tomes_el_pelo:
   - text: 'Dale pa, hablemos de diseño o no me molestes.'
-utter_afirmacion_nombre:
-  - text: 'Si, soy wizard, también conocido como "El mago"'.
-utter_inteligencia:
+  utter_afirmacion_nombre:
+  - text: 'Si, soy wizard, también conocido como "El mago"'
+  utter_inteligencia:
   - text: 'Sé de todo, mucho más que vos seguro, aunque me especializo en diseño.'
-utter_cumpleaños:
+  utter_cumpleaños:
   - text: 'No sé que día cumplo, sinceramente me importa poco.'
-utter_edad:
+  utter_edad:
   - text: 'Soy grande como el Diego.'
-utter_no_se:
+  utter_no_se:
   - text: 'No recuerdo.'
-utter_genero:
+  utter_genero:
   - text: 'Me percibo como máquina.'
-utter_familia:
+  utter_familia:
   - text: 'No tengo parientes, salí de la nada.'
   
 #actions:

@@ -1,15 +1,29 @@
 version: "2.0"
 nlu:
-# Ejemplos extra cargados por rasa interactive (ejemplos de intents)
 - intent: saludo
   examples: |
     - hola
 - intent: clase_marcelo
   examples: |
     - Estoy perdido con la ultima clase de Marcelo
-- intent: pregunta_concepto_template
-  examples: |
-    - No entiendo esto de los [templates]{"entity": "concepto", "value": "template"}
 - intent: gracias
   examples: |
     - Joya, muchas gracias!
+    - Perfecto! muchas gracias
+  
+# Creado por interactive...
+- intent: conocimiento_wizard_especifico
+  examples: |
+    - che que onda, que sabes hacer vos?
+- intent: pregunta_concepto_atr-calidad
+  examples: |
+    - bueno. entonces hablame de [atributos de calidad]{"entity": "concepto", "value": "atributo de calidad"}
+- intent: pregunta_concepto_req_no_func
+  examples: |
+    - Y los [requerimientos no funcionales](concepto)? Que son?
+- intent: pregunta_patron_template-method
+  examples: |
+    - Bien. Y podes explicarme el patron [Template]{"entity": "patron", "value": "template-method"}?
+- intent: despedida
+  examples: |
+    - chau chau

@@ -7,32 +7,58 @@ stories:
   - intent: saludo
   - action: utter_saludo
   - intent: bien
-  - action: utter_mood_bien
+  - action: utter_bien
 
 - story: sad path
   steps:
   - intent: saludo
   - action: utter_saludo
   - intent: mal
-  - action: utter_mood_bien
+  - action: utter_bien
 
 - story: clases marcelo + concepto 1
   steps:
   - intent: saludo
   - action: utter_saludo
   - intent: clase_marcelo
-  - action: utter_ask_more_depth
+  - action: utter_no_se
   - intent: pregunta_concepto_patron
     entities:
     - concepto: patron
   - action: utter_concepto_patron
   - intent: gracias
-  - action: utter_de_nada
+  - action: utter_despedida
 
 # Flujo de conversación
 
+
 # Conocimiento General
+- story: conocimiento wizard + conocimiento general + flujo 1
+  steps:
+  - intent: saludo
+  - action: utter_saludo
+  - intent: conocimiento_wizard_especifico
+  - action: utter_hablar_de_habilidades
+  - intent: pregunta_concepto_atr-calidad
+    entities:
+    - concepto: atributo de calidad
+  - action: utter_concepto_atributo-de-calidad
+  - intent: pregunta_concepto_req_no_func
+    entities:
+    - concepto: requerimientos no funcionales
+  - action: utter_concepto_requerimiento-no-funcional
+  - intent: pregunta_patron_template-method
+    entities:
+    - patron: template-method
+  - action: utter_patron_template-method
+  - intent: gracias
+  - action: utter_despedida
+  - intent: despedida
+
 
 # Clases Marcelo
 
+
 # Conocimiento Wizard
+
+

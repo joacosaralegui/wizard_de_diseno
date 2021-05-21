@@ -3,15 +3,14 @@ nlu:
 # Sección conocimiento wizard
 - intent: conocimiento_wizard_ambiguo
   examples: |
-    -Hablemos de la vida
-    -Quiero charlar
-    -¿Pinta hablar de algo?
-    -Contame algo
-    -Decime algún dato
-    -Tira una data
-    -Dame info
-    -...
-    -...
+    - Hablemos de la vida
+    - Quiero charlar
+    - ¿Pinta hablar de algo?
+    - Contame algo
+    - Decime algún dato
+    - Tira una data
+    - Dame info
+  #...
 
 - intent: conocimiento_wizard_especifico
 # (mi idea es que en el ambiguo el usuario no está queriendo saber exactamente las skills del wizard,por lo que pinta descansarlo)
@@ -60,8 +59,8 @@ nlu:
     - ¿Qué pensas del clima?
     - ¿Qué opinas de la economía del país?
     - ¿Sabes matemática?
-    - ...
-    - ... 
+#- ...
+#- ... 
 
 - intent: wizard_desafio_inteligencia
   examples: |
@@ -71,7 +70,7 @@ nlu:
     - ¿Tan sabio vas a ser?
     - No creo que seas tan inteligente
 
-- intent: wizard_desafio_name
+- intent: wizard_desafio_nombre
   examples: |
     - ¿Por qué te dicen wizard?
     - Así que te dicen "El mago"
