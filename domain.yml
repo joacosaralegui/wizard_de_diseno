@@ -176,7 +176,7 @@ responses:
   - text: 'Nos vemos, cualquier cosita ya sabes que estoy aqui'
   - text: 'Espero haberte ayudado en algo, chauu'
 
-  utter_gracias:
+  utter_de_nada:
   - text: 'A vos!'
   - text: 'Por nada, estoy para ayudarte'
   - text: 'Por nada, siempre y cuando pueda ayudarte lo hare'

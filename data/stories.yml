@@ -95,8 +95,8 @@ stories:
   - action: utter_no_me_tomes_el_pelo
   - intent: despedida
   - action: utter_despedida
-  
-  - story: saludo + charla sobre el bot + conocimiento fuera del alcance del chatbot + no me tomes el pelo + charla de diseño + despedida
+
+- story: saludo + charla sobre el bot + conocimiento fuera del alcance del chatbot + no me tomes el pelo + charla de diseño + despedida
   steps:
   - intent: saludo
   - action: utter_saludo
@@ -120,7 +120,7 @@ stories:
   #...
   - intent: despedida
   - action: utter_despedida
- 
+  
 # Clases diseño
 - story: clase_diseño
   steps:
