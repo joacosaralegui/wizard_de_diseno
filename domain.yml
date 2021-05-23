@@ -3,95 +3,45 @@ session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
 intents:
-- pregunta_concepto_patron
-- pregunta_concepto_patron_listado
-- saludo
-- conocimiento_wizard_ambiguo
-- conocimiento_wizard_especifico
+- no_entendio
 - gracias
-- negacion
+- saludo
+- pregunta_concepto:
+    is_retrieval_intent: true
+- pregunta_atributos:
+    is_retrieval_intent: true
+- chitchat:
+    is_retrieval_intent: true
+- pregunta_patrones:
+    is_retrieval_intent: true
+- wizard_conocimiento_ambiguo
+- wizard_conocimiento_especifico
 - conocimiento_wizard_no_especifico
+- negacion
 - despedida
-- pregunta_concepto_scrum
-- pregunta_concepto_agil
-- pregunta_concepto_fdd
-- pregunta_concepto_atr-calidad
-- pregunta_concepto_hook
-- pregunta_concepto_req_func
-- pregunta_concepto_req_no_func
-- pregunta_concepto_req_no_func_ejemplo
-- pregunta_concepto_req_func_ejemplo
-- pregunta_diferencia_req_func_no_func
-- pregunta_patron_abstract-factory
-- pregunta_patron_factory-method
-- pregunta_patron_builder
-- pregunta_patron_prototype
-- pregunta_patron_singleton
-- pregunta_patron_adapter
-- pregunta_patron_bridge
-- pregunta_patron_composite
-- pregunta_patron_decorator
-- pregunta_patron_facade
-- pregunta_patron_flyweigth
-- pregunta_patron_proxy
-- pregunta_patron_chain-of-responsibility
-- pregunta_patron_command
-- pregunta_patron_memento
-- pregunta_patron_iterator
-- pregunta_patron_mediator
-- pregunta_patron_observer
-- pregunta_patron_state
-- pregunta_patron_strategy
-- pregunta_patron_template-method
-- pregunta_patron_visitor
-- pregunta_atr-calidad_listado
-- pregunta_atr-calidad_tolerancia-a-fallos
-- pregunta_atr-calidad_tolerancia-a-fallos_ejemplo
-- pregunta_atr-calidad_disponibilidad
-- pregunta_atr-calidad_disponibilidad_ejemplo
-- pregunta_atr-calidad_mantenibilidad
-- pregunta_atr-calidad_mantenibilidad_ejemplo
-- pregunta_atr-calidad_performance
-- pregunta_atr-calidad_performance_ejemplo
-- pregunta_atr-calidad_escalabilidad
-- pregunta_atr-calidad_escalabilidad_ejemplo
-- pregunta_atr-calidad_seguridad
-- pregunta_atr-calidad_seguridad_ejemplo
-- pregunta_atr-calidad_usabilidad
-- pregunta_atr-calidad_usabilidad_ejemplo
-- pregunta_atr-calidad_portabilidad
-- pregunta_atr-calidad_portabilidad_ejemplo
-- pregunta_atr-calidad_interoperabilidad
-- pregunta_atr-calidad_nteroperabilidad_ejemplo
 - afirmacion
 - entendio
-- no_entendio
-- bien
-- mal
-- aburrido
-- cansado
 - ayuda_transparencia
 - ayuda_presentacion_transparencia
 - concepto_transparencia
-- clase_marcelo
 - concepto_millenial
 - concepto_centennial
-- objetivo_clase_marcelo
+- modo_de_evaluacion
 - wizard_pedido_ayuda
-- wizard_nombre
-- wizard_desafio_inteligencia
-- wizard_desafio_nombre
-- wizard_creacion
-- wizard_cumpleaños
-- wizard_edad_especifica
-- wizard_edad_no_especifica_viejo
-- wizard_edad_no_especifica_joven
-- wizard_genero
-- wizard_padres
 entities:
 - atr-calidad
 - concepto
 - patron
+slots:
+  concepto:
+    type: text
+    influence_conversation: true
+  patron:
+    type: text
+    influence_conversation: true
+  atr-calidad:
+    type: text
+    influence_conversation: true
 responses:
   utter_saludo:
   - text: Hola! Soy DesignWizard. Qué te pinta hacer hoy?
@@ -113,144 +63,156 @@ responses:
   - text: Que es lo que no entendes?
   - text: Dime que es lo que no entendiste, quizas pueda ayudarte de otra menera
   - text: Con que te quedaron dudas?
-  utter_bien:
+  utter_chitchat:
+  - text: Test de chitchat
+  utter_pregunta_concepto:
+  - text: Test de concepto
+  utter_pregunta_patrones:
+  - text: Test de patrones
+  utter_pregunta_atributos:
+  - text: Test de atributos
+  utter_chitchat/bien:
   - text: Me alegro mucho...
   - text: Mejor asi entonces
   - text: Buenisimo que asi sea
   - text: Esa es la actitud!!
-  utter_mal:
+  utter_chitchat/mal:
   - text: Tranqui, siempre se puede estar peor
   - text: Uhh que lastima, espero con mi ayuda estes un poco mejor
   - text: Uhh bajon, ya estaras mejor!
   - text: Trata de pensar en cosas positivas, eso ayuda a sentirse mejor
-  utter_aburrido:
+  utter_chitchat/aburrido:
   - text: Tranqui, ya encontraras algo para hacer
   - text: Espero poder entretenerte un rato entonces
   - text: Si no tenes nada para hacer, ponete a investigar sobre patrones de diseño, ya que es muy importante
   - text: Hablemos de patrones de diseño y nos entretenemos un ratito
-  utter_cansado:
+  utter_chitchat/cansado:
   - text: Cuando puedas intenta descansar para luego estar con mas energia
   - text: Tomate un cafe, eso te puede ayudar
   - text: Somos dos, yo tambien estoy cansado, he charlado con mucha gente hoy
   - text: Ya habra tiempo para descansar, ahora es momento de seguir aprendiendo
-  utter_concepto_patron:
+  utter_pregunta_concepto/patron:
   - text: Los patrones de diseño (design patterns) son soluciones habituales a problemas comunes en el diseño de software. Cada patrón es como un plano que se puede personalizar para resolver un problema de diseño particular de tu código.
-  utter_concepto_scrum:
+  utter_pregunta_concepto/patron_clarificacion:
+  - text:  Mirá, pensalos cómo las estructuras más utilizadas para resolver problemas muy comunes a la hora de diseñar tu solución.
+  utter_pregunta_concepto/scrum:
   - text: 'La metodología Scrum es un framework que se utiliza dentro de equipos que manejan proyectos complejos. Es decir, se trata de una metodología de trabajo ágil que tiene como finalidad la entrega de valor en períodos cortos de tiempo y para ello se basa en tres pilares: la transparencia, inspección y adaptación.'
-  utter_concepto_agil:
+  utter_pregunta_concepto/scrum_clarificacion:
+  - text: 'Pensalo como un conjunto de reglas y prácticas para poder organizar el trabajo de mucha gente. Cada persona tiene un rol, con distintas personalidades y hay eventos importantes que agrupan distintos roles.'
+  utter_pregunta_concepto/agil:
   - text: Las metodologías ágiles son un conjunto de métodos que permiten adaptar el modo de trabajo a las condiciones del proyecto, aportando flexibilidad, eficiencia y, por lo tanto, logrando un mejor producto a menor coste.
-  utter_concepto_FDD:
+  utter_pregunta_concepto/agil_clarificacion:
+  - text: Pensalos cómo la manera de combinar la velocidad y creatividad con las estructuras tradicionales de las empresas grandes.
+  utter_pregunta_concepto/fdd:
   - text: Feature-driven development (FDD) es un proceso para desarrollo de software de forma iterativa e incremental\nEl proceso comienza por los requerimientos y el modelado, siguiendo por el diseño y construcción en base a incrementos
-  utter_concepto_atributo-de-calidad:
+  utter_pregunta_concepto/atr-calidad:
   - text: Los atributos de calidad (también cualidades del software) son características no funcionales que se consideran deseables en un sistema de software.
   - text: Un atributo de calidad es una propiedad medible de un sistema, que indica qué tan bien el sistema satisface las necesidades de las partes interesadas.
-  utter_concepto_hook:
+  utter_pregunta_concepto/hook:
   - text: Hooking is a concept that allows modifying the behavior of a program. It’s the chance that code gives you to change the original behavior of something without changing your code of the corresponding class. This is done by overwriting the hook methods.
-  utter_concepto_requerimiento-funcional:
+  utter_pregunta_concepto/req_func:
   - text: Los requerimientos funcionales de un sistema son aquellos que describen cualquier actividad/servicio que éste deba realizar.
-  utter_concepto_requerimiento-funcional_ejemplo:
+  utter_pregunta_concepto/req_func_ejemplo:
   - text: Un ejemplo de requerimiento funcional, sería:\nEl sistema permitirá a los usuarios autorizados ingresar planes y cronogramas de proyecto
   - text: Por ejemplo,\nEl sistema permitirá el envío automatizado de cartas de entrega de órdenes directamente al almacén.
-  utter_concepto_requerimiento-no-funcional:
+  utter_pregunta_concepto/req_no_func:
   - text: Los requerimientos no funcionales representan características generales y restricciones de la aplicación o sistema que se esté desarrollando.
   - text: 'Se trata de requisitos que no se refieren directamente a las funciones específicas suministradas por el sistema (características de usuario), sino a las propiedades del sistema: rendimiento, seguridad, disponibilidad.'
-  utter_concepto_requerimiento-no-funcional_ejemplo:
+  utter_pregunta_concepto/req_no_func_ejemplo:
   - text: Por ejemplo,\nTodas las comunicaciones externas entre los servidores de datos, la aplicación y el cliente del sistema deben estar cifradas utilizando el algoritmo RSA.\nEs un ejemplo de RNF que puede encasillarse en el atributo de calidad de Seguridad.
-  utter_diferencia_req_func_no_func:
+  utter_pregunta_concepto/diferencia_req_func_no_func:
   - text: Un requisito funcional describe lo que debe hacer un sistema, mientras que los requisitos no funcionales imponen restricciones sobre cómo lo hará el sistema.
-  utter_concepto_patron_tipos:
-  - text: 'Los patrones se dividen en 3 tipos: Creacionales, Estructurales y de Comportamiento'
-  utter_concepto_patron_listado:
+  utter_pregunta_patrones/patron_tipos:
   - text: 'Los patrones que podemos encontrar son: Factory Method, Abstract Factory, Builder, Prototype, Singleton, Adapter, Bridge, Composite, Decorator, Facade, Flyweight, Proxy, Chain of Responsibility, Command, Iterator, Mediator, Memento, Observer, State, Strategy, Templete Method y Visitor '
-  utter_patron_abstract-factory:
+  utter_pregunta_patrones/abstract-factory:
   - text: Abstract Factory es un patrón de diseño creacional que nos permite producir familias de objetos relacionados sin especificar sus clases concretas.
-  utter_patron_factory-method:
+  utter_pregunta_patrones/factory-method:
   - text: Factory Method es un patrón de diseño creacional que proporciona una interfaz para crear objetos en una superclase, mientras permite a las subclases alterar el tipo de objetos que se crearán.
-  utter_patron_builder:
+  utter_pregunta_patrones/builder:
   - text: Builder es un patrón de diseño creacional que nos permite construir objetos complejos paso a paso. El patrón nos permite producir distintos tipos y representaciones de un objeto empleando el mismo código de construcción.
-  utter_patron_prototype:
+  utter_pregunta_patrones/prototype:
   - text: Prototype es un patrón de diseño creacional que nos permite copiar objetos existentes sin que el código dependa de sus clases.
-  utter_patron_singleton:
+  utter_pregunta_patrones/singleton:
   - text: Singleton es un patrón de diseño creacional que nos permite asegurarnos de que una clase tenga una única instancia, a la vez que proporciona un punto de acceso global a dicha instancia.
-  utter_patron_adapter:
+  utter_pregunta_patrones/adapter:
   - text: Adapter es un patrón de diseño estructural que permite la colaboración entre objetos con interfaces incompatibles.
-  utter_patron_bridge:
+  utter_pregunta_patrones/bridge:
   - text: Bridge es un patrón de diseño estructural que te permite dividir una clase grande, o un grupo de clases estrechamente relacionadas, en dos jerarquías separadas (abstracción e implementación) que pueden desarrollarse independientemente la una de la otra.
-  utter_patron_composite:
+  utter_pregunta_patrones/composite:
   - text: Composite es un patrón de diseño estructural que te permite componer objetos en estructuras de árbol y trabajar con esas estructuras como si fueran objetos individuales.
-  utter_patron_decorator:
+  utter_pregunta_patrones/decorator:
   - text: Decorator es un patrón de diseño estructural que te permite añadir funcionalidades a objetos colocando estos objetos dentro de objetos encapsuladores especiales que contienen estas funcionalidades.
-  utter_patron_facade:
+  utter_pregunta_patrones/facade:
   - text: Facade es un patrón de diseño estructural que proporciona una interfaz simplificada a una biblioteca, un framework o cualquier otro grupo complejo de clases.
-  utter_patron_flyweight:
+  utter_pregunta_patrones/flyweight:
   - text: Flyweight es un patrón de diseño estructural que te permite mantener más objetos dentro de la cantidad disponible de RAM compartiendo las partes comunes del estado entre varios objetos en lugar de mantener toda la información en cada objeto.
-  utter_patron_proxy:
+  utter_pregunta_patrones/proxy:
   - text: Proxy es un patrón de diseño estructural que te permite proporcionar un sustituto o marcador de posición para otro objeto. Un proxy controla el acceso al objeto original, permitiéndote hacer algo antes o después de que la solicitud llegue al objeto original.
-  utter_patron_chain-of-responsibility:
+  utter_pregunta_patrones/chain-of-responsibility:
   - text: Chain of Responsibility es un patrón de diseño de comportamiento que te permite pasar solicitudes a lo largo de una cadena de manejadores. Al recibir una solicitud, cada manejador decide si la procesa o si la pasa al siguiente manejador de la cadena.
-  utter_patron_command:
+  utter_pregunta_patrones/command:
   - text: Command es un patrón de diseño de comportamiento que convierte una solicitud en un objeto independiente que contiene toda la información sobre la solicitud. Esta transformación te permite parametrizar los métodos con diferentes solicitudes, retrasar o poner en cola la ejecución de una solicitud y soportar operaciones que no se pueden realizar.
-  utter_patron_memento:
+  utter_pregunta_patrones/memento:
   - text: Memento es un patrón de diseño de comportamiento que te permite guardar y restaurar el estado previo de un objeto sin revelar los detalles de su implementación.
-  utter_patron_iterator:
+  utter_pregunta_patrones/iterator:
   - text: Iterator es un patrón de diseño de comportamiento que te permite recorrer elementos de una colección sin exponer su representación subyacente (lista, pila, árbol, etc.).
-  utter_patron_mediator:
+  utter_pregunta_patrones/mediator:
   - text: Mediator es un patrón de diseño de comportamiento que te permite reducir las dependencias caóticas entre objetos. El patrón restringe las comunicaciones directas entre los objetos, forzándolos a colaborar únicamente a través de un objeto mediador.
-  utter_patron_observer:
+  utter_pregunta_patrones/observer:
   - text: Observer es un patrón de diseño de comportamiento que te permite definir un mecanismo de suscripción para notificar a varios objetos sobre cualquier evento que le suceda al objeto que están observando.
-  utter_patron_state:
+  utter_pregunta_patrones/state:
   - text: State es un patrón de diseño de comportamiento que permite a un objeto alterar su comportamiento cuando su estado interno cambia. Parece como si el objeto cambiara su clase.
-  utter_patron_strategy:
+  utter_pregunta_patrones/strategy:
   - text: Strategy es un patrón de diseño de comportamiento que te permite definir una familia de algoritmos, colocar cada uno de ellos en una clase separada y hacer sus objetos intercambiables.
-  utter_patron_template-method:
+  utter_pregunta_patrones/template-method:
   - text: Template Method es un patrón de diseño de comportamiento que define el esqueleto de un algoritmo en la superclase pero permite que las subclases sobrescriban pasos del algoritmo sin cambiar su estructura.
-  utter_patron_visitor:
+  utter_pregunta_patrones/visitor:
   - text: Visitor es un patrón de diseño de comportamiento que te permite separar algoritmos de los objetos sobre los que operan.
-  utter_atr-calidad_listado:
+  utter_pregunta_atributos/listado:
   - text: 'Los atributos de calidad son: Tolerancia a Fallos, Disponiilidad, Mantenibilidad, Performance, Escalabilidad, Seguridad, Usabilidad, Portabilidad e Interoperabilidad'
-  utter_atr-calidad_tolerancia-a-fallos:
+  utter_pregunta_atributos/tolerancia-a-fallos:
   - text: Es la capacidad del sistema o componente para operar según lo previsto en presencia de fallos hardware o software.
-  utter_atr-calidad_tolerancia-a-fallos_ejemplo:
+  utter_pregunta_atributos/tolerancia-a-fallos_ejemplo:
   - text: Por ejemplo, un requerimiento no funcional que se encasilla en Tolerancia a fallos puede ser:\nEl producto tendrá tolerancia a fallas mediante el uso de técnicas de recuperación, transacciones compensatorias y enrutamiento en caso de fallas.
   - text: Por ejemplo, un requerimiento no funcional que se encasilla en Tolerancia a fallos puede ser:\nDebe ser posible que se trate de forma independiente una falla de software del sistema
-  utter_disponibilidad:
+  utter_pregunta_atributos/disponibilidad:
   - text: Capacidad del sistema o componente de estar operativo y accesible para su uso cuando se requiere.
-  utter_atr-calidad_disponibilidad_ejemplo:
+  utter_pregunta_atributos/disponibilidad_ejemplo:
   - text: Por ejemplo, un requerimiento no funcional que se encasilla en Disponibilidad puede ser:\nEs relevante que el sistema este disponible las 24 horas del día durante todo el año
   - text: Por ejemplo, un requerimiento no funcional que se encasilla en Disponibilidad puede ser:\nEl sistema debe estar inactivo un tiempo relativamente corto por año.
-  utter_atr-calidad_mantenibilidad:
+  utter_pregunta_atributos/mantenibilidad:
   - text: Esta característica representa la capacidad del producto software para ser modificado efectiva y eficientemente, debido a necesidades evolutivas, correctivas o perfectivas.
-  utter_atr-calidad_mantenibilidad_ejem:
+  utter_pregunta_atributos/mantenibilidad_ejemplo:
   - text: Por ejemplo, un requerimiento no funcional que se encasilla en Mantenibilidad puede ser:\nLos componentes del sistema deben poder intercambiarse sin afectar el funcionamiento del programa
   - text: Por ejemplo, un requerimiento no funcional que se encasilla en Mantenibilidad puede ser:\nEl sistema debe ser fácil de actualizar
-  utter_atr-calidad_performance:
+  utter_pregunta_atributos/performance:
   - text: Esta característica representa el desempeño relativo a la cantidad de recursos utilizados bajo determinadas condiciones
-  utter_atr-calidad_performance_ejemplo:
+  utter_pregunta_atributos/performance_ejemplo:
   - text: Por ejemplo, un requerimiento no funcional que se encasilla en Performance puede ser:\nEs importante que el sistema traiga resultados de búsqueda en un tiempo aceptable
   - text: Por ejemplo, un requerimiento no funcional que se encasilla en Performance puede ser:\nEl tiempo de espera para que un usuario navegue de una pantalla será inmediato
-  utter_atr-calidad_escalabilidad:
+  utter_pregunta_atributos/escalabilidad:
   - text: 'Es la capacidad de un sistema para funcionar bien cuando se presentan cambios en la demanda o en la carga del mismo. '
-  utter_atr-calidad_escalabilidad_ejemplo:
+  utter_pregunta_atributos/escalabilidad_ejemplo:
   - text: Por ejemplo, un requerimiento no funcional que se encasilla en Escalabilidad puede ser:\nEl producto debe ser capaz de soportar y administrar 1000 usuarios simultáneos y remotos
   - text: Por ejemplo, un requerimiento no funcional que se encasilla en Escalabilidad puede ser:\nEl sistema de manejo de cuentas debera soportar un número ilimitado de clientes, cuentas y transacciones
-  utter_atr-calidad_seguridad:
+  utter_pregunta_atributos/seguridad:
   - text: 'Capacidad de protección de la información y los datos de manera que personas o sistemas no autorizados no puedan leerlos o modificarlos. '
-  utter_atr-calidad_seguridad_ejemplo:
+  utter_pregunta_atributos/seguridad_ejemplo:
   - text: Por ejemplo, un requerimiento no funcional que se encasilla en Seguridad puede ser:\nEs importante que el sistema traiga autorización de usuarios y almacenamiento seguro de contraseñas
   - text: Por ejemplo, un requerimiento no funcional que se encasilla en Seguridad puede ser:\nNo se introducirán datos inválidos en el sistema
-  utter_atr-calidad_usabilidad:
+  utter_pregunta_atributos/usabilidad:
   - text: 'Es la capacidad del producto software para ser entendido, aprendido, usado y resultar atractivo para el usuario, cuando se usa bajo determinadas condiciones. '
-  utter_atr-calidad_usabilidad_ejemplo:
+  utter_pregunta_atributos/usabilidad_ejemplo:
   - text: Por ejemplo, un requerimiento no funcional que se encasilla en Usabilidad puede ser:\nEs importante que el sistema sea intuitivo y de fácil comprensión
   - text: Por ejemplo, un requerimiento no funcional que se encasilla en Usabilidad puede ser:\nLa navegación debe diseñarse para ayudar a los usuarios a comprender dónde se encuentran, dónde han estado y adónde pueden ir a continuación
-  utter_atr-calidad_portabilidad:
+  utter_pregunta_atributos/portabilidad:
   - text: Es la capacidad del producto o componente de ser transferido de forma efectiva y eficiente de un entorno hardware, software, operacional o de utilización a otro
-  utter_atr-calidad_portabilidad_ejemplo:
+  utter_pregunta_atributos/portabilidad_ejemplo:
   - text: Por ejemplo, un requerimiento no funcional que se encasilla en Portabilidad puede ser:\nEl sistema debe funcionar en más de una plataforma móvil (Android, iOS)
   - text: Por ejemplo, un requerimiento no funcional que se encasilla en Portabilidad puede ser:\nEl producto debe correr en más de un sistema operativo (Windows, Linux, macOS)
-  utter_atr-calidad_interoperabilidad:
+  utter_pregunta_atributos/interoperabilidad:
   - text: Es la capacidad de dos o más sistemas o componentes para intercambiar información y/o llevar a cabo sus funciones requeridas cuando comparten el mismo entorno hardware o software
-  utter_atr-calidad_interoperabilidad_ejemplo:
+  utter_pregunta_atributos/interoperabilidad_ejemplo:
   - text: Por ejemplo, un requerimiento no funcional que se encasilla en Interoperabilidad puede ser:\nEl producto debe tener la capacidad de interpretar correctamente los datos que se intercambian
   - text: Por ejemplo, un requerimiento no funcional que se encasilla en Interoperabilidad puede ser:\nEl sistema debe poder comunicarse fácilmente con otros servicios
   utter_como_hacer_transparencias:
@@ -267,11 +229,6 @@ responses:
   - text: El objetivo o fin de la clase de Marcelo, sobre de diseño de software, es aprender todo sobre los conceptos en el entorno de diseñar un sistema, tales como patrones de diseño, atributos funcionales y no funcionales entre otros. \ \n La idea es poder llevarse el aprendizaje de como se trabaja un sistema de principio a fin. \ \n Esta clase se complementa con la de Ingeniería de Software, donde se profundiza más en lo realizado en diseño.
   utter_modo_evaluacion:
   - text: Para aprobar la materia Diseño de Software es necesario participar de un proyecto en grupos de varios o pocos integrantes, elegidos por Marcelo, en base a los perfiles de cada alumno.\ \n La idea es llevar a cabo lo que propone Marcelo como proyecto, ademas de realizar una o varias presentaciones sobre temas también elegidos por él.
-  utter_clase_marcelo:
-  - text: En que concepto o tema te puedo ayudar ?
-  - text: En que te puedo ayudar de todo ?
-  - text: Que parte no entendes de las clases ?
-  - text: Podes especificarme que tema, parte o concepto de las clases no entendes ?
   utter_hablar_de_disenio:
   - text: Hablemos de diseño, ¿te parece?.
   utter_hablar_de_habilidades:
@@ -297,11 +254,12 @@ responses:
   utter_familia:
   - text: No tengo parientes, salí de la nada.
 actions:
-- utter_concepto_patron
-- utter_concepto_patron_listado
+- action_clarificacion
+- action_default_fallback
+- action_ejemplo
+- utter_chitchat
 - utter_de_nada
-- utter_despedida
-- utter_hablar_de_disenio
-- utter_hablar_de_habilidades
-- utter_no_me_tomes_el_pelo
+- utter_pregunta_atributos
+- utter_pregunta_concepto
+- utter_pregunta_patrones
 - utter_saludo

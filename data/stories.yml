@@ -2,413 +2,218 @@ version: "2.0"
 
 stories:
 
-- story: happy path
-  steps:
-  - intent: saludo
-  - action: utter_saludo
-  - intent: bien
-  - action: utter_bien
+# # Conocimiento wizard
 
-- story: sad path
-  steps:
-  - intent: saludo
-  - action: utter_saludo
-  - intent: mal
-  - action: utter_bien
+# #(charla que comienza con pregunta ambigua de conocimiento y lo orientamos al diseño, acepta y comienza la charla)
+# - story: saludo + pregunta ambigua sobre autoconocimiento + ofrecer ayuda/hablar de diseño + afirmacion + ... + gracias + despedida
+#   steps:
+#   - intent: saludo
+#   - action: utter_saludo
+#   - intent: wizard_conocimiento_ambiguo
+#   - action: utter_hablar_de_disenio
+#   - intent: afirmacion
+#   - action: utter_hablar_de_habilidades          
+#   #...Agregar pedidos de otras ramas 
+#   #...Agregar pedidos de otras ramas
+#   - intent: gracias
+#   - action: utter_de_nada
+#   - intent: despedida
+#   - action: utter_despedida
 
-# Conocimiento wizard
-
-#(charla que comienza con pregunta ambigua de conocimiento y lo orientamos al diseño, acepta y comienza la charla)
-- story: saludo + pregunta ambigua sobre autoconocimiento + ofrecer ayuda/hablar de diseño + afirmacion + ... + gracias + despedida
-  steps:
-  - intent: saludo
-  - action: utter_saludo
-  - intent: wizard_conocimiento_ambiguo
-  - action: utter_hablar_de_disenio
-  - intent: afirmacion
-  - action: utter_hablar_de_habilidades          
-  #...Agregar pedidos de otras ramas 
-  #...Agregar pedidos de otras ramas
-  - intent: gracias
-  - action: utter_de_nada
-  - intent: despedida
-  - action: utter_despedida
-
-#(charla que comienza con pregunta especifica de conocimiento y lo orientamos al diseño, acepta y comienza la charla)
-- story: saludo + pregunta específica sobre autoconocimiento + ofrecer ayuda/hablar de diseño + afirmacion + ... + gracias + despedida
-  steps:
-  - intent: saludo
-  - action: utter_saludo
-  - intent: wizard_conocimiento_especifico
-  - action: utter_hablar_de_disenio
-  - intent: afirmacion
-  - action: utter_hablar_de_habilidades          
-  #...Agregar pedidos de otras ramas 
-  #...Agregar pedidos de otras ramas
-  - intent: gracias
-  - action: utter_de_nada
-  - intent: despedida
-  - action: utter_despedida
+# #(charla que comienza con pregunta especifica de conocimiento y lo orientamos al diseño, acepta y comienza la charla)
+# - story: saludo + pregunta específica sobre autoconocimiento + ofrecer ayuda/hablar de diseño + afirmacion + ... + gracias + despedida
+#   steps:
+#   - intent: saludo
+#   - action: utter_saludo
+#   - intent: wizard_conocimiento_especifico
+#     entities:
+#     - concepto: diseño
+#   - action: utter_hablar_de_disenio
+#   - intent: afirmacion
+#   - action: utter_hablar_de_habilidades          
+#   #...Agregar pedidos de otras ramas 
+#   #...Agregar pedidos de otras ramas
+#   - intent: gracias
+#   - action: utter_de_nada
+#   - intent: despedida
+#   - action: utter_despedida
   
-  #(charla que comienza con cualquier cosa y lo orientamos al diseño y se niega a charlar, lo despedimos)
-- story: saludo + pregunta ambigua sobre autoconocimiento + ofrecer ayuda/hablar de diseño + negacion + despedida
+#   #(charla que comienza con cualquier cosa y lo orientamos al diseño y se niega a charlar, lo despedimos)
+# - story: saludo + pregunta ambigua sobre autoconocimiento + ofrecer ayuda/hablar de diseño + negacion + despedida
+#   steps:
+#   - intent: saludo
+#   - action: utter_saludo
+#   - intent: wizard_conocimiento_ambiguo
+#   - action: utter_hablar_de_disenio
+#   - intent: negacion
+#   - action: utter_despedida         
+  
+#   #(charla que comienza con pedido de ayuda y aceptamos ayudarlo, nos cuenta su problema)
+# - story: saludo + pedido de ayuda + ofrecer ayuda/hablar de diseño + ... + gracias + despedida
+#   steps:
+#   - intent: saludo
+#   - action: utter_saludo
+#   - intent: wizard_pedido_ayuda
+#   - action: utter_aceptacion_ayuda        
+#   #...Agregar pedidos de otras ramas 
+#   #...Agregar pedidos de otras ramas
+#   - intent: gracias
+#   - action: utter_de_nada
+#   - intent: despedida
+#   - action: utter_despedida
+
+# - story: clase_marcelo, transparencia
+#   steps:
+#   - intent: concepto_transparencia
+#   - action: utter_que_es_una_transparencia
+#   - intent: ayuda_transparencia
+#   - action: utter_como_hacer_transparencias  
+#   - intent: gracias
+#   - action: utter_de_nada
+
+# - story: clase_marcelo, millenials
+#   steps:
+#   - intent: concepto_millenial
+#   - action: utter_concepto_millenial
+#   - intent: gracias
+#   - action: utter_de_nada
+
+# - story: clase_marcelo, centennials
+#   steps:
+#   - intent: concepto_centennial
+#   - action: utter_concepto_centennial
+#   - intent: gracias
+#   - action: utter_de_nada
+
+# - story: relizar_transparencia
+#   steps:
+#   - intent: ayuda_transparencia
+#   - action: utter_como_hacer_transparencias
+#   - intent: gracias
+#   - action: utter_de_nada
+
+# - story: concepto, ayuda transparencia
+#   steps:
+#   - intent: concepto_transparencia
+#   - action: utter_que_es_una_transparencia
+#   - intent: ayuda_transparencia
+#   - action: utter_como_hacer_transparencias
+#   - intent: gracias
+#   - action: utter_de_nada  
+  
+# - story: ayuda presentacion transparencia
+#   steps:
+#   - intent: ayuda_presentacion_transparencia
+#   - action: utter_como_hacer_una_transparencia  
+#   - intent: gracias
+#   - action: utter_de_nada  
+  
+# - story: concepto transparencia
+#   steps:
+#   - intent: concepto_transparencia
+#   - action: utter_que_es_una_transparencia
+#   - intent: gracias
+#   - action: utter_de_nada
+  
+# - story: concepto millenial
+#   steps:
+#   - intent: concepto_millenial
+#   - action: utter_concepto_millenial 
+#   - intent: gracias
+#   - action: utter_de_nada
+  
+# - story: concepto millenial
+#   steps:
+#   - intent: concepto_centennial
+#   - action: utter_concepto_centennial 
+#   - intent: gracias
+#   - action: utter_de_nada
+  
+# - story: objetivo clase diseño
+#   steps:
+#   - intent: modo_de_evaluacion 
+#   - action: utter_modo_evaluacion
+#   - intent: gracias
+#   - action: utter_de_nada
+  
+# - story: objetivo clase diseño
+#   steps:
+#   - intent: modo_de_evaluacion 
+#   - action: utter_modo_evaluacion
+#   - intent: gracias
+#   -  action: utter_de_nada
+
+- story: interactive_story_1
   steps:
   - intent: saludo
   - action: utter_saludo
-  - intent: wizard_conocimiento_ambiguo
-  - action: utter_hablar_de_disenio
+  - intent: conocimiento_wizard_no_especifico
+  - action: utter_no_me_tomes_el_pelo
   - intent: negacion
-  - action: utter_despedida         
-  
-  #(charla que comienza con pedido de ayuda y aceptamos ayudarlo, nos cuenta su problema)
-- story: saludo + pedido de ayuda + ofrecer ayuda/hablar de diseño + ... + gracias + despedida
+  - action: utter_despedida
+  - intent: despedida
+
+- story: interactive_story_2
+  steps:
+  - intent: saludo
+  - action: utter_saludo
+  - intent: wizard_conocimiento_ambiguo
+  - action: utter_hablar_de_disenio
+  - intent: wizard_conocimiento_especifico
+  - action: utter_hablar_de_habilidades
+  - intent: gracias
+  - action: utter_de_nada
+
+- story: interactive_story_3
   steps:
   - intent: saludo
   - action: utter_saludo
   - intent: wizard_pedido_ayuda
-  - action: utter_aceptacion_ayuda        
-  #...Agregar pedidos de otras ramas 
-  #...Agregar pedidos de otras ramas
-  - intent: gracias
-  - action: utter_de_nada
-  - intent: despedida
-  - action: utter_despedida
-
-# Hacer variantes de esto
-- story: saludo + charla sobre el bot + conocimiento fuera del alcance del chatbot + no me tomes el pelo + despedida
-  steps:
-  - intent: saludo
-  - action: utter_saludo
-  - intent: wizard_nombre
-  - action: utter_nombre       
-  - intent: wizard_creacion
-  - action: utter_no_se
-  - intent: wizard_desafio_inteligencia
-  - action: utter_inteligencia
-  - intent: wizard_genero
-  - action: utter_genero
-  - intent: wizard_padres
-  - action: utter_familia
-  - intent: wizard_edad_especifico
-  - action: utter_edad
-  - intent: conocimiento_wizard_no_especifico
-  - action: utter_no_me_tomes_el_pelo
-  - intent: despedida
-  - action: utter_despedida
-
-- story: saludo + charla sobre el bot + conocimiento fuera del alcance del chatbot + no me tomes el pelo + charla de diseño + despedida
-  steps:
-  - intent: saludo
-  - action: utter_saludo
-  - intent: wizard_nombre
-  - action: utter_nombre       
-  - intent: wizard_creacion
-  - action: utter_no_se
-  - intent: wizard_desafio_inteligencia
-  - action: utter_inteligencia
-  - intent: wizard_genero
-  - action: utter_genero
-  - intent: wizard_padres
-  - action: utter_familia
-  - intent: wizard_edad_especifico
-  - action: utter_edad
-  - intent: conocimiento_wizard_no_especifico
-  - action: utter_no_me_tomes_el_pelo
-  - intent: despedida
-  - action: utter_despedida
-  #...
-  #...
-  - intent: despedida
-  - action: utter_despedida
-  
-# Clases diseño
-- story: clase_diseño
-  steps:
-  - intent: clase_marcelo 
-  - action: utter_clase_marcelo 
-
-- story: clase_marcelo, transparencia
-  steps:
-  - intent: clase_marcelo 
-  - action: utter_clase_marcelo 
-  - intent: concepto_transparencia
-  - action: utter_que_es_una_transparencia
-  - intent: ayuda_transparencia
-  - action: utter_como_hacer_transparencias  
-  - intent: gracias
-  - action: utter_de_nada
-
-- story: clase_marcelo, millenials
-  steps:
-  - intent: clase_marcelo 
-  - action: utter_clase_marcelo 
-  - intent: concepto_millenial
-  - action: utter_concepto_millenial
-  - intent: gracias
-  - action: utter_de_nada
-
-- story: clase_marcelo, centennials
-  steps:
-  - intent: clase_marcelo 
-  - action: utter_clase_marcelo 
-  - intent: concepto_centennial
-  - action: utter_concepto_centennial
-  - intent: gracias
-  - action: utter_de_nada
-
-- story: clase_marcelo, patrones
-  steps:
-  - intent: clase_marcelo 
-  - action: utter_clase_marcelo 
-  - intent: pregunta_concepto_patron
-  - action: utter_concepto_patron
-  - intent: gracias
-  - action: utter_despedida
-
-- story: clase_marcelo, scrum
-  steps:
-  - intent: clase_marcelo 
-  - action: utter_clase_marcelo 
-  - intent: pregunta_concepto_scrum
-  - action: utter_concepto_scrum
-  - intent: gracias
-  - action: utter_de_nada
-
-# Conocimiento General
-- story: conocimiento wizard + conocimiento general + flujo 1
-  steps:
-  - intent: saludo
-  - action: utter_saludo
-  - intent: conocimiento_wizard_especifico
-  - action: utter_hablar_de_habilidades
-  - intent: pregunta_concepto_atr-calidad
-    entities:
-    - concepto: atributo de calidad
-  - action: utter_concepto_atributo-de-calidad
-  - intent: pregunta_concepto_req_no_func
-    entities:
-    - concepto: requerimientos no funcionales
-  - action: utter_concepto_requerimiento-no-funcional
-  - intent: pregunta_patron_template-method
-    entities:
-    - patron: template-method
-  - action: utter_patron_template-method
-  - intent: gracias
-  - action: utter_despedida
-  - intent: despedida
-
-- story: interactive_story_1
-  steps:
-  - intent: saludo
-  - action: utter_saludo
-  - intent: wizard_nombre
-  - action: utter_nombre
-  - intent: conocimiento_wizard_especifico
-  - action: utter_hablar_de_habilidades
-  - intent: pregunta_concepto_agil
-    entities:
-    - concepto: agil
-  - action: utter_concepto_agil
-  - intent: pregunta_concepto_scrum
-    entities:
-    - concepto: scrum
-  - action: utter_concepto_scrum
-  - intent: clase_marcelo
-  - action: utter_clase_marcelo
-  - intent: ayuda_transparencia
-  - action: utter_como_hacer_transparencias
-  - intent: gracias
-  - action: utter_despedida
-
-# Clases
-
-- story: clase_marcelo, agil 
-  steps:
-  - intent: clase_marcelo 
-  - action: utter_clase_marcelo 
-  - intent: pregunta_concepto_agil
-  - action: utter_concepto_agil
-  - intent: gracias
-  - action: utter_de_nada
-
-- story: clase_marcelo, fdd
-  steps:
-  - intent: clase_marcelo 
-  - action: utter_clase_marcelo 
-  - intent: pregunta_concepto_fdd
-  - action: utter_concepto_FDD
-  - intent: gracias
-  - action: utter_de_nada
-
-- story: clase_marcelo, atributo de calidad
-  steps:
-  - intent: clase_marcelo 
-  - action: utter_clase_marcelo 
-  - intent: pregunta_concepto_atr_calidad
-  - action: utter_concepto_atributo-de-calidad
-  - intent: gracias
-  - action: utter_de_nada
-
-- story: clase_marcelo, hook
-  steps:
-  - intent: clase_marcelo 
-  - action: utter_clase_marcelo 
-  - intent: pregunta_concepto_hook
-  - action: utter_concepto_hook
-  - intent: gracias
-  - action: utter_de_nada
-
-- story: clase_marcelo, req funcional
-  steps:
-  - intent: clase_marcelo 
-  - action: utter_clase_marcelo 
-  - intent: pregunta_concepto_req_func
-  - action: utter_concepto_requerimiento-funcional
-  - intent: gracias
-  - action: utter_de_nada
-
-- story: clase_marcelo, req no funcional
-  steps:
-  - intent: clase_marcelo 
-  - action: utter_clase_marcelo 
-  - intent: pregunta_concepto_req_no_func
-  - action: utter_concepto_requerimiento-no-funcional
-  - intent: gracias
-  - action: utter_de_nada
-
-- story: clase_marcelo, patrones , requerimientos 
-  steps:
-  - intent: clase_marcelo 
-  - action: utter_clase_marcelo 
-  - intent: pregunta_concepto_patron
-  - action: utter_concepto_patron
-  - intent: pregunta_concepto_req_func
-  - action: utter_concepto_requerimiento-funcional 
-  - intent: pregunta_concepto_req_no_func
-  - action: utter_concepto_requerimiento-no-funcional
-  - intent: gracias
-  - action: utter_de_nada
-
-- story: clase_marcelo, atributo de calidad, req no funcional
-  steps:
-  - intent: clase_marcelo 
-  - action: utter_clase_marcelo 
-  - intent: pregunta_concepto_atr_calidad
-  - action: utter_concepto_atributo-de-calidad
-  - intent: pregunta_concepto_req_no_func
-  - action: utter_concepto_requerimiento-no-funcional
-  - intent: gracias
-  - action: utter_de_nada
-
-- story: clase_marcelo, atributo de calidad, req no funcional
-  steps:
-  - intent: clase_marcelo 
-  - action: utter_clase_marcelo 
-  - intent: pregunta_concepto_atr_calidad
-  - action: utter_concepto_atributo-de-calidad
-  - intent: pregunta_concepto_req_no_func
-  - action: utter_concepto_requerimiento-no-funcional
-  - intent: gracias
-  - action: utter_de_nada
-
-- story: clase_marcelo, agil, scrum fdd
-  steps:
-  - intent: clase_marcelo 
-  - action: utter_clase_marcelo 
-  - intent: pregunta_concepto_agil
-  - action: utter_concepto_agil
-  - intent: pregunta_concepto_scrum
-  - action: utter_concepto_scrum
-  - intent: pregunta_concepto_fdd
-  - action: utter_concepto_FDD
-  - intent: gracias
-  - action: utter_de_nada
-  
-- story: relizar_transparencia
-  steps:
-  - intent: ayuda_transparencia
-  - action: utter_como_hacer_transparencias
-  - intent: gracias
-  - action: utter_de_nada
-
-- story: concepto, ayuda transparencia
-  steps:
-  - intent: concepto_transparencia
-  - action: utter_que_es_una_transparencia
-  - intent: ayuda_transparencia
-  - action: utter_como_hacer_transparencias
-  - intent: gracias
-  - action: utter_de_nada  
-  
-- story: ayuda presentacion transparencia
-  steps:
+  - action: utter_aceptacion_ayuda
   - intent: ayuda_presentacion_transparencia
-  - action: utter_como_hacer_una_transparencia  
+  - action: utter_como_hacer_una_transparencia
+  - intent: afirmacion
   - intent: gracias
-  - action: utter_de_nada  
-  
-- story: concepto transparencia
-  steps:
-  - intent: concepto_transparencia
-  - action: utter_que_es_una_transparencia
-  - intent: gracias
-  - action: utter_de_nada
-  
-- story: concepto millenial
-  steps:
-  - intent: concepto_millenial
-  - action: utter_concepto_millenial 
-  - intent: gracias
-  - action: utter_de_nada
-  
-- story: concepto millenial
-  steps:
-  - intent: concepto_centennial
-  - action: utter_concepto_centennial 
-  - intent: gracias
-  - action: utter_de_nada
-  
-- story: objetivo clase diseño
-  steps:
-  - intent: objetivo_clase_marcelo
-  - action: utter_objetivo_clase_marcelo
-  - intent: modo_de_evaluacion 
-  - action: utter_modo_evaluacion
-  - intent: gracias
-  - action: utter_de_nada
-  
-- story: objetivo clase diseño
-  steps:
-  - intent: modo_de_evaluacion 
-  - action: utter_modo_evaluacion
-  - intent: gracias
-  -  action: utter_de_nada
 
-- story: interactive_story_1
+- story: interactive_story_5
   steps:
   - intent: saludo
   - action: utter_saludo
-  - intent: conocimiento_wizard_no_especifico
-  - action: utter_no_me_tomes_el_pelo
-  - intent: negacion
-  - action: utter_despedida
-  - intent: despedida
-
-- story: interactive_story_1
-  steps:
-  - intent: saludo
-  - action: utter_saludo
-  - intent: conocimiento_wizard_ambiguo
-  - action: utter_hablar_de_disenio
-  - intent: conocimiento_wizard_especifico
-    entities:
-    - concepto: diseño
-  - action: utter_hablar_de_habilidades
-  - intent: pregunta_concepto_patron
+  - intent: pregunta_concepto
     entities:
     - concepto: patron
-  - action: utter_concepto_patron
-  - intent: pregunta_concepto_patron_listado
-  - action: utter_concepto_patron_listado
+  - slot_was_set:
+    - concepto: patron
+  - action: utter_pregunta_concepto
+  - intent: no_entendio
+  - action: action_clarificacion
+  - intent: gracias
+  - action: utter_de_nada
+
+- story: interactive_story_6
+  steps:
+  - intent: saludo
+  - action: utter_saludo
+  - intent: pregunta_atributos
+    entities:
+    - atr-calidad: tolerancia a fallos
+  - slot_was_set:
+    - atr-calidad: tolerancia a fallos
+  - action: utter_pregunta_atributos
+  - intent: no_entendio
+  - action: action_clarificacion
+  - intent: gracias
+  - action: utter_de_nada
+
+- story: interactive_story_6
+  steps:
+  - intent: saludo
+  - action: utter_saludo
+  - intent: pregunta_atributos
+    entities:
+    - atr-calidad: tolerancia a fallos
+  - slot_was_set:
+    - atr-calidad: tolerancia a fallos
+  - action: utter_pregunta_atributos
   - intent: gracias
   - action: utter_de_nada

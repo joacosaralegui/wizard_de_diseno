@@ -3,50 +3,12 @@ nlu:
 - intent: saludo
   examples: |
     - hola
-    - buenass
-- intent: clase_marcelo
+- intent: pregunta_concepto
   examples: |
-    - Estoy perdido con la ultima clase de Marcelo
+    - necesito ayuda con los [patrones de diseño]{"entity": "concepto", "value": "patron"}
+- intent: no_entendio
+  examples: |
+    - no entiendo
 - intent: gracias
   examples: |
-    - Joya, muchas gracias!
-    - Perfecto! muchas gracias
-    - bueno, muchas gracias por la ayuda!
-- intent: conocimiento_wizard_especifico
-  examples: |
-    - che que onda, que sabes hacer vos?
-    - dale, que sabes de [diseño](concepto)?
-- intent: pregunta_concepto_atr-calidad
-  examples: |
-    - bueno. entonces hablame de [atributos de calidad]{"entity": "concepto", "value": "atributo de calidad"}
-- intent: pregunta_concepto_req_no_func
-  examples: |
-    - Y los [requerimientos no funcionales](concepto)? Que son?
-- intent: pregunta_patron_template-method
-  examples: |
-    - Bien. Y podes explicarme el patron [Template]{"entity": "patron", "value": "template-method"}?
-- intent: despedida
-  examples: |
-    - chau chau
-    - chau
-- intent: conocimiento_wizard_no_especifico
-  examples: |
-    - como esta el dia?
-- intent: negacion
-  examples: |
-    - ni en pedo
-- intent: conocimiento_wizard_ambiguo
-  examples: |
-    - charlemos un rato
-- intent: pregunta_concepto_patron
-  examples: |
-    - no logro entender los [patrones]{"entity": "concepto", "value": "patron"}
-- intent: pregunta_concepto_patron_listado
-  examples: |
-    - aaah cuales existen?
-- synonym: atributo de calidad
-  examples: |
-    - atributos de calidad
-- synonym: template-method
-  examples: |
-    - Template
+    - Gracias

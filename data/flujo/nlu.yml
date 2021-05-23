@@ -1,6 +1,5 @@
 version: "2.0"
 nlu:
-# Sección flujo de conversacion
 - intent: saludo
   examples: |
     - hola genio
@@ -9,102 +8,62 @@ nlu:
     - buenos díass
     - como va
     - hola locura
-    - no me preguntes que hago aca, que haces
-    - holas
-    - vengo a molestar
-    - tienes un momento
-    - quiero hablar
-    - quiero charlar
-    - mira a donde vine a parar
-
 - intent: afirmacion
   examples: |
-    - te tengo que decir que si
     - si
     - por supuesto
     - ok buenisimo
-    - okey 
-    - oka
-    - oki 
+    - okey
+    - oki
     - dale
     - sisi perfecto
-    - sisisi
-    - me parece bien
-    - claaaro
-    - esta bien
-    - me parece acertada tu respuesta
-    - vale hacemos asi entonces
-  
 - intent: negacion
   examples: |
     - no creo que sea asi
     - nono
-    - a mi no me parece 
+    - a mi no me parece
     - no estoy de acuerdo
     - no creo
     - no lo creo
     - de ninguna manera
-    - en absoluto
     - nada de eso
     - ni loco
     - ni a palo
-    - no es por ahi
-    - nonono
-
 - intent: despedida
   examples: |
     - bueno me tengo que ir hasta luego
     - nos vemos, muy buena charla
     - chau nos estamos viendo
-    - chauchau cualquier cosa te vuelvo a escribir
     - hasta la proxima estamos en contacto
     - adios, charlaremos pronto
-    - chauchau
-    - byebye
     - bye
-    - hasta la vista baby
-    - hasta luego un gusto 
+    - hasta luego un gusto
     - nos estamos hablando
-    - nos vemos, luego te vuelvo a escribir
-
 - intent: gracias
   examples: |
     - muchas gracias por la informacion
     - gracias por todo
     - muchisimas gracias por todo
-    - mil gracias fuiste de gran ayuda 
-    - un millon de gracias he aprendido mucho hoy
-    - gracias por todo 
-    - te lo agradezco de corazon
-    - se lo agradezco
-    - muy amable 
-
+    - mil gracias fuiste de gran ayuda
+    - muy amable
+    - Gracias!
 - intent: entendio
   examples: |
     - ahora si entendi
-    - entendi 
+    - entendi
     - la verdad que me sirvio
     - entiendo
     - listo entendido
-    - pude captar todo lo que me dijo
-    - anotado lo voy a tener en cuenta
-    - aaahh agendado
-    - me costo, pero lo pude entender
-    - parecia dificil pero resolto no ser tan complejo al final
-
 - intent: no_entendio
   examples: |
+    - no entendí
+    - no entendi
+    - no entiendo
     - no entiendo un pomo
-    - no logro entender lo que me decis
     - no logro entenderlo
-    - la verdad me cuesta entenderlo
-    - no lo interpreto
-    - no puedo interpretarlo
-    - no entendi un carajo lo que me dijiste
     - la verdad que no lo entiendo, me lo podrias decir de otra forma
     - decimelo de otra manera por favor
-
-- intent: bien
+- intent: chitchat/bien
   examples: |
     - me siento bien
     - hoy estoy alegre
@@ -114,59 +73,33 @@ nlu:
     - fantastico no podria estar mejor
     - estoy bien
     - me encuentro bien
-    - la verdad que estoy de maravilla
-    - muy contento
-    - de puta madre
-    - fenomenal
-    - no podria estar mejor
-    - he estado peor
-    - siempre se puede estar peor
-
-- intent: mal
+    
+- intent: chitchat/mal
   examples: |
-    - me encuentro triste 
+    - me encuentro triste
     - como el orto
     - ahi vamos se podria estar mejor
     - en la ruina
     - en la mierda
-    - estoy como el culo 
+    - estoy como el culo
     - estuve todo el dia tirando
     - podria estar mejor
     - no demasiado bien
     - no estoy en el mejor momento
     - estoy mal
     - me siento mal
-    - mas o menos
-    - mal no pego una
-    - muy mal no me sale nada
-    - ando medio bajon 
-    - maso maso
-    - la verdad que estoy angustiado
-    - angustiada quisiera estar mejor
-    - te mentiria si te digo bien
-    - no estoy en mi mejor momento
-    - he estado mejor
-
-
-- intent: aburrido
+- intent: chitchat/aburrido
   examples: |
     - tremendamente aburrido la verdad
     - completamente aburridisimo
-    - aburrida, no tengo nada para hacer 
+    - aburrida, no tengo nada para hacer
     - me gustaria estar haciendo algo porque estoy muy aburrida
     - embolado, no se que hacer
     - en este momento estoy demasiado embolada
     - buscando algo para hacer
     - me muero de aburrimiento
     - estoy aburrido
-    - estoy aburrida y no me gusta para nada
-    - muy aburrido siendo exacto
-    - me gustaria estar haciendo algo
-    - al pedo la verdad
-    - en este momento estoy al pedo
-    - me gustaria estar haciendo algo
-  
-- intent: cansado
+- intent: chitchat/cansado
   examples: |
     - estoy algo agotado
     - agotada de todo
@@ -176,22 +109,4 @@ nlu:
     - re podrido con ganas de mandar todo a la mierda
     - podrido de tanto estudiar
     - re podrida de laburar
-    - totalmente podrida 
-    - cansadisimo preferiria estar haciendo otras cosas
-    - toy cansadisima
-    - me encuentro agotado
-    - hoy el dia me tiene agotada
-    - sin ganas de nada
-    - no tengo ganas de nada
-    - me gustaria estar en la playa, pero estoy aca desganado
-    - desganada
-    - destrozado totalmente estoy
-    - destrozada
-    - estoy que me caigo
-    - no puedo mas 
-    - hecho pelota de tanto trabajar
-    - en la mierda 
-    - hecho pelota no doy mas
-    - totalmente hecha pelota
-    - hechx pelotx
-    
+    - totalmente podrida

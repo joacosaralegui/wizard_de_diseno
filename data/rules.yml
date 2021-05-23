@@ -1,6 +1,11 @@
 version: "2.0"
 
 rules:
+- rule: respond to chitchat
+  steps:
+  - intent: chitchat
+  - action: utter_chitchat
+
 - rule: respond to pregunta_concepto
   steps:
   - intent: pregunta_concepto

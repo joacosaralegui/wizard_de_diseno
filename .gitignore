@@ -138,3 +138,6 @@ rasa.sb
 story_graph.dot
 
 .DS_Store
+results/
+train_test_split/
+rasa.db
