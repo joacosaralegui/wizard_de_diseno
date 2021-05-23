@@ -2,8 +2,16 @@
 Chatbot especializado en diseño de software desarrollado con Rasa
 
 ## Instalación
-Instalar Python 3, pip y virtualenv y crear un nuevo virtual enviroment: <br/>
+Instalar Python 3.7, pip y virtualenv y crear un nuevo virtual enviroment: <br/>
 https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/
+
+Para python 3.7
+```
+sudo apt-get install python3.7
+sudo apt-get install python3.7-dev
+virtualenv env -p python3.7
+```
+
 
 Con el virtual env activado, instalar los requerimientos corriendo<br/>
 ```pip install -r requirements.txt```
