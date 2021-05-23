@@ -1,0 +1,175 @@
+version: "2.0"
+nlu:
+- intent: pregunta_patrones/patron_tipos
+  examples: |
+    - Qué tipos de [patrones]{"entity": "concepto", "value": "patron"} existen?
+    - Hay alguna clasificación para los [design patterns]{"entity": "concepto", "value": "patron"}?
+    - Cómo se agrupan los [patrones de diseño]{"entity": "concepto", "value": "patron"}?
+    - Que [patrones de diseño]{"entity": "concepto", "value": "patron"} hay?
+    - Cuáles son los [patrones de diseño]{"entity": "concepto", "value": "patron"}?
+    - Cuales son los distintos [design patterns]{"entity": "concepto", "value": "patron"} que hay?
+    - Che, me listas los [patrones de diseño]{"entity": "concepto", "value": "patron"}?
+- intent: pregunta_patrones/abstract-factory
+  examples: |
+    - Conocés el patrón [Abstract Factory]{"entity": "patron", "value": "abstract factory"}
+    - Que onda el patrón de diseño [abstract factory](patron)
+    - Decime que es [abstract factory](patron)
+    - Por favor me explicas el patron de diseño [Abstract Factory]{"entity": "patron", "value": "abstract factory"}
+- intent: pregunta_patrones/factory-method
+  examples: |
+    - Que sabes de [factory method](patron)?
+    - Que es [Factory method]{"entity": "patron", "value": "factory method"}?
+- intent: pregunta_patrones/builder
+  examples: |
+    - Me explicas sobre el patron [builder](patron)
+    - En los dintintos patrones de diseño que existen, cual es el [Builder]{"entity": "patron", "value": "builder"}?
+- intent: pregunta_patrones/prototype
+  examples: |
+    - Me contas sobre [prototype](patron)?
+    - Por favor, me contas sobre el patron sobre [Prototype]{"entity": "patron", "value": "prototype"}?
+- intent: pregunta_patrones/singleton
+  examples: |
+    - Me ayudas a entender el patron de diseño sobre [Singleton]{"entity": "patron", "value": "singleton"}?
+    - Explicame sobre [singleton](patron)
+- intent: pregunta_patrones/adapter
+  examples: |
+    - Por favor ayudame a entender el patron [adapter](patron)
+    - Cual es la funcion de [Adapter]{"entity": "patron", "value": "adapter"}
+- intent: pregunta_patrones/bridge
+  examples: |
+    - Cual es el proposito de [bridge](patron)
+    - Y que es [Bridge]{"entity": "patron", "value": "bridge"}?
+- intent: pregunta_patrones/composite
+  examples: |
+    - Che no entiendo el patron de diseño [composite](patron)
+    - Que pueso hacer con [Composite]{"entity": "patron", "value": "composite"}
+- intent: pregunta_patrones/decorator
+  examples: |
+    - No entiendo para que se usas [Decorator]{"entity": "patron", "value": "decorator"}
+    - Decime que es el patron de diseño [decorator](patron)
+- intent: pregunta_patrones/facade
+  examples: |
+    - Cual es la utilidada de [facade](patron)?
+    - che, no entiendo para que sirve [Facade]{"entity": "patron", "value": "facade"}
+- intent: pregunta_patrones/flyweight
+  examples: |
+    - Me parece que no entiendo [flyweight](patron), me explicas?
+    - Me parece que no entiendo [flyweigth]{"entity": "patron", "value": "flyweight"}, me explicas?
+    - Explicame, por favor, el patron [Flyweigth]{"entity": "patron", "value": "flyweight"}
+- intent: pregunta_patrones/proxy
+  examples: |
+    - Ayudame, quiero saber sobre [proxy](patron)
+    - Me poder contar hacerca del patron [Proxy]{"entity": "patron", "value": "proxy"}
+- intent: pregunta_patrones/chain-of-responsibility
+  examples: |
+    - No entiendo que es [chain of responsibility](patron)
+    - Me decis para que se usa [Chain of Responsibility]{"entity": "patron", "value": "chain of responsibility"}
+- intent: pregunta_patrones/command
+  examples: |
+    - Cual es la funcionalidad de [command](patron)
+    - Contame sobre el patrn de diseño [command](patron)
+- intent: pregunta_patrones/memento
+  examples: |
+    - Explicame que es [memento](patron)
+    - Cual es la utlidad de [Memento]{"entity": "patron", "value": "memento"}?
+- intent: pregunta_patrones/iterator
+  examples: |
+    - Me decis la funcionalidad del patron [iterator](patron)
+    - Che, contame sobre [Iterator]{"entity": "patron", "value": "iterator"}
+- intent: pregunta_patrones/mediator
+  examples: |
+    - No me doy cuenta que es [mediator](patron)
+    - Me ayudas a entender mas sobre el patron [Mediator]{"entity": "patron", "value": "mediator"}?
+- intent: pregunta_patrones/observer
+  examples: |
+    - Desconozco sobre el patron [observer](patron)
+    - Me das una mano para comprender el patron de diseño [Observer]{"entity": "patron", "value": "observer"}?
+- intent: pregunta_patrones/state
+  examples: |
+    - Me ayudas a dejar claro el patrón [state](patron)
+    - Cual es el proposito de [State]{"entity": "patron", "value": "state"}?
+- intent: pregunta_patrones/strategy
+  examples: |
+    - No comprendo el patron de diseño [strategy](patron)
+    - Guacho que onda [Strategy]{"entity": "patron", "value": "strategy"}
+- intent: pregunta_patrones/template-method
+  examples: |
+    - Me explicas como es [Template method]{"entity": "patron", "value": "template-method"}?
+    - Qué es un [Template]{"entity": "patron", "value": "template-method"}?
+- intent: pregunta_patrones/visitor
+  examples: |
+    - Que onda el patron [visitor](patron)?
+    - Y [Visitor]{"entity": "patron", "value": "visitor"}? Cómo es?
+- synonym: abstract factory
+  examples: |
+    - Abstract Factory
+    - Abstract factory
+- synonym: factory method
+  examples: |
+    - Factory method
+    - Factory Method
+- synonym: builder
+  examples: |
+    - Builder
+- synonym: prototype
+  examples: |
+    - Prototype
+- synonym: singleton
+  examples: |
+    - Singleton
+- synonym: adapter
+  examples: |
+    - Adapter
+- synonym: bridge
+  examples: |
+    - Bridge
+- synonym: composite
+  examples: |
+    - Composite
+- synonym: decorator
+  examples: |
+    - Decorator
+- synonym: facade
+  examples: |
+    - Facade
+- synonym: flyweight
+  examples: |
+    - Flyweight
+    - flyweigth
+- synonym: proxy
+  examples: |
+    - Proxy
+- synonym: chain of responsibility
+  examples: |
+    - Chain of Responsibility
+    - Chain of responsibility
+- synonym: command
+  examples: |
+    - Command
+- synonym: memento
+  examples: |
+    - Memento
+- synonym: iterator
+  examples: |
+    - Iterator
+- synonym: mediator
+  examples: |
+    - Mediator
+- synonym: observer
+  examples: |
+    - Observer
+- synonym: state
+  examples: |
+    - State
+- synonym: strategy
+  examples: |
+    - Strategy
+- synonym: template-method
+  examples: |
+    - Template method
+    - Template
+    - template
+    - Template Method
+- synonym: visitor
+  examples: |
+    - Visitor
