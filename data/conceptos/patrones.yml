@@ -1,175 +1,140 @@
 version: "2.0"
 nlu:
-- intent: pregunta_patrones/patron_tipos
+- intent: pregunta_patrones/capas
+  examples: | 
+    - Qué es el patron [capas]{"entity": "patron_arquitectonico", "value": "capas"}?
+    - Explicame el pattern [Layered]{"entity": "patron_arquitectonico", "value": "capas"}
+
+- intent: pregunta_patrones/cliente-servidor
   examples: |
-    - Qué tipos de [patrones]{"entity": "concepto", "value": "patron"} existen?
-    - Hay alguna clasificación para los [design patterns]{"entity": "concepto", "value": "patron"}?
-    - Cómo se agrupan los [patrones de diseño]{"entity": "concepto", "value": "patron"}?
-    - Que [patrones de diseño]{"entity": "concepto", "value": "patron"} hay?
-    - Cuáles son los [patrones de diseño]{"entity": "concepto", "value": "patron"}?
-    - Cuales son los distintos [design patterns]{"entity": "concepto", "value": "patron"} que hay?
-    - Che, me listas los [patrones de diseño]{"entity": "concepto", "value": "patron"}?
-- intent: pregunta_patrones/abstract-factory
+    - Sabes algo de [cliente-servidor]{"entity": "patron_arquitectonico", "value": "cliente-servidor"}?
+    - Y [Client-Server]{"entity": "patron_arquitectonico", "value": "cliente-servidor"}? Podes explicarmelo?
+
+- intent: pregunta_patrones/maestro-esclavo
   examples: |
-    - Conocés el patrón [Abstract Factory]{"entity": "patron", "value": "abstract factory"}
-    - Que onda el patrón de diseño [abstract factory](patron)
-    - Decime que es [abstract factory](patron)
-    - Por favor me explicas el patron de diseño [Abstract Factory]{"entity": "patron", "value": "abstract factory"}
-- intent: pregunta_patrones/factory-method
+    - Che me explicas [maestro esclavo]{"entity": "patron_arquitectonico", "value": "maestro-esclavo"}?
+    - Que onda [master slave]{"entity": "patron_arquitectonico", "value": "maestro-esclavo"}
+
+- intent: pregunta_patrones/pipe-filter
   examples: |
-    - Que sabes de [factory method](patron)?
-    - Que es [Factory method]{"entity": "patron", "value": "factory method"}?
-- intent: pregunta_patrones/builder
+    - Conocés [pipe and filters]{"entity": "patron_arquitectonico", "value": "pipe-filter"}?
+    - En qué se basa el patron arquitectonico [pipe-filter]{"entity": "patron_arquitectonico", "value": "pipe-filter"}?
+
+- intent: pregunta_patrones/broker
   examples: |
-    - Me explicas sobre el patron [builder](patron)
-    - En los dintintos patrones de diseño que existen, cual es el [Builder]{"entity": "patron", "value": "builder"}?
-- intent: pregunta_patrones/prototype
+    - Me explicas [broker]{"entity": "patron_arquitectonico", "value": "broker"} por favor?
+    - No entiendo como funciona [Broker]{"entity": "patron_arquitectonico", "value": "broker"}
+
+- intent: pregunta_patrones/peer-to-peer
   examples: |
-    - Me contas sobre [prototype](patron)?
-    - Por favor, me contas sobre el patron sobre [Prototype]{"entity": "patron", "value": "prototype"}?
-- intent: pregunta_patrones/singleton
+    - No se como trabaja [peer to peer]{"entity": "patron_arquitectonico", "value": "peer-to-peer"}
+    - Como es [p2p]{"entity": "patron_arquitectonico", "value": "peer-to-peer"}?
+
+- intent: pregunta_patrones/event-bus
   examples: |
-    - Me ayudas a entender el patron de diseño sobre [Singleton]{"entity": "patron", "value": "singleton"}?
-    - Explicame sobre [singleton](patron)
-- intent: pregunta_patrones/adapter
+    - Como funciona el patron de arquitectura [event-driven]{"entity": "patron_arquitectonico", "value": "event-bus"}?
+    - Como es el patron [manejado por eventos]{"entity": "patron_arquitectonico", "value": "event-bus"}?
+
+- intent: pregunta_patrones/mvc
   examples: |
-    - Por favor ayudame a entender el patron [adapter](patron)
-    - Cual es la funcion de [Adapter]{"entity": "patron", "value": "adapter"}
-- intent: pregunta_patrones/bridge
+    - Que onda con [MVC]{"entity": "patron_arquitectonico", "value": "mvc"}?
+    - Explicame [model view controller]{"entity": "patron_arquitectonico", "value": "mvc"}
+
+
+- intent: pregunta_patrones/blackboard
   examples: |
-    - Cual es el proposito de [bridge](patron)
-    - Y que es [Bridge]{"entity": "patron", "value": "bridge"}?
-- intent: pregunta_patrones/composite
+    - Acaso conoces el patron [blackboard]{"entity": "patron_arquitectonico", "value": "blackboard"}?
+    - Sabes de [Blackboard]{"entity": "patron_arquitectonico", "value": "blackboard"}?
+
+- intent: pregunta_patrones/interpreter
   examples: |
-    - Che no entiendo el patron de diseño [composite](patron)
-    - Que pueso hacer con [Composite]{"entity": "patron", "value": "composite"}
-- intent: pregunta_patrones/decorator
+    - Necesito entender el patron [Interpreter]{"entity": "patron_arquitectonico", "value": "interpreter"}
+    - Quiero saber de [interpreter]{"entity": "patron_arquitectonico", "value": "interpreter"}
+
+
+- synonym: capas
   examples: |
-    - No entiendo para que se usas [Decorator]{"entity": "patron", "value": "decorator"}
-    - Decime que es el patron de diseño [decorator](patron)
-- intent: pregunta_patrones/facade
+    - Capas
+    - Layered
+    - layered
+
+- synonym: cliente-servidor
   examples: |
-    - Cual es la utilidada de [facade](patron)?
-    - che, no entiendo para que sirve [Facade]{"entity": "patron", "value": "facade"}
-- intent: pregunta_patrones/flyweight
+    - Cliente-servidor
+    - Cliente-Servidor
+    - client-server
+    - Client-Server
+    - Client-server
+    - cliente servidor
+    - Cliente servidor
+    - client server
+    - Client server
+
+- synonym: maestro-esclavo
   examples: |
-    - Me parece que no entiendo [flyweight](patron), me explicas?
-    - Me parece que no entiendo [flyweigth]{"entity": "patron", "value": "flyweight"}, me explicas?
-    - Explicame, por favor, el patron [Flyweigth]{"entity": "patron", "value": "flyweight"}
-- intent: pregunta_patrones/proxy
+    - maestro esclavo
+    - Maestro esclavo
+    - master slave
+    - Master slave
+    - maestro-esclavo
+    - Maestro-esclavo
+    - Maestro-Esclavo
+    - master-slave
+    - Master-slave
+    - Master-Slave
+
+- synonym: pipe-filter
   examples: |
-    - Ayudame, quiero saber sobre [proxy](patron)
-    - Me poder contar hacerca del patron [Proxy]{"entity": "patron", "value": "proxy"}
-- intent: pregunta_patrones/chain-of-responsibility
+    - Pipe-filter
+    - Pipe-Filter
+    - pipe filter
+    - Pipe filter
+    - Pipeline
+    - pipeline
+    - pipe and filter
+    - pipe and filters
+    - Pipe and filter
+    - Pipe and filters
+
+- synonym: broker
   examples: |
-    - No entiendo que es [chain of responsibility](patron)
-    - Me decis para que se usa [Chain of Responsibility]{"entity": "patron", "value": "chain of responsibility"}
-- intent: pregunta_patrones/command
+    - Broker
+
+- synonym: peer-to-peer
   examples: |
-    - Cual es la funcionalidad de [command](patron)
-    - Contame sobre el patrn de diseño [command](patron)
-- intent: pregunta_patrones/memento
+    - Peer-to-peer
+    - Peer-to-Peer
+    - peer to peer
+    - Peer to Peer
+    - Peer to peer
+    - p2p
+    - P2P
+
+- synonym: event-bus
   examples: |
-    - Explicame que es [memento](patron)
-    - Cual es la utlidad de [Memento]{"entity": "patron", "value": "memento"}?
-- intent: pregunta_patrones/iterator
+    - Event-bus
+    - event bus
+    - Event Bus
+    - event-driven
+    - event driven
+    - Event driven
+    - manejado por eventos
+    - Manejado por eventos
+
+- synonym: mvc
   examples: |
-    - Me decis la funcionalidad del patron [iterator](patron)
-    - Che, contame sobre [Iterator]{"entity": "patron", "value": "iterator"}
-- intent: pregunta_patrones/mediator
+    - model-view-controller
+    - modelo-vista-controlador
+    - model view controller
+    - modelo vista controlador
+    - Model View Controller
+    - Model view controller
+    - MVC
+
+- synonym: blackboard
   examples: |
-    - No me doy cuenta que es [mediator](patron)
-    - Me ayudas a entender mas sobre el patron [Mediator]{"entity": "patron", "value": "mediator"}?
-- intent: pregunta_patrones/observer
+    - Blackboard
+
+- synonym: interpreter
   examples: |
-    - Desconozco sobre el patron [observer](patron)
-    - Me das una mano para comprender el patron de diseño [Observer]{"entity": "patron", "value": "observer"}?
-- intent: pregunta_patrones/state
-  examples: |
-    - Me ayudas a dejar claro el patrón [state](patron)
-    - Cual es el proposito de [State]{"entity": "patron", "value": "state"}?
-- intent: pregunta_patrones/strategy
-  examples: |
-    - No comprendo el patron de diseño [strategy](patron)
-    - Guacho que onda [Strategy]{"entity": "patron", "value": "strategy"}
-- intent: pregunta_patrones/template-method
-  examples: |
-    - Me explicas como es [Template method]{"entity": "patron", "value": "template-method"}?
-    - Qué es un [Template]{"entity": "patron", "value": "template-method"}?
-- intent: pregunta_patrones/visitor
-  examples: |
-    - Que onda el patron [visitor](patron)?
-    - Y [Visitor]{"entity": "patron", "value": "visitor"}? Cómo es?
-- synonym: abstract factory
-  examples: |
-    - Abstract Factory
-    - Abstract factory
-- synonym: factory method
-  examples: |
-    - Factory method
-    - Factory Method
-- synonym: builder
-  examples: |
-    - Builder
-- synonym: prototype
-  examples: |
-    - Prototype
-- synonym: singleton
-  examples: |
-    - Singleton
-- synonym: adapter
-  examples: |
-    - Adapter
-- synonym: bridge
-  examples: |
-    - Bridge
-- synonym: composite
-  examples: |
-    - Composite
-- synonym: decorator
-  examples: |
-    - Decorator
-- synonym: facade
-  examples: |
-    - Facade
-- synonym: flyweight
-  examples: |
-    - Flyweight
-    - flyweigth
-- synonym: proxy
-  examples: |
-    - Proxy
-- synonym: chain of responsibility
-  examples: |
-    - Chain of Responsibility
-    - Chain of responsibility
-- synonym: command
-  examples: |
-    - Command
-- synonym: memento
-  examples: |
-    - Memento
-- synonym: iterator
-  examples: |
-    - Iterator
-- synonym: mediator
-  examples: |
-    - Mediator
-- synonym: observer
-  examples: |
-    - Observer
-- synonym: state
-  examples: |
-    - State
-- synonym: strategy
-  examples: |
-    - Strategy
-- synonym: template-method
-  examples: |
-    - Template method
-    - Template
-    - template
-    - Template Method
-- synonym: visitor
-  examples: |
-    - Visitor
+    - Interpreter

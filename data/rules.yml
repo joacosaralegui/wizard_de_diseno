@@ -16,6 +16,11 @@ rules:
   - intent: pregunta_patrones
   - action: utter_pregunta_patrones
 
+- rule: respond to pregunta_patrones_poo
+  steps:
+  - intent: pregunta_patrones_poo
+  - action: utter_pregunta_patrones_poo
+
 - rule: respond to pregunta_atributos
   steps:
   - intent: pregunta_atributos

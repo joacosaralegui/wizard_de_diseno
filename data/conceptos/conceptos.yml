@@ -2,14 +2,25 @@ version: "2.0"
 nlu:
 - intent: pregunta_concepto/patron
   examples: |
-    - Qué es un [patron de diseño]{"entity": "concepto", "value": "patron"}?
-    - Definime [design pattern]{"entity": "concepto", "value": "patron"}
-    - No sé qué es un [patron](concepto)
-    - Me decís qué son los [patrones de diseño]{"entity": "concepto", "value": "patron"}?
-    - Che estoy re perdido con esto de los [patrones]{"entity": "concepto", "value": "patron"}?
-    - Estoy complicado con los [patrones de diseño]{"entity": "concepto", "value": "patron"}
-    - Necesito ayuda con los [patrones de diseño]{"entity": "concepto", "value": "patron"}
-    - No entiendo que son los [patrones]{"entity": "concepto", "value": "patron"}
+    - Qué es un [patron de diseño arquitectonico]{"entity": "concepto", "value": "patron_arquitectonico"}?
+    - Definime [patrones de arquitectura]{"entity": "concepto", "value": "patron_arquitectonico"}
+    - No sé qué es un [patron]{"entity": "concepto", "value": "patron_arquitectonico"}
+    - Me decís qué son los [patrones arquitectonico]{"entity": "concepto", "value": "patron_arquitectonico"}?
+    - Che estoy re perdido con esto de los [patrones de arquitectura de software]{"entity": "concepto", "value": "patron_arquitectonico"}?
+    - Estoy complicado con los [patrones de diseño]{"entity": "concepto", "value": "patron_arquitectonico"}
+    - Necesito ayuda con los [patrones de diseño]{"entity": "concepto", "value": "patron_arquitectonico"}
+    - No entiendo que son los [patrones]{"entity": "concepto", "value": "patron_arquitectonico"}
+
+- intent: pregunta_concepto/patrones_listado
+  examples: |
+    - Qué tipos de [patrones]{"entity": "concepto", "value": "patron_arquitectonico"} existen?
+    - Hay alguna clasificación para los [design patterns]{"entity": "concepto", "value": "patron_arquitectonico"}?
+    - Cómo se agrupan los [patrones de diseño]{"entity": "concepto", "value": "patron_arquitectonico"}?
+    - Que [patrones de diseño]{"entity": "concepto", "value": "patron_arquitectonico"} hay?
+    - Cuáles son los [patrones de diseño]{"entity": "concepto", "value": "patron_arquitectonico"}?
+    - Cuales son los distintos [design patterns]{"entity": "concepto", "value": "patron_arquitectonico"} que hay?
+    - Che, me listas los [patrones de diseño]{"entity": "concepto", "value": "patron_arquitectonico"}?
+
 - intent: pregunta_concepto/scrum
   examples: |
     - Quiero saber qué es [scrum](concepto)
@@ -67,15 +78,19 @@ nlu:
     - No entiendo la diferencia entre [requerimientos funcionales]{"entity": "concepto", "value": "requerimiento funcional"} y [requerimiento no funcional](concepto)
     - Cuál es la diferencia entre [requerimientos funcionales]{"entity": "concepto", "value": "requerimiento funcional"} y [requerimiento no funcional](concepto)?
     - No distingo entre [requerimientos funcionales]{"entity": "concepto", "value": "requerimiento funcional"} y [requerimiento no funcional](concepto)
-- synonym: patron
+- synonym: patron_arquitectonico
   examples: |
-    - patron de diseño
-    - design pattern
-    - patrones de diseño
+    - patron de diseño arquitectónico
+    - patrón de diseño arquitectónico
+    - patrones de diseño de arquitectura
     - patrones
     - patrón
-    - patrón de diseño
-    - design patterns
+    - patron de arquitectura de software
+    - patrón de arquitectura de software
+    - patrones de arquitectura de software
+    - patrones de arquitectura
+    - patron de arquitectura
+    - patrón de arquitectura
 - synonym: scrum
   examples: |
     - metodología Scrum

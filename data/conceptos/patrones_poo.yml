@@ -1,0 +1,166 @@
+version: "2.0"
+nlu:
+- intent: pregunta_patrones_poo/abstract-factory
+  examples: |
+    - Conocés el patrón [Abstract Factory]{"entity": "patron_poo", "value": "abstract factory"}
+    - Que onda el patrón de diseño [abstract factory](patron_poo)
+    - Decime que es [abstract factory](patron_poo)
+    - Por favor me explicas el patron de diseño [Abstract Factory]{"entity": "patron_poo", "value": "abstract factory"}
+- intent: pregunta_patrones_poo/factory-method
+  examples: |
+    - Que sabes de [factory method](patron_poo)?
+    - Que es [Factory method]{"entity": "patron_poo", "value": "factory method"}?
+- intent: pregunta_patrones_poo/builder
+  examples: |
+    - Me explicas sobre el patron [builder](patron)
+    - En los dintintos patrones de diseño que existen, cual es el [Builder]{"entity": "patron_poo", "value": "builder"}?
+- intent: pregunta_patrones_poo/prototype
+  examples: |
+    - Me contas sobre [prototype](patron)?
+    - Por favor, me contas sobre el patron sobre [Prototype]{"entity": "patron_poo", "value": "prototype"}?
+- intent: pregunta_patrones_poo/singleton
+  examples: |
+    - Me ayudas a entender el patron de diseño sobre [Singleton]{"entity": "patron_poo", "value": "singleton"}?
+    - Explicame sobre [singleton](patron_poo)
+- intent: pregunta_patrones_poo/adapter
+  examples: |
+    - Por favor ayudame a entender el patron [adapter](patron_poo)
+    - Cual es la funcion de [Adapter]{"entity": "patron_poo", "value": "adapter"}
+- intent: pregunta_patrones_poo/bridge
+  examples: |
+    - Cual es el proposito de [bridge](patron_poo)
+    - Y que es [Bridge]{"entity": "patron_poo", "value": "bridge"}?
+- intent: pregunta_patrones_poo/composite
+  examples: |
+    - Che no entiendo el patron de diseño [composite](patron_poo)
+    - Que pueso hacer con [Composite]{"entity": "patron_poo", "value": "composite"}
+- intent: pregunta_patrones_poo/decorator
+  examples: |
+    - No entiendo para que se usas [Decorator]{"entity": "patron_poo", "value": "decorator"}
+    - Decime que es el patron de diseño [decorator](patron_poo)
+- intent: pregunta_patrones_poo/facade
+  examples: |
+    - Cual es la utilidada de [facade](patron_poo)?
+    - che, no entiendo para que sirve [Facade]{"entity": "patron_poo", "value": "facade"}
+- intent: pregunta_patrones_poo/flyweight
+  examples: |
+    - Me parece que no entiendo [flyweight](patron_poo), me explicas?
+    - Me parece que no entiendo [flyweigth]{"entity": "patron_poo", "value": "flyweight"}, me explicas?
+    - Explicame, por favor, el patron [Flyweigth]{"entity": "patron_poo", "value": "flyweight"}
+- intent: pregunta_patrones_poo/proxy
+  examples: |
+    - Ayudame, quiero saber sobre [proxy](patron_poo)
+    - Me poder contar hacerca del patron [Proxy]{"entity": "patron_poo", "value": "proxy"}
+- intent: pregunta_patrones_poo/chain-of-responsibility
+  examples: |
+    - No entiendo que es [chain of responsibility](patron_poo)
+    - Me decis para que se usa [Chain of Responsibility]{"entity": "patron_poo", "value": "chain of responsibility"}
+- intent: pregunta_patrones_poo/command
+  examples: |
+    - Cual es la funcionalidad de [command](patron_poo)
+    - Contame sobre el patrn de diseño [command](patron_poo)
+- intent: pregunta_patrones_poo/memento
+  examples: |
+    - Explicame que es [memento](patron_poo)
+    - Cual es la utlidad de [Memento]{"entity": "patron_poo", "value": "memento"}?
+- intent: pregunta_patrones_poo/iterator
+  examples: |
+    - Me decis la funcionalidad del patron [iterator](patron_poo)
+    - Che, contame sobre [Iterator]{"entity": "patron_poo", "value": "iterator"}
+- intent: pregunta_patrones_poo/mediator
+  examples: |
+    - No me doy cuenta que es [mediator](patron_poo)
+    - Me ayudas a entender mas sobre el patron [Mediator]{"entity": "patron_poo", "value": "mediator"}?
+- intent: pregunta_patrones_poo/observer
+  examples: |
+    - Desconozco sobre el patron [observer](patron_poo)
+    - Me das una mano para comprender el patron de diseño [Observer]{"entity": "patron_poo", "value": "observer"}?
+- intent: pregunta_patrones_poo/state
+  examples: |
+    - Me ayudas a dejar claro el patrón [state](patron_poo)
+    - Cual es el proposito de [State]{"entity": "patron_poo", "value": "state"}?
+- intent: pregunta_patrones_poo/strategy
+  examples: |
+    - No comprendo el patron de diseño [strategy](patron_poo)
+    - Guacho que onda [Strategy]{"entity": "patron_poo", "value": "strategy"}
+- intent: pregunta_patrones_poo/template-method
+  examples: |
+    - Me explicas como es [Template method]{"entity": "patron_poo", "value": "template-method"}?
+    - Qué es un [Template]{"entity": "patron_poo", "value": "template-method"}?
+- intent: pregunta_patrones_poo/visitor
+  examples: |
+    - Que onda el patron [visitor](patron_poo)?
+    - Y [Visitor]{"entity": "patron_poo", "value": "visitor"}? Cómo es?
+- synonym: abstract factory
+  examples: |
+    - Abstract Factory
+    - Abstract factory
+- synonym: factory method
+  examples: |
+    - Factory method
+    - Factory Method
+- synonym: builder
+  examples: |
+    - Builder
+- synonym: prototype
+  examples: |
+    - Prototype
+- synonym: singleton
+  examples: |
+    - Singleton
+- synonym: adapter
+  examples: |
+    - Adapter
+- synonym: bridge
+  examples: |
+    - Bridge
+- synonym: composite
+  examples: |
+    - Composite
+- synonym: decorator
+  examples: |
+    - Decorator
+- synonym: facade
+  examples: |
+    - Facade
+- synonym: flyweight
+  examples: |
+    - Flyweight
+    - flyweigth
+- synonym: proxy
+  examples: |
+    - Proxy
+- synonym: chain of responsibility
+  examples: |
+    - Chain of Responsibility
+    - Chain of responsibility
+- synonym: command
+  examples: |
+    - Command
+- synonym: memento
+  examples: |
+    - Memento
+- synonym: iterator
+  examples: |
+    - Iterator
+- synonym: mediator
+  examples: |
+    - Mediator
+- synonym: observer
+  examples: |
+    - Observer
+- synonym: state
+  examples: |
+    - State
+- synonym: strategy
+  examples: |
+    - Strategy
+- synonym: template-method
+  examples: |
+    - Template method
+    - Template
+    - template
+    - Template Method
+- synonym: visitor
+  examples: |
+    - Visitor

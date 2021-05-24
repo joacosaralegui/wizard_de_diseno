@@ -141,3 +141,5 @@ story_graph.dot
 results/
 train_test_split/
 rasa.db
+
+settings.json

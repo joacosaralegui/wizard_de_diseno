@@ -8,7 +8,7 @@ nlu:
 - intent: pregunta_atributos/tolerancia-a-fallos
   examples: |
     - Que es [tolerancia a fallos](atr-calidad)?
-    - Me podes ecxplicar lo que es [Tolerancia a fallos]{"entity": "atr-calidad", "value": "tolerancia a fallos"}?
+    - Me podes explicar lo que es [Tolerancia a fallos]{"entity": "atr-calidad", "value": "tolerancia a fallos"}?
     - Che, que es [fault tolerance]{"entity": "atr-calidad", "value": "tolerancia a fallos"}?
 - intent: pregunta_atributos/tolerancia-a-fallos_ejemplo
   examples: |

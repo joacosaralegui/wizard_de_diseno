@@ -1,46 +1,75 @@
 version: '2.0'
+config:
+  store_entities_as_slots: true
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
 intents:
-- no_entendio
-- gracias
-- saludo
+- no_entendio:
+    use_entities: true
+- gracias:
+    use_entities: true
+- saludo:
+    use_entities: true
 - pregunta_concepto:
-    is_retrieval_intent: true
+    use_entities: true
 - pregunta_atributos:
-    is_retrieval_intent: true
+    use_entities: true
 - chitchat:
-    is_retrieval_intent: true
+    use_entities: true
 - pregunta_patrones:
-    is_retrieval_intent: true
-- wizard_conocimiento_ambiguo
-- wizard_conocimiento_especifico
-- conocimiento_wizard_no_especifico
-- negacion
-- despedida
-- afirmacion
-- entendio
-- ayuda_transparencia
-- ayuda_presentacion_transparencia
-- concepto_transparencia
-- concepto_millenial
-- concepto_centennial
-- modo_de_evaluacion
-- wizard_pedido_ayuda
+    use_entities: true
+- pregunta_patrones_poo:
+    use_entities: true
+- wizard_conocimiento_ambiguo:
+    use_entities: true
+- wizard_conocimiento_especifico:
+    use_entities: true
+- conocimiento_wizard_no_especifico:
+    use_entities: true
+- negacion:
+    use_entities: true
+- despedida:
+    use_entities: true
+- afirmacion:
+    use_entities: true
+- entendio:
+    use_entities: true
+- ayuda_transparencia:
+    use_entities: true
+- ayuda_presentacion_transparencia:
+    use_entities: true
+- concepto_transparencia:
+    use_entities: true
+- concepto_millenial:
+    use_entities: true
+- concepto_centennial:
+    use_entities: true
+- modo_de_evaluacion:
+    use_entities: true
+- wizard_pedido_ayuda:
+    use_entities: true
 entities:
 - atr-calidad
 - concepto
+- patron_arquitectonico
+- patron_poo
 - patron
 slots:
   concepto:
-    type: text
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
     influence_conversation: true
   patron:
-    type: text
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
     influence_conversation: true
   atr-calidad:
-    type: text
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
     influence_conversation: true
 responses:
   utter_saludo:
@@ -69,6 +98,8 @@ responses:
   - text: Test de concepto
   utter_pregunta_patrones:
   - text: Test de patrones
+  utter_pregunta_patrones_poo:
+  - text: Test de patrones poo
   utter_pregunta_atributos:
   - text: Test de atributos
   utter_chitchat/bien:
@@ -92,13 +123,15 @@ responses:
   - text: Somos dos, yo tambien estoy cansado, he charlado con mucha gente hoy
   - text: Ya habra tiempo para descansar, ahora es momento de seguir aprendiendo
   utter_pregunta_concepto/patron:
-  - text: Los patrones de diseño (design patterns) son soluciones habituales a problemas comunes en el diseño de software. Cada patrón es como un plano que se puede personalizar para resolver un problema de diseño particular de tu código.
+  - text: Los patrones arquitectónicos dan una descripción de los elementos y el tipo de relación que tienen junto con un conjunto de restricciones sobre cómo pueden ser usados.\n Un patrón arquitectónico expresa un esquema de organización estructural esencial para un sistema de software, que consta de subsistemas, sus responsabilidades e interrelaciones.\n En comparación con los patrones de diseño, los patrones arquitectónicos tienen un nivel de abstracción mayor.
   utter_pregunta_concepto/patron_clarificacion:
-  - text:  Mirá, pensalos cómo las estructuras más utilizadas para resolver problemas muy comunes a la hora de diseñar tu solución.
+  - text: Mirá, pensalos cómo las estructuras más utilizadas para resolver problemas muy comunes a la hora de diseñar la arquitectura de tu solución.
+  utter_pregunta_concepto/patrones_listado:
+  - text: Los patrones más comunes son:\n Capas (Layered), Cliente-Servidor (Client-server), Maestro-Esclavo (Master-slave), Pipe-filter, Broker, Peer-to-Peer (P2P), Event-bus, MVC, Blackboard, Interpreter
   utter_pregunta_concepto/scrum:
   - text: 'La metodología Scrum es un framework que se utiliza dentro de equipos que manejan proyectos complejos. Es decir, se trata de una metodología de trabajo ágil que tiene como finalidad la entrega de valor en períodos cortos de tiempo y para ello se basa en tres pilares: la transparencia, inspección y adaptación.'
   utter_pregunta_concepto/scrum_clarificacion:
-  - text: 'Pensalo como un conjunto de reglas y prácticas para poder organizar el trabajo de mucha gente. Cada persona tiene un rol, con distintas personalidades y hay eventos importantes que agrupan distintos roles.'
+  - text: Pensalo como un conjunto de reglas y prácticas para poder organizar el trabajo de mucha gente. Cada persona tiene un rol, con distintas personalidades y hay eventos importantes que agrupan distintos roles.
   utter_pregunta_concepto/agil:
   - text: Las metodologías ágiles son un conjunto de métodos que permiten adaptar el modo de trabajo a las condiciones del proyecto, aportando flexibilidad, eficiencia y, por lo tanto, logrando un mejor producto a menor coste.
   utter_pregunta_concepto/agil_clarificacion:
@@ -122,51 +155,69 @@ responses:
   - text: Por ejemplo,\nTodas las comunicaciones externas entre los servidores de datos, la aplicación y el cliente del sistema deben estar cifradas utilizando el algoritmo RSA.\nEs un ejemplo de RNF que puede encasillarse en el atributo de calidad de Seguridad.
   utter_pregunta_concepto/diferencia_req_func_no_func:
   - text: Un requisito funcional describe lo que debe hacer un sistema, mientras que los requisitos no funcionales imponen restricciones sobre cómo lo hará el sistema.
-  utter_pregunta_patrones/patron_tipos:
-  - text: 'Los patrones que podemos encontrar son: Factory Method, Abstract Factory, Builder, Prototype, Singleton, Adapter, Bridge, Composite, Decorator, Facade, Flyweight, Proxy, Chain of Responsibility, Command, Iterator, Mediator, Memento, Observer, State, Strategy, Templete Method y Visitor '
-  utter_pregunta_patrones/abstract-factory:
+  utter_pregunta_patrones/capas:
+  - text: 'Este patrón se puede utilizar para estructurar programas que se pueden descomponer en grupos de subtareas, cada una de las cuales se encuentra en un nivel particular de abstracción. Cada capa proporciona servicios a la siguiente capa superior.\n Las 4 capas más comúnmente encontradas de un sistema de información general son las siguientes: Capa de presentación, Capa de aplicación, Capa de lógica de negocios, Capa de acceso a datos.'
+  utter_pregunta_patrones/cliente-servidor:
+  - text: Este patrón consiste en dos partes; un servidor y múltiples clientes. El componente del servidor proporcionará servicios a múltiples componentes del cliente. Los clientes solicitan servicios del servidor y el servidor proporciona servicios relevantes a esos clientes. Además, el servidor sigue escuchando las solicitudes de los clientes
+  utter_pregunta_patrones/maestro-esclavo:
+  - text: Este patrón consiste en dos partes; maestro y esclavos. El componente maestro distribuye el trabajo entre componentes esclavos idénticos y calcula el resultado final de los resultados que devuelven los esclavos.
+  utter_pregunta_patrones/pipe-filter:
+  - text: Este patrón se puede usar para estructurar sistemas que producen y procesan una secuencia de datos. Cada paso de procesamiento se incluye dentro de un componente de filtro. Los datos que se procesarán se pasan a través de las tuberías. Estas tuberías se pueden utilizar para el almacenamiento en búfer o con fines de sincronización.
+  utter_pregunta_patrones/broker:
+  - text: Este patrón se usa para estructurar sistemas distribuidos con componentes desacoplados. Estos componentes pueden interactuar entre sí mediante invocaciones de servicios remotos. Un componente de intermediario es responsable de la coordinación de la comunicación entre los componentes.
+  utter_pregunta_patrones/peer-to-peer:
+  - text: En este patrón, los componentes individuales se conocen como pares. Los pares pueden funcionar tanto como un cliente, solicitando servicios de otros pares, y como un servidor, proporcionando servicios a otros pares. Un par puede actuar como un cliente o como un servidor o como ambos, y puede cambiar su rol dinámicamente con el tiempo.
+  utter_pregunta_patrones/event-bus:
+  - text: Este patrón trata principalmente con eventos y tiene 4 componentes principales; fuente de evento, escucha de evento, canal y bus de evento. Las fuentes publican mensajes en canales particulares en un bus de eventos. Los oyentes se suscriben a canales particulares. Los oyentes son notificados de los mensajes que se publican en un canal al que se han suscrito anteriormente.
+  utter_pregunta_patrones/mvc:
+  - text: 'Este patrón, también conocido como patrón MVC, divide una aplicación interactiva en 3 partes, como:\n Modelo — contiene la funcionalidad y los datos básicos,\n Vista: muestra la información al usuario (se puede definir más de una vista),\n Controlador: maneja la entrada del usuario.\n Esto se hace para separar las representaciones internas de información de las formas en que se presenta y acepta la información del usuario. Desacopla los componentes y permite la reutilización eficiente del código.'
+  utter_pregunta_patrones/blackboard:
+  - text: 'Este patrón es útil para problemas para los que no se conocen estrategias de solución deterministas. El patrón de pizarra consta de 3 componentes principales:\n Pizarra: una memoria global estructurada que contiene objetos del espacio de solución,\n Fuente de conocimiento: módulos especializados con su propia representación,\n Componente de control : selecciona, configura y ejecuta módulos.\n Todos los componentes tienen acceso a la pizarra. Los componentes pueden producir nuevos objetos de datos que se agregan a la pizarra. Los componentes buscan tipos particulares de datos en la pizarra, y pueden encontrarlos por coincidencia de patrones con la fuente de conocimiento existente.'
+  utter_pregunta_patrones/interpreter:
+  - text: Este patrón se usa para diseñar un componente que interpreta programas escritos en un lenguaje dedicado. Especifica principalmente cómo evaluar las líneas de programas, conocidas como oraciones o expresiones escritas en un idioma particular. La idea básica es tener una clase para cada símbolo del idioma.
+  utter_pregunta_patrones_poo/abstract-factory:
   - text: Abstract Factory es un patrón de diseño creacional que nos permite producir familias de objetos relacionados sin especificar sus clases concretas.
-  utter_pregunta_patrones/factory-method:
+  utter_pregunta_patrones_poo/factory-method:
   - text: Factory Method es un patrón de diseño creacional que proporciona una interfaz para crear objetos en una superclase, mientras permite a las subclases alterar el tipo de objetos que se crearán.
-  utter_pregunta_patrones/builder:
+  utter_pregunta_patrones_poo/builder:
   - text: Builder es un patrón de diseño creacional que nos permite construir objetos complejos paso a paso. El patrón nos permite producir distintos tipos y representaciones de un objeto empleando el mismo código de construcción.
-  utter_pregunta_patrones/prototype:
+  utter_pregunta_patrones_poo/prototype:
   - text: Prototype es un patrón de diseño creacional que nos permite copiar objetos existentes sin que el código dependa de sus clases.
-  utter_pregunta_patrones/singleton:
+  utter_pregunta_patrones_poo/singleton:
   - text: Singleton es un patrón de diseño creacional que nos permite asegurarnos de que una clase tenga una única instancia, a la vez que proporciona un punto de acceso global a dicha instancia.
-  utter_pregunta_patrones/adapter:
+  utter_pregunta_patrones_poo/adapter:
   - text: Adapter es un patrón de diseño estructural que permite la colaboración entre objetos con interfaces incompatibles.
-  utter_pregunta_patrones/bridge:
+  utter_pregunta_patrones_poo/bridge:
   - text: Bridge es un patrón de diseño estructural que te permite dividir una clase grande, o un grupo de clases estrechamente relacionadas, en dos jerarquías separadas (abstracción e implementación) que pueden desarrollarse independientemente la una de la otra.
-  utter_pregunta_patrones/composite:
+  utter_pregunta_patrones_poo/composite:
   - text: Composite es un patrón de diseño estructural que te permite componer objetos en estructuras de árbol y trabajar con esas estructuras como si fueran objetos individuales.
-  utter_pregunta_patrones/decorator:
+  utter_pregunta_patrones_poo/decorator:
   - text: Decorator es un patrón de diseño estructural que te permite añadir funcionalidades a objetos colocando estos objetos dentro de objetos encapsuladores especiales que contienen estas funcionalidades.
-  utter_pregunta_patrones/facade:
+  utter_pregunta_patrones_poo/facade:
   - text: Facade es un patrón de diseño estructural que proporciona una interfaz simplificada a una biblioteca, un framework o cualquier otro grupo complejo de clases.
-  utter_pregunta_patrones/flyweight:
+  utter_pregunta_patrones_poo/flyweight:
   - text: Flyweight es un patrón de diseño estructural que te permite mantener más objetos dentro de la cantidad disponible de RAM compartiendo las partes comunes del estado entre varios objetos en lugar de mantener toda la información en cada objeto.
-  utter_pregunta_patrones/proxy:
+  utter_pregunta_patrones_poo/proxy:
   - text: Proxy es un patrón de diseño estructural que te permite proporcionar un sustituto o marcador de posición para otro objeto. Un proxy controla el acceso al objeto original, permitiéndote hacer algo antes o después de que la solicitud llegue al objeto original.
-  utter_pregunta_patrones/chain-of-responsibility:
+  utter_pregunta_patrones_poo/chain-of-responsibility:
   - text: Chain of Responsibility es un patrón de diseño de comportamiento que te permite pasar solicitudes a lo largo de una cadena de manejadores. Al recibir una solicitud, cada manejador decide si la procesa o si la pasa al siguiente manejador de la cadena.
-  utter_pregunta_patrones/command:
+  utter_pregunta_patrones_poo/command:
   - text: Command es un patrón de diseño de comportamiento que convierte una solicitud en un objeto independiente que contiene toda la información sobre la solicitud. Esta transformación te permite parametrizar los métodos con diferentes solicitudes, retrasar o poner en cola la ejecución de una solicitud y soportar operaciones que no se pueden realizar.
-  utter_pregunta_patrones/memento:
+  utter_pregunta_patrones_poo/memento:
   - text: Memento es un patrón de diseño de comportamiento que te permite guardar y restaurar el estado previo de un objeto sin revelar los detalles de su implementación.
-  utter_pregunta_patrones/iterator:
+  utter_pregunta_patrones_poo/iterator:
   - text: Iterator es un patrón de diseño de comportamiento que te permite recorrer elementos de una colección sin exponer su representación subyacente (lista, pila, árbol, etc.).
-  utter_pregunta_patrones/mediator:
+  utter_pregunta_patrones_poo/mediator:
   - text: Mediator es un patrón de diseño de comportamiento que te permite reducir las dependencias caóticas entre objetos. El patrón restringe las comunicaciones directas entre los objetos, forzándolos a colaborar únicamente a través de un objeto mediador.
-  utter_pregunta_patrones/observer:
+  utter_pregunta_patrones_poo/observer:
   - text: Observer es un patrón de diseño de comportamiento que te permite definir un mecanismo de suscripción para notificar a varios objetos sobre cualquier evento que le suceda al objeto que están observando.
-  utter_pregunta_patrones/state:
+  utter_pregunta_patrones_poo/state:
   - text: State es un patrón de diseño de comportamiento que permite a un objeto alterar su comportamiento cuando su estado interno cambia. Parece como si el objeto cambiara su clase.
-  utter_pregunta_patrones/strategy:
+  utter_pregunta_patrones_poo/strategy:
   - text: Strategy es un patrón de diseño de comportamiento que te permite definir una familia de algoritmos, colocar cada uno de ellos en una clase separada y hacer sus objetos intercambiables.
-  utter_pregunta_patrones/template-method:
+  utter_pregunta_patrones_poo/template-method:
   - text: Template Method es un patrón de diseño de comportamiento que define el esqueleto de un algoritmo en la superclase pero permite que las subclases sobrescriban pasos del algoritmo sin cambiar su estructura.
-  utter_pregunta_patrones/visitor:
+  utter_pregunta_patrones_poo/visitor:
   - text: Visitor es un patrón de diseño de comportamiento que te permite separar algoritmos de los objetos sobre los que operan.
   utter_pregunta_atributos/listado:
   - text: 'Los atributos de calidad son: Tolerancia a Fallos, Disponiilidad, Mantenibilidad, Performance, Escalabilidad, Seguridad, Usabilidad, Portabilidad e Interoperabilidad'
@@ -263,3 +314,5 @@ actions:
 - utter_pregunta_concepto
 - utter_pregunta_patrones
 - utter_saludo
+forms: {}
+e2e_actions: []

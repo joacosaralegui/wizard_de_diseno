@@ -5,7 +5,7 @@ nlu:
     - hola
 - intent: pregunta_concepto
   examples: |
-    - necesito ayuda con los [patrones de diseño]{"entity": "concepto", "value": "patron"}
+    - necesito ayuda con los [patrones de diseño]{"entity": "concepto", "value": "patron_arquitectonico"}
 - intent: no_entendio
   examples: |
     - no entiendo
