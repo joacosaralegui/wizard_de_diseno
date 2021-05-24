@@ -123,11 +123,11 @@ responses:
   - text: Somos dos, yo tambien estoy cansado, he charlado con mucha gente hoy
   - text: Ya habra tiempo para descansar, ahora es momento de seguir aprendiendo
   utter_pregunta_concepto/patron:
-  - text: Los patrones arquitectónicos dan una descripción de los elementos y el tipo de relación que tienen junto con un conjunto de restricciones sobre cómo pueden ser usados.\n Un patrón arquitectónico expresa un esquema de organización estructural esencial para un sistema de software, que consta de subsistemas, sus responsabilidades e interrelaciones.\n En comparación con los patrones de diseño, los patrones arquitectónicos tienen un nivel de abstracción mayor.
+  - text: Los patrones arquitectónicos dan una descripción de los elementos y el tipo de relación que tienen junto con un conjunto de restricciones sobre cómo pueden ser usados.\nUn patrón arquitectónico expresa un esquema de organización estructural esencial para un sistema de software, que consta de subsistemas, sus responsabilidades e interrelaciones.\nEn comparación con los patrones de diseño, los patrones arquitectónicos tienen un nivel de abstracción mayor.
   utter_pregunta_concepto/patron_clarificacion:
   - text: Mirá, pensalos cómo las estructuras más utilizadas para resolver problemas muy comunes a la hora de diseñar la arquitectura de tu solución.
   utter_pregunta_concepto/patrones_listado:
-  - text: Los patrones más comunes son:\n Capas (Layered), Cliente-Servidor (Client-server), Maestro-Esclavo (Master-slave), Pipe-filter, Broker, Peer-to-Peer (P2P), Event-bus, MVC, Blackboard, Interpreter
+  - text: Los patrones más comunes son:\nCapas (Layered), Cliente-Servidor (Client-server), Maestro-Esclavo (Master-slave), Pipe-filter, Broker, Peer-to-Peer (P2P), Event-bus, MVC, Blackboard, Interpreter
   utter_pregunta_concepto/scrum:
   - text: 'La metodología Scrum es un framework que se utiliza dentro de equipos que manejan proyectos complejos. Es decir, se trata de una metodología de trabajo ágil que tiene como finalidad la entrega de valor en períodos cortos de tiempo y para ello se basa en tres pilares: la transparencia, inspección y adaptación.'
   utter_pregunta_concepto/scrum_clarificacion:
@@ -142,7 +142,7 @@ responses:
   - text: Los atributos de calidad (también cualidades del software) son características no funcionales que se consideran deseables en un sistema de software.
   - text: Un atributo de calidad es una propiedad medible de un sistema, que indica qué tan bien el sistema satisface las necesidades de las partes interesadas.
   utter_pregunta_concepto/hook:
-  - text: Hooking is a concept that allows modifying the behavior of a program. It’s the chance that code gives you to change the original behavior of something without changing your code of the corresponding class. This is done by overwriting the hook methods.
+  - text: Hooking es un concepto que permite modificar el comportamiento de un programa. Es la posibilidad que proporciona el código de cambiar comportamiento original sin modificar código de la clase correspondiente. Esto se realiza sobreescribiendo los métodos hook.
   utter_pregunta_concepto/req_func:
   - text: Los requerimientos funcionales de un sistema son aquellos que describen cualquier actividad/servicio que éste deba realizar.
   utter_pregunta_concepto/req_func_ejemplo:
@@ -266,6 +266,47 @@ responses:
   utter_pregunta_atributos/interoperabilidad_ejemplo:
   - text: Por ejemplo, un requerimiento no funcional que se encasilla en Interoperabilidad puede ser:\nEl producto debe tener la capacidad de interpretar correctamente los datos que se intercambian
   - text: Por ejemplo, un requerimiento no funcional que se encasilla en Interoperabilidad puede ser:\nEl sistema debe poder comunicarse fácilmente con otros servicios
+  utter_pregunta_concepto/fdd_clarificacion:
+  - text: 'Te lo explico con otras palabras... fdd es un metodologia agil para el desarrollo de sistemas que incluye el monitoreo constante de porceso'
+  utter_pregunta_concepto/atr-calidad_clarificacion:
+  - text: 'Y mira, los atributos de calidad son aspectos importates impotantes de la arquitectura de software, indica que tan bien el sistema satisface las necesidades de las partes interesadas'
+  utter_pregunta_concepto/hook_clarificacion:
+  - text: 'Hooking se utiliza para muchos propósitos, incluyendo la depuración de programas y la ampliación de la funcionalidad'
+  utter_pregunta_concepto/req_func_clarificacion:
+  - text: 'Es importante saber que un requisito funcional define una función del sistema de software o sus componentes.'
+  utter_pregunta_concepto/req_no_func_clarificacion:
+  - text: 'Se trata de requisitos que no se refieren directamente a las funciones específicas suministradas por el sistema (características de usuario), sino a las propiedades del sistema: rendimiento, seguridad, disponibilidad.'
+  utter_pregunta_concepto/diferencia_req_func_no_func_clarificacion:
+  - text: 'En resumen, el requisito funcional es describir el comportamiento del sistema en relación con la funcionalidad del sistema. El requisito no funcional elabora una característica de rendimiento del sistema.'
+  utter_pregunta_atributos/tolerancia-a-fallos_clarificacion:
+  - text: 'Un diseño tolerante a fallos es un sistema que está capacitado para continuar su funcionamiento cuando algún componente del sistema falla'
+  utter_pregunta_atributos/disponibilidad_clarificacion:
+  - text: 'En pocas palabras, la disponibilidad es la proporción de tiempo que un sistema está en condiciones de funcionamiento.'
+  utter_pregunta_atributos/mantenibilidad_clarificacion:
+  - text: 'La mantenibilidad se refiere a la facilidad con que se pueden ejecutar las tareas de gestión de mantenimiento del sistema'
+  utter_pregunta_atributos/performance_clarificacion:
+  - text: 'En pocas palabras, desempeño con respecto al rendimiento de una computadora, un dispositivo, un sistema operativo, un programa o una conexión a una red'
+  utter_pregunta_atributos/escalabilidad_clarificacion:
+  - text: 'Se entiende por escalabilidad a la capacidad de adaptación y respuesta de un sistema'
+  utter_pregunta_atributos/seguridad_clarificacion:
+  - text: 'Es la medida sobre la habilidad del sistema para resistir usos no autorizados mientras sigue proveyendo sus servicios a los usuarios legítimos.'
+  utter_pregunta_atributos/usabilidad_clarificacion:
+  - text: 'Simplificando, es el grado de facilidad del sistema para ser operado'
+  utter_pregunta_atributos/portabilidad_clarificacion:
+  - text: 'Resumiendo, es el grado en el que los datos tienen atributos que les permiten ser instalados, reemplazados o eliminados de un sistema a otro'
+  utter_pregunta_atributos/interoperabilidad_clarificacion:
+  - text: 'En pocas palabras, el atrbutos de calidad interoperabilidad es responsable del funcionamiento y la transmisión de datos y su intercambio con otros sistemas externos'
+##caso de usos/ejemplos
+  utter_pregunta_concepto/scrum_ejemplo:
+    - text: 'Un ejemplo del uso de Scrum es Spotify, ya que dieron mucha importancia al rol del Scrum Master y al del Product Owner. Gracias a esta metodología, descubrieron y entendieron las necesidades reales de los clientes y realizaron un buen trabajo de equipo coordinándose en la empresa.'
+  utter_pregunta_concepto/agil_ejemplo:
+    - text: 'Existen diferentes opciones como Scrum, Kanban, entre otras; todas ellas se guían a través de un patrón establecido por el Manifiesto Ágil'
+  utter_pregunta_concepto/fdd_ejemplo:
+    - text: ''
+  utter_pregunta_concepto/hook_ejemplo:
+    - text: 'Hay varios ejemplos, como incluir la interceptación de mensajes de eventos de teclado o de ratón antes de que lleguen a una aplicación o interceptar llamadas de sistema operativo para supervisar el comportamiento o modificar la función de una aplicación u otro componente.'
+  utter_pregunta_concepto/diferencia_req_func_no_func_ejemplo:
+    - text: 'Los requisitos no funcionales a veces se definen en términos de métricas es decir, algo que se puede medir sobre el sistema para hacerlos más tangibles. Los requisitos no funcionales también pueden describir aspectos del sistema que no se relacionan con su ejecución, sino con su evolución a lo largo del tiempo, por ejemplo, mantenibilidad, extensibilidad, documentación, etc.'
   utter_como_hacer_transparencias:
   - text: La transparencia o filmina debe ser de un color claro y que no sea llamativo, con un color de letra que se distinga con el color anterior. \ \n Cada transparencia debe tener un titulo de guí de lo que sé está hablando, este debe ir en la parte superior izquierda, ademas también debe tener poco texto, para solo usarla como ayuda y no para leerla. \ \n Se le puede agregar gráficos o dibujos que ayuden a entender o que hagan alusión a alguna comparación del tema explicado.
   utter_como_hacer_una_transparencia:
