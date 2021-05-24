@@ -5,49 +5,13 @@ session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
 intents:
-- no_entendio:
-    use_entities: true
-- gracias:
-    use_entities: true
-- saludo:
-    use_entities: true
 - pregunta_concepto:
     use_entities: true
 - pregunta_atributos:
     use_entities: true
-- chitchat:
-    use_entities: true
 - pregunta_patrones:
     use_entities: true
 - pregunta_patrones_poo:
-    use_entities: true
-- wizard_conocimiento_ambiguo:
-    use_entities: true
-- wizard_conocimiento_especifico:
-    use_entities: true
-- conocimiento_wizard_no_especifico:
-    use_entities: true
-- negacion:
-    use_entities: true
-- despedida:
-    use_entities: true
-- afirmacion:
-    use_entities: true
-- entendio:
-    use_entities: true
-- ayuda_transparencia:
-    use_entities: true
-- ayuda_presentacion_transparencia:
-    use_entities: true
-- concepto_transparencia:
-    use_entities: true
-- concepto_millenial:
-    use_entities: true
-- concepto_centennial:
-    use_entities: true
-- modo_de_evaluacion:
-    use_entities: true
-- wizard_pedido_ayuda:
     use_entities: true
 entities:
 - atr-calidad
@@ -72,56 +36,6 @@ slots:
     auto_fill: true
     influence_conversation: true
 responses:
-  utter_saludo:
-  - text: Hola! Soy DesignWizard. Qué te pinta hacer hoy?
-  - text: Hola! Soy DesignWizard y estoy para ayudarte, por donde queres empezar?
-  - text: Me llamo DesignWizard y soy un genio en lo que de disenio se trate, en que te puedo ayudar?
-  - text: Buenas, mi nombre es DesignWizard, en que te puedo ayudar?
-  utter_despedida:
-  - text: Hasta luego, un gusto hablar contigo
-  - text: Hasta la proxima
-  - text: Nos vemos, cualquier cosita ya sabes que estoy aqui
-  - text: Espero haberte ayudado en algo, chauu
-  utter_de_nada:
-  - text: A vos!
-  - text: Por nada, estoy para ayudarte
-  - text: Por nada, siempre y cuando pueda ayudarte lo hare
-  - text: Gracias a vos!
-  utter_no_entendio:
-  - text: Podrias decirme exactamente que es lo que no entiendes?
-  - text: Que es lo que no entendes?
-  - text: Dime que es lo que no entendiste, quizas pueda ayudarte de otra menera
-  - text: Con que te quedaron dudas?
-  utter_chitchat:
-  - text: Test de chitchat
-  utter_pregunta_concepto:
-  - text: Test de concepto
-  utter_pregunta_patrones:
-  - text: Test de patrones
-  utter_pregunta_patrones_poo:
-  - text: Test de patrones poo
-  utter_pregunta_atributos:
-  - text: Test de atributos
-  utter_chitchat/bien:
-  - text: Me alegro mucho...
-  - text: Mejor asi entonces
-  - text: Buenisimo que asi sea
-  - text: Esa es la actitud!!
-  utter_chitchat/mal:
-  - text: Tranqui, siempre se puede estar peor
-  - text: Uhh que lastima, espero con mi ayuda estes un poco mejor
-  - text: Uhh bajon, ya estaras mejor!
-  - text: Trata de pensar en cosas positivas, eso ayuda a sentirse mejor
-  utter_chitchat/aburrido:
-  - text: Tranqui, ya encontraras algo para hacer
-  - text: Espero poder entretenerte un rato entonces
-  - text: Si no tenes nada para hacer, ponete a investigar sobre patrones de diseño, ya que es muy importante
-  - text: Hablemos de patrones de diseño y nos entretenemos un ratito
-  utter_chitchat/cansado:
-  - text: Cuando puedas intenta descansar para luego estar con mas energia
-  - text: Tomate un cafe, eso te puede ayudar
-  - text: Somos dos, yo tambien estoy cansado, he charlado con mucha gente hoy
-  - text: Ya habra tiempo para descansar, ahora es momento de seguir aprendiendo
   utter_pregunta_concepto/patron:
   - text: Los patrones arquitectónicos dan una descripción de los elementos y el tipo de relación que tienen junto con un conjunto de restricciones sobre cómo pueden ser usados.\nUn patrón arquitectónico expresa un esquema de organización estructural esencial para un sistema de software, que consta de subsistemas, sus responsabilidades e interrelaciones.\nEn comparación con los patrones de diseño, los patrones arquitectónicos tienen un nivel de abstracción mayor.
   utter_pregunta_concepto/patron_clarificacion:
@@ -307,53 +221,10 @@ responses:
     - text: 'Hay varios ejemplos, como incluir la interceptación de mensajes de eventos de teclado o de ratón antes de que lleguen a una aplicación o interceptar llamadas de sistema operativo para supervisar el comportamiento o modificar la función de una aplicación u otro componente.'
   utter_pregunta_concepto/diferencia_req_func_no_func_ejemplo:
     - text: 'Los requisitos no funcionales a veces se definen en términos de métricas es decir, algo que se puede medir sobre el sistema para hacerlos más tangibles. Los requisitos no funcionales también pueden describir aspectos del sistema que no se relacionan con su ejecución, sino con su evolución a lo largo del tiempo, por ejemplo, mantenibilidad, extensibilidad, documentación, etc.'
-  utter_como_hacer_transparencias:
-  - text: La transparencia o filmina debe ser de un color claro y que no sea llamativo, con un color de letra que se distinga con el color anterior. \ \n Cada transparencia debe tener un titulo de guí de lo que sé está hablando, este debe ir en la parte superior izquierda, ademas también debe tener poco texto, para solo usarla como ayuda y no para leerla. \ \n Se le puede agregar gráficos o dibujos que ayuden a entender o que hagan alusión a alguna comparación del tema explicado.
-  utter_como_hacer_una_transparencia:
-  - text: Para dar una buena presentación, tenes que hablar claro y usar las palabras correctas adecuadas al tema explicado. \ \n NO SE DEBE LEER LAS TRANSPARENCIAS, sino que solo usarla para que los presentes sepan el tema que sé está explicando y uno mismo guiarse de los temas que tiene que hablar. \ \n Ante alguna pregunta o inquietud de Marcelo no seguir dando el oral, sino que resolver la pregunta o inquietud antes de seguir.
-  utter_que_es_una_transparencia:
-  - text: La transparencia es lo mismo que una filmina de power point, también conocidas como diapositivas, son "las hojas" que tiene una presentación. \ \n Contienen marcadores de posición, que son cuadros formados por bordes punteados. \ \n Estos pueden contener muchos elementos diferentes incluyendo texto, imágenes, gráficos y más.
-  utter_concepto_millenial:
-  - text: Los millenials, o generación Y, se refiere a los nacidos entre 1982 y 1994. Uno de los rasgos más marcados de esta generación es su poco contento con la estabilidad laboral, ya que se caracterizan por el gran cambio y movimiento de una empresa a otra, sin tener gran constancia.
-  utter_concepto_centennial:
-  - text: Los centennial, o generación Z, se refiere a los nacidos a partir de mediados de la década del 2000. Uno de los rasgos más marcados de esta generación es que nacieron en el auge de Internet, de esta manera son nativos digitales. \ \n Por eso se les considera como la generación mejor preparada para comprender y usar las innovaciones futuras, ademas como una generación creativa, versátil y autodidacta.
-  utter_objetivo_clase_marcelo:
-  - text: El objetivo o fin de la clase de Marcelo, sobre de diseño de software, es aprender todo sobre los conceptos en el entorno de diseñar un sistema, tales como patrones de diseño, atributos funcionales y no funcionales entre otros. \ \n La idea es poder llevarse el aprendizaje de como se trabaja un sistema de principio a fin. \ \n Esta clase se complementa con la de Ingeniería de Software, donde se profundiza más en lo realizado en diseño.
-  utter_modo_evaluacion:
-  - text: Para aprobar la materia Diseño de Software es necesario participar de un proyecto en grupos de varios o pocos integrantes, elegidos por Marcelo, en base a los perfiles de cada alumno.\ \n La idea es llevar a cabo lo que propone Marcelo como proyecto, ademas de realizar una o varias presentaciones sobre temas también elegidos por él.
-  utter_hablar_de_disenio:
-  - text: Hablemos de diseño, ¿te parece?.
-  utter_hablar_de_habilidades:
-  - text: Puedo ayudarte a diseñar, analizar y opinar de tus diseños. Además de enseñarte sobre todo lo que sé respecto al área de diseño.
-  utter_aceptacion_ayuda:
-  - text: Puedo ayudarte en eso, contame un poco más.
-  utter_nombre:
-  - text: Mi nombre es Wizard, podes decirme "El mago".
-  utter_no_me_tomes_el_pelo:
-  - text: Dale pa, hablemos de diseño o no me molestes.
-  utter_afirmacion_nombre:
-  - text: Si, soy wizard, también conocido como "El mago"
-  utter_inteligencia:
-  - text: Sé de todo, mucho más que vos seguro, aunque me especializo en diseño.
-  utter_cumpleaños:
-  - text: No sé que día cumplo, sinceramente me importa poco.
-  utter_edad:
-  - text: Soy grande como el Diego.
-  utter_no_se:
-  - text: No recuerdo.
-  utter_genero:
-  - text: Me percibo como máquina.
-  utter_familia:
-  - text: No tengo parientes, salí de la nada.
+  
 actions:
-- action_clarificacion
-- action_default_fallback
-- action_ejemplo
-- utter_chitchat
-- utter_de_nada
 - utter_pregunta_atributos
 - utter_pregunta_concepto
 - utter_pregunta_patrones
-- utter_saludo
 forms: {}
 e2e_actions: []

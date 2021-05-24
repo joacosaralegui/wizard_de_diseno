@@ -1,0 +1,27 @@
+version: '2.0'
+config:
+  store_entities_as_slots: true
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+
+intents:
+- wizard_conocimiento_ambiguo:
+    use_entities: true
+- wizard_conocimiento_especifico:
+    use_entities: true
+- conocimiento_wizard_no_especifico:
+    use_entities: true
+- wizard_pedido_ayuda:
+    use_entities: true
+
+responses:
+  utter_hablar_de_disenio:
+  - text: Hablemos de diseño, ¿te parece?.
+  utter_hablar_de_habilidades:
+  - text: Puedo ayudarte a diseñar, analizar y opinar de tus diseños. Además de enseñarte sobre todo lo que sé respecto al área de diseño.
+  utter_aceptacion_ayuda:
+  - text: Puedo ayudarte en eso, contame un poco más.
+
+forms: {}
+e2e_actions: []

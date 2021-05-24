@@ -10,6 +10,7 @@ nlu:
     - Estoy complicado con los [patrones de diseño]{"entity": "concepto", "value": "patron_arquitectonico"}
     - Necesito ayuda con los [patrones de diseño]{"entity": "concepto", "value": "patron_arquitectonico"}
     - No entiendo que son los [patrones]{"entity": "concepto", "value": "patron_arquitectonico"}
+    - Me pinta aprender qué es un [patron]{"entity": "concepto", "value": "patron_arquitectonico"} viste
 
 - intent: pregunta_concepto/patrones_listado
   examples: |

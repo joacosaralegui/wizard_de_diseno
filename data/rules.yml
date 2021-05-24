@@ -25,3 +25,9 @@ rules:
   steps:
   - intent: pregunta_atributos
   - action: utter_pregunta_atributos
+
+
+- rule: respond to gracias
+  steps:
+  - intent: gracias
+  - action: utter_de_nada
