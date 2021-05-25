@@ -7,7 +7,7 @@ nlu:
 
 - intent: pregunta_patrones/cliente-servidor
   examples: |
-    - Sabes algo de [cliente-servidor]{"entity": "patron_arquitectonico", "value": "cliente-servidor"}?
+    - Sabes algo de [cliente servidor]{"entity": "patron_arquitectonico", "value": "cliente-servidor"}?
     - Y [Client-Server]{"entity": "patron_arquitectonico", "value": "cliente-servidor"}? Podes explicarmelo?
 
 - intent: pregunta_patrones/maestro-esclavo
@@ -29,6 +29,7 @@ nlu:
   examples: |
     - No se como trabaja [peer to peer]{"entity": "patron_arquitectonico", "value": "peer-to-peer"}
     - Como es [p2p]{"entity": "patron_arquitectonico", "value": "peer-to-peer"}?
+    - que onda con [peer-to-peer]{"entity": "patron_arquitectonico", "value": "peer-to-peer"}?
 
 - intent: pregunta_patrones/event-bus
   examples: |
