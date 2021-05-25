@@ -1,9 +1,9 @@
 version: "2.0"
-
+ 
 stories:
-
+ 
 # # Conocimiento wizard
-
+ 
 # #(charla que comienza con pregunta ambigua de conocimiento y lo orientamos al diseño, acepta y comienza la charla)
 # - story: saludo + pregunta ambigua sobre autoconocimiento + ofrecer ayuda/hablar de diseño + afirmacion + ... + gracias + despedida
 #   steps:
@@ -19,7 +19,7 @@ stories:
 #   - action: utter_de_nada
 #   - intent: despedida
 #   - action: utter_despedida
-
+ 
 # #(charla que comienza con pregunta especifica de conocimiento y lo orientamos al diseño, acepta y comienza la charla)
 # - story: saludo + pregunta específica sobre autoconocimiento + ofrecer ayuda/hablar de diseño + afirmacion + ... + gracias + despedida
 #   steps:
@@ -37,7 +37,7 @@ stories:
 #   - action: utter_de_nada
 #   - intent: despedida
 #   - action: utter_despedida
-  
+ 
 #   #(charla que comienza con cualquier cosa y lo orientamos al diseño y se niega a charlar, lo despedimos)
 # - story: saludo + pregunta ambigua sobre autoconocimiento + ofrecer ayuda/hablar de diseño + negacion + despedida
 #   steps:
@@ -47,7 +47,7 @@ stories:
 #   - action: utter_hablar_de_disenio
 #   - intent: negacion
 #   - action: utter_despedida         
-  
+ 
 #   #(charla que comienza con pedido de ayuda y aceptamos ayudarlo, nos cuenta su problema)
 # - story: saludo + pedido de ayuda + ofrecer ayuda/hablar de diseño + ... + gracias + despedida
 #   steps:
@@ -61,7 +61,7 @@ stories:
 #   - action: utter_de_nada
 #   - intent: despedida
 #   - action: utter_despedida
-
+ 
 # - story: clase_marcelo, transparencia
 #   steps:
 #   - intent: concepto_transparencia
@@ -70,28 +70,28 @@ stories:
 #   - action: utter_como_hacer_transparencias  
 #   - intent: gracias
 #   - action: utter_de_nada
-
+ 
 # - story: clase_marcelo, millenials
 #   steps:
 #   - intent: concepto_millenial
 #   - action: utter_concepto_millenial
 #   - intent: gracias
 #   - action: utter_de_nada
-
+ 
 # - story: clase_marcelo, centennials
 #   steps:
 #   - intent: concepto_centennial
 #   - action: utter_concepto_centennial
 #   - intent: gracias
 #   - action: utter_de_nada
-
+ 
 # - story: relizar_transparencia
 #   steps:
 #   - intent: ayuda_transparencia
 #   - action: utter_como_hacer_transparencias
 #   - intent: gracias
 #   - action: utter_de_nada
-
+ 
 # - story: concepto, ayuda transparencia
 #   steps:
 #   - intent: concepto_transparencia
@@ -100,49 +100,49 @@ stories:
 #   - action: utter_como_hacer_transparencias
 #   - intent: gracias
 #   - action: utter_de_nada  
-  
+ 
 # - story: ayuda presentacion transparencia
 #   steps:
 #   - intent: ayuda_presentacion_transparencia
 #   - action: utter_como_hacer_una_transparencia  
 #   - intent: gracias
 #   - action: utter_de_nada  
-  
+ 
 # - story: concepto transparencia
 #   steps:
 #   - intent: concepto_transparencia
 #   - action: utter_que_es_una_transparencia
 #   - intent: gracias
 #   - action: utter_de_nada
-  
+ 
 # - story: concepto millenial
 #   steps:
 #   - intent: concepto_millenial
 #   - action: utter_concepto_millenial 
 #   - intent: gracias
 #   - action: utter_de_nada
-  
+ 
 # - story: concepto millenial
 #   steps:
 #   - intent: concepto_centennial
 #   - action: utter_concepto_centennial 
 #   - intent: gracias
 #   - action: utter_de_nada
-  
+ 
 # - story: objetivo clase diseño
 #   steps:
 #   - intent: modo_de_evaluacion 
 #   - action: utter_modo_evaluacion
 #   - intent: gracias
 #   - action: utter_de_nada
-  
+ 
 # - story: objetivo clase diseño
 #   steps:
 #   - intent: modo_de_evaluacion 
 #   - action: utter_modo_evaluacion
 #   - intent: gracias
 #   -  action: utter_de_nada
-
+ 
 - story: interactive_story_1
   steps:
   - intent: saludo
@@ -152,7 +152,7 @@ stories:
   - intent: negacion
   - action: utter_despedida
   - intent: despedida
-
+ 
 - story: interactive_story_2
   steps:
   - intent: saludo
@@ -163,7 +163,7 @@ stories:
   - action: utter_hablar_de_habilidades
   - intent: gracias
   - action: utter_de_nada
-
+ 
 - story: interactive_story_3
   steps:
   - intent: saludo
@@ -173,9 +173,7 @@ stories:
   - intent: ayuda_presentacion_transparencia
   - action: utter_como_hacer_una_transparencia
   - intent: afirmacion
-  - intent: gracias
-  - action: utter_de_nada
-
+ 
 - story: interactive_story_5
   steps:
   - intent: saludo
@@ -190,7 +188,7 @@ stories:
   - action: action_clarificacion
   - intent: gracias
   - action: utter_de_nada
-
+ 
 - story: interactive_story_6
   steps:
   - intent: saludo
@@ -205,8 +203,8 @@ stories:
   - action: action_clarificacion
   - intent: gracias
   - action: utter_de_nada
-
-- story: interactive_story_6
+ 
+- story: interactive_story_7
   steps:
   - intent: saludo
   - action: utter_saludo
@@ -218,3 +216,103 @@ stories:
   - action: utter_pregunta_atributos
   - intent: gracias
   - action: utter_de_nada
+- story: interactive_story_8
+  steps:
+  - intent: saludo
+  - action: utter_saludo
+  - intent: wizard_conocimiento_ambiguo
+  - action: utter_hablar_de_disenio
+  - intent: despedida
+  - action: utter_despedida
+  - action: action_default_fallback
+#
+#- story: interactive_story_9
+#  steps:
+#  - intent: saludo
+#  - action: utter_saludo
+#  - intent: wizard_conocimiento_especifico
+#  - action: utter_hablar_de_habilidades
+#  - action: action_default_fallback
+#  - intent: wizard_pedido_ayuda
+#  - action: utter_aceptacion_ayuda
+#  - action: action_default_fallback
+#  - intent: pregunta_concepto
+#    entities:
+#    - concepto: requerimientos
+#  - slot_was_set:
+#    - concepto: requerimientos
+#  - action: utter_pregunta_concepto/diferencia_req_func_no_func
+#  - action: action_default_fallback
+#  - intent: pregunta_concepto
+#  - action: utter_pregunta_concepto/diferencia_req_func_no_func_ejemplo
+#  - action: action_default_fallback
+#  - intent: wizard_pedido_ayuda
+#  - action: utter_aceptacion_ayuda
+#  - action: action_default_fallback
+ 
+- story: interactive_story_10
+  steps:
+  - intent: saludo
+  - action: utter_saludo
+  - intent: pregunta_concepto
+    entities:
+    - concepto: patron_arquitectonico
+  - slot_was_set:
+    - concepto: patron_arquitectonico
+  - action: utter_pregunta_concepto
+  - intent: pregunta_patrones
+    entities:
+    - patron_arquitectonico: cliente-servidor
+  - action: utter_pregunta_patrones
+  - intent: pregunta_atributos
+    entities:
+    - concepto: atributos
+  - slot_was_set:
+    - concepto: atributos
+  - action: utter_pregunta_atributos
+  - intent: concepto_transparencia
+  - action: utter_como_hacer_transparencias
+  - action: action_default_fallback
+  - intent: despedida
+  - action: action_default_fallback
+ 
+- story: interactive_story_11
+  steps:
+  - intent: saludo
+  - action: utter_saludo
+  - intent: pregunta_patrones_poo
+    entities:
+    - patron_poo: composite
+  - action: utter_pregunta_patrones_poo
+  - intent: pregunta_patrones
+    entities:
+    - patron_arquitectonico: peer-to-peer
+  - action: utter_pregunta_patrones
+  - intent: pregunta_atributos
+    entities:
+    - concepto: atributos
+  - slot_was_set:
+    - concepto: atributos
+  - action: utter_pregunta_atributos
+  - intent: gracias
+  - action: utter_de_nada
+ 
+- story: interactive_story_12
+  steps:
+  - intent: ayuda_transparencia
+  - action: utter_como_hacer_una_transparencia
+  - action: action_default_fallback
+  - intent: ayuda_transparencia
+  - action: utter_como_hacer_transparencias
+  - action: action_default_fallback
+  - intent: pregunta_concepto
+    entities:
+    - concepto: patrones arquitectonicos
+  - slot_was_set:
+    - concepto: patrones arquitectonicos
+  - action: utter_pregunta_concepto
+  - intent: pregunta_patrones
+  - action: utter_pregunta_patrones
+  - intent: despedida
+  - action: utter_despedida
+  - action: action_default_fallback
