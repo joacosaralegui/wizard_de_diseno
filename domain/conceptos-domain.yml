@@ -225,6 +225,8 @@ responses:
   
 actions:
 - action_clarificacion
+- action_dispatch_patrones_arq
+- action_dispatch_patrones_poo
 - action_default_fallback
 - action_ejemplo
 - utter_chitchat

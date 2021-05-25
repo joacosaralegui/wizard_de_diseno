@@ -6,27 +6,6 @@ rules:
   - intent: chitchat
   - action: utter_chitchat
 
-- rule: respond to pregunta_concepto
-  steps:
-  - intent: pregunta_concepto
-  - action: utter_pregunta_concepto
-
-- rule: respond to pregunta_patrones
-  steps:
-  - intent: pregunta_patrones
-  - action: utter_pregunta_patrones
-
-- rule: respond to pregunta_patrones_poo
-  steps:
-  - intent: pregunta_patrones_poo
-  - action: utter_pregunta_patrones_poo
-
-- rule: respond to pregunta_atributos
-  steps:
-  - intent: pregunta_atributos
-  - action: utter_pregunta_atributos
-
-
 - rule: respond to gracias
   steps:
   - intent: gracias

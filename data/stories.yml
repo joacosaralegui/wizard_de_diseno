@@ -263,7 +263,7 @@ stories:
   - intent: pregunta_patrones
     entities:
     - patron_arquitectonico: cliente-servidor
-  - action: utter_pregunta_patrones
+  - action: action_dispatch_patrones_arq
   - intent: pregunta_atributos
     entities:
     - concepto: atributos
@@ -283,11 +283,11 @@ stories:
   - intent: pregunta_patrones_poo
     entities:
     - patron_poo: composite
-  - action: utter_pregunta_patrones_poo
+  - action: action_dispatch_patrones_poo
   - intent: pregunta_patrones
     entities:
     - patron_arquitectonico: peer-to-peer
-  - action: utter_pregunta_patrones
+  - action: action_dispatch_patrones_arq
   - intent: pregunta_atributos
     entities:
     - concepto: atributos
@@ -312,7 +312,7 @@ stories:
     - concepto: patrones arquitectonicos
   - action: utter_pregunta_concepto
   - intent: pregunta_patrones
-  - action: utter_pregunta_patrones
+  - action: action_dispatch_patrones_arq
   - intent: despedida
   - action: utter_despedida
   - action: action_default_fallback
