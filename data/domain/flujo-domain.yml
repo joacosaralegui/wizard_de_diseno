@@ -1,0 +1,106 @@
+version: '2.0'
+config:
+  store_entities_as_slots: true
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- no_entendio:
+    use_entities: true
+- gracias:
+    use_entities: true
+- saludo:
+    use_entities: true
+- chitchat:
+    use_entities: true
+- negacion:
+    use_entities: true
+- despedida:
+    use_entities: true
+- afirmacion:
+    use_entities: true
+- entendio:
+    use_entities: true
+
+
+responses:
+  utter_saludo:
+  - text: Hola! Soy DesignWizard. Qué te pinta hacer hoy?
+  - text: Hola! Soy DesignWizard y estoy para ayudarte, por donde queres empezar?
+  - text: Me llamo DesignWizard y soy un genio en lo que de disenio se trate, en que te puedo ayudar?
+  - text: Buenas, mi nombre es DesignWizard, en que te puedo ayudar?
+  utter_despedida:
+  - text: Hasta luego, un gusto hablar contigo
+  - text: Hasta la proxima
+  - text: Nos vemos, cualquier cosita ya sabes que estoy aqui
+  - text: Espero haberte ayudado en algo, chauu
+  utter_de_nada:
+  - text: A vos!
+  - text: Por nada, estoy para ayudarte
+  - text: Por nada, siempre y cuando pueda ayudarte lo hare
+  - text: Gracias a vos!
+  utter_no_entendio:
+  - text: Podrias decirme exactamente que es lo que no entiendes?
+  - text: Que es lo que no entendes?
+  - text: Dime que es lo que no entendiste, quizas pueda ayudarte de otra menera
+  - text: Con que te quedaron dudas?
+  utter_chitchat:
+  - text: Test de chitchat
+  utter_pregunta_concepto:
+  - text: Test de concepto
+  utter_pregunta_patrones:
+  - text: Test de patrones
+  utter_pregunta_patrones_poo:
+  - text: Test de patrones poo
+  utter_pregunta_atributos:
+  - text: Test de atributos
+  utter_chitchat/bien:
+  - text: Me alegro mucho...
+  - text: Mejor asi entonces
+  - text: Buenisimo que asi sea
+  - text: Esa es la actitud!!
+  utter_chitchat/mal:
+  - text: Tranqui, siempre se puede estar peor
+  - text: Uhh que lastima, espero con mi ayuda estes un poco mejor
+  - text: Uhh bajon, ya estaras mejor!
+  - text: Trata de pensar en cosas positivas, eso ayuda a sentirse mejor
+  utter_chitchat/aburrido:
+  - text: Tranqui, ya encontraras algo para hacer
+  - text: Espero poder entretenerte un rato entonces
+  - text: Si no tenes nada para hacer, ponete a investigar sobre patrones de diseño, ya que es muy importante
+  - text: Hablemos de patrones de diseño y nos entretenemos un ratito
+  utter_chitchat/cansado:
+  - text: Cuando puedas intenta descansar para luego estar con mas energia
+  - text: Tomate un cafe, eso te puede ayudar
+  - text: Somos dos, yo tambien estoy cansado, he charlado con mucha gente hoy
+  - text: Ya habra tiempo para descansar, ahora es momento de seguir aprendiendo
+
+
+  utter_nombre:
+  - text: Mi nombre es Wizard, podes decirme "El mago".
+  utter_no_me_tomes_el_pelo:
+  - text: Dale pa, hablemos de diseño o no me molestes.
+  utter_afirmacion_nombre:
+  - text: Si, soy wizard, también conocido como "El mago"
+  utter_inteligencia:
+  - text: Sé de todo, mucho más que vos seguro, aunque me especializo en diseño.
+  utter_cumpleaños:
+  - text: No sé que día cumplo, sinceramente me importa poco.
+  utter_edad:
+  - text: Soy grande como el Diego.
+  utter_no_se:
+  - text: No recuerdo.
+  utter_genero:
+  - text: Me percibo como máquina.
+  utter_familia:
+  - text: No tengo parientes, salí de la nada.
+actions:
+- action_clarificacion
+- action_default_fallback
+- action_ejemplo
+- utter_chitchat
+- utter_de_nada
+- utter_saludo
+
+forms: {}
+e2e_actions: []
