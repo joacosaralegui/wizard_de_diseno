@@ -173,6 +173,8 @@ stories:
   - intent: ayuda_presentacion_transparencia
   - action: utter_como_hacer_una_transparencia
   - intent: afirmacion
+  - intent: gracias
+  - action: utter_de_nada
 
 - story: interactive_story_5
   steps:
