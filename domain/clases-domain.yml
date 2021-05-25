@@ -4,7 +4,6 @@ config:
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
-
 intents:
 - ayuda_transparencia:
     use_entities: true
@@ -18,7 +17,8 @@ intents:
     use_entities: true
 - concepto_centennial:
     use_entities: true
-
+entities: []
+slots: {}
 responses:
   utter_como_hacer_transparencias:
   - text: La transparencia o filmina debe ser de un color claro y que no sea llamativo, con un color de letra que se distinga con el color anterior. \ \n Cada transparencia debe tener un titulo de guí de lo que sé está hablando, este debe ir en la parte superior izquierda, ademas también debe tener poco texto, para solo usarla como ayuda y no para leerla. \ \n Se le puede agregar gráficos o dibujos que ayuden a entender o que hagan alusión a alguna comparación del tema explicado.
@@ -34,6 +34,6 @@ responses:
   - text: El objetivo o fin de la clase de Marcelo, sobre de diseño de software, es aprender todo sobre los conceptos en el entorno de diseñar un sistema, tales como patrones de diseño, atributos funcionales y no funcionales entre otros. \ \n La idea es poder llevarse el aprendizaje de como se trabaja un sistema de principio a fin. \ \n Esta clase se complementa con la de Ingeniería de Software, donde se profundiza más en lo realizado en diseño.
   utter_modo_evaluacion:
   - text: Para aprobar la materia Diseño de Software es necesario participar de un proyecto en grupos de varios o pocos integrantes, elegidos por Marcelo, en base a los perfiles de cada alumno.\ \n La idea es llevar a cabo lo que propone Marcelo como proyecto, ademas de realizar una o varias presentaciones sobre temas también elegidos por él.
-
+actions: []
 forms: {}
 e2e_actions: []

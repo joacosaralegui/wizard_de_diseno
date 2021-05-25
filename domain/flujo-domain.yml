@@ -21,8 +21,8 @@ intents:
     use_entities: true
 - entendio:
     use_entities: true
-
-
+entities: []
+slots: {}
 responses:
   utter_saludo:
   - text: Hola! Soy DesignWizard. Qué te pinta hacer hoy?
@@ -74,8 +74,6 @@ responses:
   - text: Tomate un cafe, eso te puede ayudar
   - text: Somos dos, yo tambien estoy cansado, he charlado con mucha gente hoy
   - text: Ya habra tiempo para descansar, ahora es momento de seguir aprendiendo
-
-
   utter_nombre:
   - text: Mi nombre es Wizard, podes decirme "El mago".
   utter_no_me_tomes_el_pelo:
@@ -101,6 +99,5 @@ actions:
 - utter_chitchat
 - utter_de_nada
 - utter_saludo
-
 forms: {}
 e2e_actions: []

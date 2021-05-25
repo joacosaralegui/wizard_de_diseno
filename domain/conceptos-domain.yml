@@ -13,7 +13,6 @@ intents:
     use_entities: true
 - pregunta_patrones_poo:
     use_entities: true
-
 entities:
 - atr-calidad
 - concepto
@@ -71,25 +70,35 @@ responses:
   utter_pregunta_concepto/diferencia_req_func_no_func:
   - text: Un requisito funcional describe lo que debe hacer un sistema, mientras que los requisitos no funcionales imponen restricciones sobre cómo lo hará el sistema.
   utter_pregunta_patrones/capas:
-  - text: 'Este patrón se puede utilizar para estructurar programas que se pueden descomponer en grupos de subtareas, cada una de las cuales se encuentra en un nivel particular de abstracción. Cada capa proporciona servicios a la siguiente capa superior.\n Las 4 capas más comúnmente encontradas de un sistema de información general son las siguientes: Capa de presentación, Capa de aplicación, Capa de lógica de negocios, Capa de acceso a datos.'
+  - image: https://miro.medium.com/max/568/1*4xX_WQQuD2u0PMK5bcWFkQ.png
+    text: 'Este patrón se puede utilizar para estructurar programas que se pueden descomponer en grupos de subtareas, cada una de las cuales se encuentra en un nivel particular de abstracción. Cada capa proporciona servicios a la siguiente capa superior.\n Las 4 capas más comúnmente encontradas de un sistema de información general son las siguientes: Capa de presentación, Capa de aplicación, Capa de lógica de negocios, Capa de acceso a datos.'
   utter_pregunta_patrones/cliente-servidor:
-  - text: Este patrón consiste en dos partes; un servidor y múltiples clientes. El componente del servidor proporcionará servicios a múltiples componentes del cliente. Los clientes solicitan servicios del servidor y el servidor proporciona servicios relevantes a esos clientes. Además, el servidor sigue escuchando las solicitudes de los clientes
+  - image: https://miro.medium.com/max/568/1*4xX_WQQuD2u0PMK5bcWFkQ.png
+    text: Este patrón consiste en dos partes; un servidor y múltiples clientes. El componente del servidor proporcionará servicios a múltiples componentes del cliente. Los clientes solicitan servicios del servidor y el servidor proporciona servicios relevantes a esos clientes. Además, el servidor sigue escuchando las solicitudes de los clientes
   utter_pregunta_patrones/maestro-esclavo:
-  - text: Este patrón consiste en dos partes; maestro y esclavos. El componente maestro distribuye el trabajo entre componentes esclavos idénticos y calcula el resultado final de los resultados que devuelven los esclavos.
+  - image: https://miro.medium.com/max/1084/1*lsK9QntZl2d5oLojwRGXDg.png
+    text: Este patrón consiste en dos partes; maestro y esclavos. El componente maestro distribuye el trabajo entre componentes esclavos idénticos y calcula el resultado final de los resultados que devuelven los esclavos.
   utter_pregunta_patrones/pipe-filter:
-  - text: Este patrón se puede usar para estructurar sistemas que producen y procesan una secuencia de datos. Cada paso de procesamiento se incluye dentro de un componente de filtro. Los datos que se procesarán se pasan a través de las tuberías. Estas tuberías se pueden utilizar para el almacenamiento en búfer o con fines de sincronización.
+  - image: https://miro.medium.com/max/1400/1*qikehZcDhhl_wWsqeI_nvg.png
+    text: Este patrón se puede usar para estructurar sistemas que producen y procesan una secuencia de datos. Cada paso de procesamiento se incluye dentro de un componente de filtro. Los datos que se procesarán se pasan a través de las tuberías. Estas tuberías se pueden utilizar para el almacenamiento en búfer o con fines de sincronización.
   utter_pregunta_patrones/broker:
-  - text: Este patrón se usa para estructurar sistemas distribuidos con componentes desacoplados. Estos componentes pueden interactuar entre sí mediante invocaciones de servicios remotos. Un componente de intermediario es responsable de la coordinación de la comunicación entre los componentes.
+  - image: https://miro.medium.com/max/1400/1*1qRQZjLRAd0yY_T9p2OgBw.png
+    text: Este patrón se usa para estructurar sistemas distribuidos con componentes desacoplados. Estos componentes pueden interactuar entre sí mediante invocaciones de servicios remotos. Un componente de intermediario es responsable de la coordinación de la comunicación entre los componentes.
   utter_pregunta_patrones/peer-to-peer:
-  - text: En este patrón, los componentes individuales se conocen como pares. Los pares pueden funcionar tanto como un cliente, solicitando servicios de otros pares, y como un servidor, proporcionando servicios a otros pares. Un par puede actuar como un cliente o como un servidor o como ambos, y puede cambiar su rol dinámicamente con el tiempo.
+  - image: https://miro.medium.com/max/520/1*ROvkckSTw1UncrbQSmUJUQ.png
+    text: En este patrón, los componentes individuales se conocen como pares. Los pares pueden funcionar tanto como un cliente, solicitando servicios de otros pares, y como un servidor, proporcionando servicios a otros pares. Un par puede actuar como un cliente o como un servidor o como ambos, y puede cambiar su rol dinámicamente con el tiempo.
   utter_pregunta_patrones/event-bus:
-  - text: Este patrón trata principalmente con eventos y tiene 4 componentes principales; fuente de evento, escucha de evento, canal y bus de evento. Las fuentes publican mensajes en canales particulares en un bus de eventos. Los oyentes se suscriben a canales particulares. Los oyentes son notificados de los mensajes que se publican en un canal al que se han suscrito anteriormente.
+  - image: https://miro.medium.com/max/1264/1*DOZ4nVR9zkJm-EnXT3KOGQ.png
+    text: Este patrón trata principalmente con eventos y tiene 4 componentes principales; fuente de evento, escucha de evento, canal y bus de evento. Las fuentes publican mensajes en canales particulares en un bus de eventos. Los oyentes se suscriben a canales particulares. Los oyentes son notificados de los mensajes que se publican en un canal al que se han suscrito anteriormente.
   utter_pregunta_patrones/mvc:
-  - text: 'Este patrón, también conocido como patrón MVC, divide una aplicación interactiva en 3 partes, como:\n Modelo — contiene la funcionalidad y los datos básicos,\n Vista: muestra la información al usuario (se puede definir más de una vista),\n Controlador: maneja la entrada del usuario.\n Esto se hace para separar las representaciones internas de información de las formas en que se presenta y acepta la información del usuario. Desacopla los componentes y permite la reutilización eficiente del código.'
+  - image: https://miro.medium.com/max/1400/1*OP0CS6O5Sb66jpc-H-IuRQ.png
+    text: 'Este patrón, también conocido como patrón MVC, divide una aplicación interactiva en 3 partes, como:\n Modelo — contiene la funcionalidad y los datos básicos,\n Vista: muestra la información al usuario (se puede definir más de una vista),\n Controlador: maneja la entrada del usuario.\n Esto se hace para separar las representaciones internas de información de las formas en que se presenta y acepta la información del usuario. Desacopla los componentes y permite la reutilización eficiente del código.'
   utter_pregunta_patrones/blackboard:
-  - text: 'Este patrón es útil para problemas para los que no se conocen estrategias de solución deterministas. El patrón de pizarra consta de 3 componentes principales:\n Pizarra: una memoria global estructurada que contiene objetos del espacio de solución,\n Fuente de conocimiento: módulos especializados con su propia representación,\n Componente de control : selecciona, configura y ejecuta módulos.\n Todos los componentes tienen acceso a la pizarra. Los componentes pueden producir nuevos objetos de datos que se agregan a la pizarra. Los componentes buscan tipos particulares de datos en la pizarra, y pueden encontrarlos por coincidencia de patrones con la fuente de conocimiento existente.'
+  - image: https://miro.medium.com/max/1060/1*ArbMx7A21I47llvwUTiSDg.png
+    text: 'Este patrón es útil para problemas para los que no se conocen estrategias de solución deterministas. El patrón de pizarra consta de 3 componentes principales:\n Pizarra: una memoria global estructurada que contiene objetos del espacio de solución,\n Fuente de conocimiento: módulos especializados con su propia representación,\n Componente de control : selecciona, configura y ejecuta módulos.\n Todos los componentes tienen acceso a la pizarra. Los componentes pueden producir nuevos objetos de datos que se agregan a la pizarra. Los componentes buscan tipos particulares de datos en la pizarra, y pueden encontrarlos por coincidencia de patrones con la fuente de conocimiento existente.'
   utter_pregunta_patrones/interpreter:
-  - text: Este patrón se usa para diseñar un componente que interpreta programas escritos en un lenguaje dedicado. Especifica principalmente cómo evaluar las líneas de programas, conocidas como oraciones o expresiones escritas en un idioma particular. La idea básica es tener una clase para cada símbolo del idioma.
+  - image: "https://miro.medium.com/max/1320/1*DrC3T5R4SsdcQY6aXLCRZA.png"
+    text: Este patrón se usa para diseñar un componente que interpreta programas escritos en un lenguaje dedicado. Especifica principalmente cómo evaluar las líneas de programas, conocidas como oraciones o expresiones escritas en un idioma particular. La idea básica es tener una clase para cada símbolo del idioma.
   utter_pregunta_patrones_poo/abstract-factory:
   - text: Abstract Factory es un patrón de diseño creacional que nos permite producir familias de objetos relacionados sin especificar sus clases concretas.
   utter_pregunta_patrones_poo/factory-method:
@@ -182,47 +191,45 @@ responses:
   - text: Por ejemplo, un requerimiento no funcional que se encasilla en Interoperabilidad puede ser:\nEl producto debe tener la capacidad de interpretar correctamente los datos que se intercambian
   - text: Por ejemplo, un requerimiento no funcional que se encasilla en Interoperabilidad puede ser:\nEl sistema debe poder comunicarse fácilmente con otros servicios
   utter_pregunta_concepto/fdd_clarificacion:
-  - text: 'Te lo explico con otras palabras... fdd es un metodologia agil para el desarrollo de sistemas que incluye el monitoreo constante de porceso'
+  - text: Te lo explico con otras palabras... fdd es un metodologia agil para el desarrollo de sistemas que incluye el monitoreo constante de porceso
   utter_pregunta_concepto/atr-calidad_clarificacion:
-  - text: 'Y mira, los atributos de calidad son aspectos importates impotantes de la arquitectura de software, indica que tan bien el sistema satisface las necesidades de las partes interesadas'
+  - text: Y mira, los atributos de calidad son aspectos importates impotantes de la arquitectura de software, indica que tan bien el sistema satisface las necesidades de las partes interesadas
   utter_pregunta_concepto/hook_clarificacion:
-  - text: 'Hooking se utiliza para muchos propósitos, incluyendo la depuración de programas y la ampliación de la funcionalidad'
+  - text: Hooking se utiliza para muchos propósitos, incluyendo la depuración de programas y la ampliación de la funcionalidad
   utter_pregunta_concepto/req_func_clarificacion:
-  - text: 'Es importante saber que un requisito funcional define una función del sistema de software o sus componentes.'
+  - text: Es importante saber que un requisito funcional define una función del sistema de software o sus componentes.
   utter_pregunta_concepto/req_no_func_clarificacion:
   - text: 'Se trata de requisitos que no se refieren directamente a las funciones específicas suministradas por el sistema (características de usuario), sino a las propiedades del sistema: rendimiento, seguridad, disponibilidad.'
   utter_pregunta_concepto/diferencia_req_func_no_func_clarificacion:
-  - text: 'En resumen, el requisito funcional es describir el comportamiento del sistema en relación con la funcionalidad del sistema. El requisito no funcional elabora una característica de rendimiento del sistema.'
+  - text: En resumen, el requisito funcional es describir el comportamiento del sistema en relación con la funcionalidad del sistema. El requisito no funcional elabora una característica de rendimiento del sistema.
   utter_pregunta_atributos/tolerancia-a-fallos_clarificacion:
-  - text: 'Un diseño tolerante a fallos es un sistema que está capacitado para continuar su funcionamiento cuando algún componente del sistema falla'
+  - text: Un diseño tolerante a fallos es un sistema que está capacitado para continuar su funcionamiento cuando algún componente del sistema falla
   utter_pregunta_atributos/disponibilidad_clarificacion:
-  - text: 'En pocas palabras, la disponibilidad es la proporción de tiempo que un sistema está en condiciones de funcionamiento.'
+  - text: En pocas palabras, la disponibilidad es la proporción de tiempo que un sistema está en condiciones de funcionamiento.
   utter_pregunta_atributos/mantenibilidad_clarificacion:
-  - text: 'La mantenibilidad se refiere a la facilidad con que se pueden ejecutar las tareas de gestión de mantenimiento del sistema'
+  - text: La mantenibilidad se refiere a la facilidad con que se pueden ejecutar las tareas de gestión de mantenimiento del sistema
   utter_pregunta_atributos/performance_clarificacion:
-  - text: 'En pocas palabras, desempeño con respecto al rendimiento de una computadora, un dispositivo, un sistema operativo, un programa o una conexión a una red'
+  - text: En pocas palabras, desempeño con respecto al rendimiento de una computadora, un dispositivo, un sistema operativo, un programa o una conexión a una red
   utter_pregunta_atributos/escalabilidad_clarificacion:
-  - text: 'Se entiende por escalabilidad a la capacidad de adaptación y respuesta de un sistema'
+  - text: Se entiende por escalabilidad a la capacidad de adaptación y respuesta de un sistema
   utter_pregunta_atributos/seguridad_clarificacion:
-  - text: 'Es la medida sobre la habilidad del sistema para resistir usos no autorizados mientras sigue proveyendo sus servicios a los usuarios legítimos.'
+  - text: Es la medida sobre la habilidad del sistema para resistir usos no autorizados mientras sigue proveyendo sus servicios a los usuarios legítimos.
   utter_pregunta_atributos/usabilidad_clarificacion:
-  - text: 'Simplificando, es el grado de facilidad del sistema para ser operado'
+  - text: Simplificando, es el grado de facilidad del sistema para ser operado
   utter_pregunta_atributos/portabilidad_clarificacion:
-  - text: 'Resumiendo, es el grado en el que los datos tienen atributos que les permiten ser instalados, reemplazados o eliminados de un sistema a otro'
+  - text: Resumiendo, es el grado en el que los datos tienen atributos que les permiten ser instalados, reemplazados o eliminados de un sistema a otro
   utter_pregunta_atributos/interoperabilidad_clarificacion:
-  - text: 'En pocas palabras, el atrbutos de calidad interoperabilidad es responsable del funcionamiento y la transmisión de datos y su intercambio con otros sistemas externos'
-##caso de usos/ejemplos
+  - text: En pocas palabras, el atrbutos de calidad interoperabilidad es responsable del funcionamiento y la transmisión de datos y su intercambio con otros sistemas externos
   utter_pregunta_concepto/scrum_ejemplo:
-    - text: 'Un ejemplo del uso de Scrum es Spotify, ya que dieron mucha importancia al rol del Scrum Master y al del Product Owner. Gracias a esta metodología, descubrieron y entendieron las necesidades reales de los clientes y realizaron un buen trabajo de equipo coordinándose en la empresa.'
+  - text: Un ejemplo del uso de Scrum es Spotify, ya que dieron mucha importancia al rol del Scrum Master y al del Product Owner. Gracias a esta metodología, descubrieron y entendieron las necesidades reales de los clientes y realizaron un buen trabajo de equipo coordinándose en la empresa.
   utter_pregunta_concepto/agil_ejemplo:
-    - text: 'Existen diferentes opciones como Scrum, Kanban, entre otras; todas ellas se guían a través de un patrón establecido por el Manifiesto Ágil'
+  - text: Existen diferentes opciones como Scrum, Kanban, entre otras; todas ellas se guían a través de un patrón establecido por el Manifiesto Ágil
   utter_pregunta_concepto/fdd_ejemplo:
-    - text: ''
+  - text: ''
   utter_pregunta_concepto/hook_ejemplo:
-    - text: 'Hay varios ejemplos, como incluir la interceptación de mensajes de eventos de teclado o de ratón antes de que lleguen a una aplicación o interceptar llamadas de sistema operativo para supervisar el comportamiento o modificar la función de una aplicación u otro componente.'
+  - text: Hay varios ejemplos, como incluir la interceptación de mensajes de eventos de teclado o de ratón antes de que lleguen a una aplicación o interceptar llamadas de sistema operativo para supervisar el comportamiento o modificar la función de una aplicación u otro componente.
   utter_pregunta_concepto/diferencia_req_func_no_func_ejemplo:
-    - text: 'Los requisitos no funcionales a veces se definen en términos de métricas es decir, algo que se puede medir sobre el sistema para hacerlos más tangibles. Los requisitos no funcionales también pueden describir aspectos del sistema que no se relacionan con su ejecución, sino con su evolución a lo largo del tiempo, por ejemplo, mantenibilidad, extensibilidad, documentación, etc.'
-  
+  - text: Los requisitos no funcionales a veces se definen en términos de métricas es decir, algo que se puede medir sobre el sistema para hacerlos más tangibles. Los requisitos no funcionales también pueden describir aspectos del sistema que no se relacionan con su ejecución, sino con su evolución a lo largo del tiempo, por ejemplo, mantenibilidad, extensibilidad, documentación, etc.
 actions:
 - action_clarificacion
 - action_dispatch_patrones_arq
