@@ -138,21 +138,30 @@ class ActionDispatchPatronesPoo(Action):
 
 class ActionEjemplo(Action):
     def name(self) -> Text:
-        return "action_ejempĺo"
+        return "action_ejemplo"
 
     def run(self, dispatcher: CollectingDispatcher,
         tracker: Tracker,
         domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
         utter = get_latest_questions(tracker.events)[0]
-        # pregunta_concepto/patron
-        # utter_pregunta_concepto/patron_clarificacion
-
-        # TODO: soportar cuando vuelve a no entender (1 nivel de recursividad de no entender)
-        # SI tiene clarificacion -> no me rompas las bolas
-        # TODO: chequear que exista y sino decir que -> nom me rompas als bolas
-
-        return [FollowupAction(name='utter_' + utter + '_ejemplo')]
+        
+        #intento retornar con el utter que no se si existe
+        try:
+            retorno = FollowupAction(name='utter_' + utter + '_ejemplo')
+            return[retorno]
+        except:
+            # si dio error busco en wiki
+            try:
+                text = tracker.latest_message['text']
+                print('texto a buscar en wiki: ' + text) # ver como buscar mensje anterior a este
+                summary = wikipedia.summary(text, sentences=1)
+            except:
+                # si no funco wiki tampoco
+                summary = "La verdad que no entiendo que es lo que queres... " 
+                dispatcher.utter_message(summary)
+                FollowupAction("action_listen")
+        return []
 
 class ActionDefaultFallback(Action):
     """Executes the fallback action and goes back to the previous state

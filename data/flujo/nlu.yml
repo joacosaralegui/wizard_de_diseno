@@ -1,5 +1,12 @@
 version: "2.0"
 nlu:
+- intent: ejemplo
+  examples: |
+    - me darias un ejemplo
+    - en donde se usa eso
+    - me das un ejemplo
+    - me das ejemplos?
+    - tenes algun ejemplo de eso?
 - intent: saludo
   examples: |
     - hola genio

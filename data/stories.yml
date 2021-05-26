@@ -316,3 +316,33 @@ stories:
   - intent: despedida
   - action: utter_despedida
   - action: action_default_fallback
+
+- story: interactive_story_13
+  steps:
+  - intent: saludo
+  - action: utter_saludo
+  - intent: pregunta_atributos
+    entities:
+    - atr-calidad: tolerancia a fallos
+  - slot_was_set:
+    - atr-calidad: tolerancia a fallos
+  - action: utter_pregunta_atributos
+  - intent: ejemplo
+  - action: action_ejemplo
+  - intent: gracias
+  - action: utter_de_nada
+
+- story: interactive_story_14
+  steps:
+  - intent: saludo
+  - action: utter_saludo
+  - intent: pregunta_concepto
+    entities:
+    - concepto: patron_arquitectonico
+  - slot_was_set:
+    - concepto: patron_arquitectonico
+  - action: utter_pregunta_concepto
+  - intent: ejemplo
+  - action: action_ejemplo
+  - intent: gracias
+  - action: utter_de_nada
