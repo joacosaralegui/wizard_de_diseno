@@ -20,3 +20,13 @@ rules:
   steps:
   - intent: pregunta_atributos
   - action: utter_pregunta_atributos
+
+- rule: respond to ejemplo
+  steps:
+  - intent: ejemplo
+  - action: action_ejemplo
+
+- rule: respond to no_entendio
+  steps:
+  - intent: no_entendio
+  - action: action_clarificacion

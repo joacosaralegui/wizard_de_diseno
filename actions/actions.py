@@ -17,28 +17,36 @@ import wikipedia
 from wikipedia.wikipedia import summary
 wikipedia.set_lang("es")
 
+
+
 def get_latest_questions(events):
     # Extrae los ultimos intents que tengan "pregunta_" en el nombre
     return [e['parse_data']['response_selector']['default']['response']['intent_response_key'] for e in events if e['event'] == 'user' and 'pregunta_' in e['parse_data']['intent']['name']]
 
 class ActionClarification(Action):
+    """Esta funcion se encarga de buscar un utter de clarificacion en base al intent detectado, 
+    se acciona con el intent de no_entendio"""
     def name(self) -> Text:
-        return "action_clarificacion"
+        return "action_clarificacion"    # con intent no entendio... 
 
     def run(self, dispatcher: CollectingDispatcher,
         tracker: Tracker,
         domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+       
+        ultimo_intent = get_latest_questions(tracker.events)[0]
 
-        utter = get_latest_questions(tracker.events)[0]
-        # pregunta_concepto/patron
-        # utter_pregunta_concepto/patron_clarificacion
+        a_buscar = 'utter_' + ultimo_intent + '_clarificacion'
 
-        # TODO: soportar cuando vuelve a no entender (1 nivel de recursividad de no entender)
-        # SI tiene clarificacion -> no me rompas las bolas
-        # TODO: chequear que exista y sino decir que -> nom me rompas als bolas
+        print('action de clarificacion a buscar: ' + a_buscar)
 
-        return [FollowupAction(name='utter_' + utter + '_clarificacion')]
+        lista_acciones = domain['responses']
 
+        if a_buscar in lista_acciones:
+            dispatcher.utter_message(response=a_buscar)
+        else:
+            dispatcher.utter_message(text='Ya lo deje muy claro, no se me ocurre otra manera...')
+
+        return []
 
 class ActionDispatchPatrones(Action):
     def name(self) -> Text:
@@ -58,6 +66,8 @@ class ActionDispatchPatrones(Action):
         return []
 
 class ActionEjemplo(Action):
+    """Esta funcion se encarga de buscar una utter de ejemplo en base al intent detectado,
+    se acciona con el intent de ejemplo"""
     def name(self) -> Text:
         return "action_ejemplo"
 
@@ -65,23 +75,19 @@ class ActionEjemplo(Action):
         tracker: Tracker,
         domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-        utter = get_latest_questions(tracker.events)[0]
-        
-        #intento retornar con el utter que no se si existe
-        try:
-            retorno = FollowupAction(name='utter_' + utter + '_ejemplo')
-            return[retorno]
-        except:
-            # si dio error busco en wiki
-            try:
-                text = tracker.latest_message['text']
-                print('texto a buscar en wiki: ' + text) # ver como buscar mensje anterior a este
-                summary = wikipedia.summary(text, sentences=1)
-            except:
-                # si no funco wiki tampoco
-                summary = "La verdad que no entiendo que es lo que queres... " 
-                dispatcher.utter_message(summary)
-                FollowupAction("action_listen")
+        ultimo_intent = get_latest_questions(tracker.events)[0]
+
+        a_buscar = 'utter_' + ultimo_intent + '_ejemplo'
+
+        print('action de ejemplo a buscar: ' + a_buscar)
+
+        lista_acciones = domain['responses']
+
+        if a_buscar in lista_acciones:
+            dispatcher.utter_message(response=a_buscar)
+        else:
+            dispatcher.utter_message(text='No tengo ejemplos de eso...')
+
         return []
 
 class ActionDefaultFallback(Action):
