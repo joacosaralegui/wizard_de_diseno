@@ -97,7 +97,7 @@ responses:
   - image: https://miro.medium.com/max/1060/1*ArbMx7A21I47llvwUTiSDg.png
     text: 'Este patrón es útil para problemas para los que no se conocen estrategias de solución deterministas. El patrón de pizarra consta de 3 componentes principales:\n Pizarra: una memoria global estructurada que contiene objetos del espacio de solución,\n Fuente de conocimiento: módulos especializados con su propia representación,\n Componente de control : selecciona, configura y ejecuta módulos.\n Todos los componentes tienen acceso a la pizarra. Los componentes pueden producir nuevos objetos de datos que se agregan a la pizarra. Los componentes buscan tipos particulares de datos en la pizarra, y pueden encontrarlos por coincidencia de patrones con la fuente de conocimiento existente.'
   utter_pregunta_patrones/interpreter:
-  - image: "https://miro.medium.com/max/1320/1*DrC3T5R4SsdcQY6aXLCRZA.png"
+  - image: https://miro.medium.com/max/1320/1*DrC3T5R4SsdcQY6aXLCRZA.png
     text: Este patrón se usa para diseñar un componente que interpreta programas escritos en un lenguaje dedicado. Especifica principalmente cómo evaluar las líneas de programas, conocidas como oraciones o expresiones escritas en un idioma particular. La idea básica es tener una clase para cada símbolo del idioma.
   utter_pregunta_patrones_poo/abstract-factory:
   - text: Abstract Factory es un patrón de diseño creacional que nos permite producir familias de objetos relacionados sin especificar sus clases concretas.
@@ -232,8 +232,7 @@ responses:
   - text: Los requisitos no funcionales a veces se definen en términos de métricas es decir, algo que se puede medir sobre el sistema para hacerlos más tangibles. Los requisitos no funcionales también pueden describir aspectos del sistema que no se relacionan con su ejecución, sino con su evolución a lo largo del tiempo, por ejemplo, mantenibilidad, extensibilidad, documentación, etc.
 actions:
 - action_clarificacion
-- action_dispatch_patrones_arq
-- action_dispatch_patrones_poo
+- action_dispatch_patrones
 - action_default_fallback
 - action_ejemplo
 - utter_chitchat

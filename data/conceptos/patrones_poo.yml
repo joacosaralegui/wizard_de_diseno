@@ -2,12 +2,12 @@ version: "2.0"
 nlu:
 - intent: pregunta_patrones_poo
   examples: |
-    - Conocés el patrón [Abstract Factory]{"entity": "patron_poo", "value": "abstract factory"}
-    - Que onda el patrón de diseño [abstract factory]{"entity": "patron_poo", "value": "abstract factory"}
-    - Decime que es [abstract factory]{"entity": "patron_poo", "value": "abstract factory"}
-    - Por favor me explicas el patron de diseño [Abstract Factory]{"entity": "patron_poo", "value": "abstract factory"}
-    - Que sabes de [factory method]{"entity": "patron_poo", "value": "factory method"}?
-    - Que es [Factory method]{"entity": "patron_poo", "value": "factory method"}?
+    - Conocés el patrón [Abstract Factory]{"entity": "patron_poo", "value": "abstract-factory"}
+    - Que onda el patrón de diseño [abstract factory]{"entity": "patron_poo", "value": "abstract-factory"}
+    - Decime que es [abstract factory]{"entity": "patron_poo", "value": "abstract-factory"}
+    - Por favor me explicas el patron de diseño [Abstract Factory]{"entity": "patron_poo", "value": "abstract-factory"}
+    - Que sabes de [factory method]{"entity": "patron_poo", "value": "factory-method"}?
+    - Que es [Factory method]{"entity": "patron_poo", "value": "factory-method"}?
     - Me explicas sobre el patron [builder]{"entity": "patron_poo", "value": "builder"}
     - En los dintintos patrones de diseño que existen, cual es el [Builder]{"entity": "patron_poo", "value": "builder"}?
     - Me contas sobre [prototype]{"entity": "patron_poo", "value": "prototype"}?
@@ -28,8 +28,8 @@ nlu:
     - Explicame, por favor, el patron [Flyweigth]{"entity": "patron_poo", "value": "flyweight"}
     - Ayudame, quiero saber sobre [proxy]{"entity": "patron_poo", "value": "proxy"}
     - Me poder contar hacerca del patron [Proxy]{"entity": "patron_poo", "value": "proxy"}
-    - No entiendo que es [chain of responsibility]{"entity": "patron_poo", "value": "chain of responsibility"}
-    - Me decis para que se usa [Chain of Responsibility]{"entity": "patron_poo", "value": "chain of responsibility"}
+    - No entiendo que es [chain of responsibility]{"entity": "patron_poo", "value": "chain-of-responsibility"}
+    - Me decis para que se usa [Chain of Responsibility]{"entity": "patron_poo", "value": "chain-of-responsibility"}
     - Cual es la funcionalidad de [command]{"entity": "patron_poo", "value": "command"}
     - Contame sobre el patrn de diseño [command]{"entity": "patron_poo", "value": "command"}
     - Explicame que es [memento]{"entity": "patron_poo", "value": "memento"}
@@ -44,16 +44,16 @@ nlu:
     - Cual es el proposito de [State]{"entity": "patron_poo", "value": "state"}?
     - No comprendo el patron de diseño [strategy]{"entity": "patron_poo", "value": "strategy"}
     - Guacho que onda [Strategy]{"entity": "patron_poo", "value": "strategy"}
-    - Me explicas como es [Template method]{"entity": "patron_poo", "value": "template method"}?
-    - Qué es un [Template]{"entity": "patron_poo", "value": "template method"}?
+    - Me explicas como es [Template method]{"entity": "patron_poo", "value": "template-method"}?
+    - Qué es un [Template]{"entity": "patron_poo", "value": "template-method"}?
     - Que onda el patron [visitor]{"entity": "patron_poo", "value": "visitor"}?
     - Y [Visitor]{"entity": "patron_poo", "value": "visitor"}? Cómo es?
 
-- synonym: abstract factory
+- synonym: abstract-factory
   examples: |
     - Abstract Factory
     - Abstract factory
-- synonym: factory method
+- synonym: factory-method
   examples: |
     - Factory method
     - Factory Method
@@ -88,7 +88,7 @@ nlu:
 - synonym: proxy
   examples: |
     - Proxy
-- synonym: chain of responsibility
+- synonym: chain-of-responsibility
   examples: |
     - Chain of Responsibility
     - Chain of responsibility
@@ -113,7 +113,7 @@ nlu:
 - synonym: strategy
   examples: |
     - Strategy
-- synonym: template method
+- synonym: template-method
   examples: |
     - Template method
     - Template
