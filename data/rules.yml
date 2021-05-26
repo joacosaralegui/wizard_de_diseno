@@ -10,3 +10,8 @@ rules:
   steps:
   - intent: gracias
   - action: utter_de_nada
+
+- rule: fallback wikipedia
+  steps:
+  - intent: nlu_fallback
+  - action: action_default_fallback

@@ -4,23 +4,18 @@
 # See this guide on how to implement these action:
 # https://rasa.com/docs/rasa/custom-actions
 
-
-# This is a simple example for a custom action which utters "Hello World!"
-
 from typing import Any, Text, Dict, List
 
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.events import FollowupAction
 
+# Setup wikipedia
 import wikipedia
-from wikipedia.wikipedia import summary
 wikipedia.set_lang("es")
 
-
-
-def get_latest_questions(events):
-    # Extrae los ultimos intents que tengan "pregunta_" en el nombre
+# Extrae los ultimos intents que tengan "pregunta_" en el nombre
+def get_ultimas_preguntas(events):
     return [e['parse_data']['response_selector']['default']['response']['intent_response_key'] for e in events if e['event'] == 'user' and 'pregunta_' in e['parse_data']['intent']['name']]
 
 class ActionClarification(Action):
@@ -32,37 +27,44 @@ class ActionClarification(Action):
     def run(self, dispatcher: CollectingDispatcher,
         tracker: Tracker,
         domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-       
-        ultimo_intent = get_latest_questions(tracker.events)[0]
-
-        a_buscar = 'utter_' + ultimo_intent + '_clarificacion'
-
-        print('action de clarificacion a buscar: ' + a_buscar)
-
-        lista_acciones = domain['responses']
-
-        if a_buscar in lista_acciones:
-            dispatcher.utter_message(response=a_buscar)
+        
+        ultimas_preguntas = get_ultimas_preguntas(tracker.events)
+        
+        if ultimas_preguntas:
+            ultima_pregunta = ultimas_preguntas[0]
+            accion_a_responder = 'utter_' + ultima_pregunta + '_clarificacion'
+            print('action de clarificacion a buscar: ' + accion_a_responder)
+            
+            lista_acciones = domain['responses']
+            if accion_a_responder in lista_acciones:
+                dispatcher.utter_message(response=accion_a_responder)
+            else:
+                dispatcher.utter_message(text='Ya lo deje muy claro, no se me ocurre otra manera...')
         else:
-            dispatcher.utter_message(text='Ya lo deje muy claro, no se me ocurre otra manera...')
-
+            dispatcher.utter_message(text="No hay nada que entender. Haceme alguna pregunta interesante")
+        
         return []
 
 class ActionDispatchPatrones(Action):
+    """Esta funcion se dispara cada vez que alguien pide una pregunta de patrones.
+    Devuelve un utter con la respuesta para ese patron en particular"""
     def name(self) -> Text:
         return "action_dispatch_patrones"
 
     def run(self, dispatcher: CollectingDispatcher,
         tracker: Tracker,
         domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-
-        last_intent = tracker.get_intent_of_latest_message()
-        last_entity_value = tracker.latest_message['entities'][0]['value']
-
-        utter = 'utter_'+ last_intent + '/' + last_entity_value
-
-        dispatcher.utter_message(response=utter)
-
+        
+        ultimo_intent = tracker.get_intent_of_latest_message()
+        ultima_entidad = tracker.latest_message['entities'][0]['value']
+        utter_a_responder = 'utter_'+ ultimo_intent + '/' + ultima_entidad
+        
+        lista_acciones = domain['responses']
+        if utter_a_responder in lista_acciones:
+            dispatcher.utter_message(response=utter_a_responder)
+        else:
+            dispatcher.utter_message(text='Es una buena pregunta, la verdad que no tengo idea. Preguntame alguna otra cosa, la segunda es la vencida.')
+    
         return []
 
 class ActionEjemplo(Action):
@@ -75,24 +77,25 @@ class ActionEjemplo(Action):
         tracker: Tracker,
         domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-        ultimo_intent = get_latest_questions(tracker.events)[0]
-
-        a_buscar = 'utter_' + ultimo_intent + '_ejemplo'
-
-        print('action de ejemplo a buscar: ' + a_buscar)
-
-        lista_acciones = domain['responses']
-
-        if a_buscar in lista_acciones:
-            dispatcher.utter_message(response=a_buscar)
+        ultimas_preguntas = get_ultimas_preguntas(tracker.events)
+        
+        if ultimas_preguntas:
+            ultima_pregunta = ultimas_preguntas[0]
+            accion_a_responder = 'utter_' + ultima_pregunta + '_ejemplo'
+            print('action de ejemplo a buscar: ' + accion_a_responder)
+            
+            lista_acciones = domain['responses']
+            if accion_a_responder in lista_acciones:
+                dispatcher.utter_message(response=accion_a_responder)
+            else:
+                dispatcher.utter_message(text='No tengo ejemplos de eso...')
         else:
-            dispatcher.utter_message(text='No tengo ejemplos de eso...')
-
+            dispatcher.utter_message(text="Ejemplos de qué? Estás bien vos? Preguntame algo en serio..")
+        
         return []
 
 class ActionDefaultFallback(Action):
-    """Executes the fallback action and goes back to the previous state
-    of the dialogue"""
+    """Ejecuta una accion de fallback que busca en wikipedia lo que no entiende el bot"""
 
     def name(self) -> Text:
         return "action_default_fallback"
@@ -110,9 +113,7 @@ class ActionDefaultFallback(Action):
             summary = wikipedia.summary(text, sentences=1)
         except:
             # TODO: add otras opciones!! (UTTER??)
-            summary = "Que pregunta más básica. No tenes algo mejor?"
+            summary = "Que pregunta más amplia. No tenes algo más específico?"
         dispatcher.utter_message(summary)
-        FollowupAction("action_listen")
-
-        # Revert user message which led to fallback.
-        return []
+        
+        return [FollowupAction("action_listen")]
