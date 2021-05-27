@@ -230,6 +230,12 @@ responses:
   - text: Hay varios ejemplos, como incluir la interceptación de mensajes de eventos de teclado o de ratón antes de que lleguen a una aplicación o interceptar llamadas de sistema operativo para supervisar el comportamiento o modificar la función de una aplicación u otro componente.
   utter_pregunta_concepto/diferencia_req_func_no_func_ejemplo:
   - text: Los requisitos no funcionales a veces se definen en términos de métricas es decir, algo que se puede medir sobre el sistema para hacerlos más tangibles. Los requisitos no funcionales también pueden describir aspectos del sistema que no se relacionan con su ejecución, sino con su evolución a lo largo del tiempo, por ejemplo, mantenibilidad, extensibilidad, documentación, etc.
+  utter_pregunta_concepto/diseño:
+  - text: Se lo define como el proceso de aplicar ciertas técnicas y principios con el propósito de definir un dispositivo, un proceso o un Sistema, con suficientes detalles como para permitir su interpretación y realización física. El Diseño de Software cuenta con distintas etapas, pero podemos resaltar la etapa del Diseño Arquitectónico, que describe la estructura y el comportamiento del Software consigo mismo, con los sistemas que operan junto con el y con los usuarios que lo emplean.
+  utter_pregunta_concepto/diseño_ejemplo:
+  - text: Hay miles de ejemplos, te puedo ayudar a diseñar! Así armamos tu propio diseño, puede ser el de diseño de sistemas de operaciones, páginas web, dispositivos móviles y mas!
+  utter_pregunta_concepto/diseño_clarificacion:
+  - text: En otras palabras y muy muy breve, es el proceso de definición de la arquitectura, módulos, interfaces y datos de un sistema para satisfacer unos requisitos previamente especificados.
 actions:
 - action_clarificacion
 - action_dispatch_patrones

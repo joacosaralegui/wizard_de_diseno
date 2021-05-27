@@ -79,6 +79,13 @@ nlu:
     - No entiendo la diferencia entre [requerimientos funcionales]{"entity": "concepto", "value": "requerimiento funcional"} y [requerimiento no funcional](concepto)
     - Cuál es la diferencia entre [requerimientos funcionales]{"entity": "concepto", "value": "requerimiento funcional"} y [requerimiento no funcional](concepto)?
     - No distingo entre [requerimientos funcionales]{"entity": "concepto", "value": "requerimiento funcional"} y [requerimiento no funcional](concepto)
+- intent: pregunta_concepto/diseño
+  examples: |
+    - Que es el [diseño de sistemas de software] {"entity": "concepto", "value": "diseño"}?
+    - Que onda, contame de [Diseño]{"entity": "concepto", "value": "diseño"}
+    - Che, sabes que es [diseño de sofware]{"entity": "concepto", "value": "diseño"}?
+    - Me explicas que es el [design]{"entity": "concepto", "value": "diseño"}? 
+    - Quiero entender el concepto de [diseño]{"entity": "concepto", "value": "diseño"}?
 - synonym: patron_arquitectonico
   examples: |
     - patron de diseño arquitectónico
@@ -133,4 +140,8 @@ nlu:
 - synonym: requerimiento no funcional
   examples: |
     - requerimientos no funcionales
-
+- synonym: diseño
+  examples: |
+    - Diseño
+    - diseño de sistemas de software
+    - diseño de sofware
