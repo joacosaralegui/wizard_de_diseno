@@ -152,6 +152,7 @@ stories:
   - intent: negacion
   - action: utter_despedida
   - intent: despedida
+  - action: utter_despedida
  
 - story: interactive_story_2
   steps:
@@ -224,7 +225,6 @@ stories:
   - action: utter_hablar_de_disenio
   - intent: despedida
   - action: utter_despedida
-  - action: action_default_fallback
 #
 #- story: interactive_story_9
 #  steps:
@@ -272,9 +272,8 @@ stories:
   - action: utter_pregunta_atributos
   - intent: concepto_transparencia
   - action: utter_como_hacer_transparencias
-  - action: action_default_fallback
   - intent: despedida
-  - action: action_default_fallback
+  - action: utter_despedida
  
 - story: interactive_story_11
   steps:
@@ -301,10 +300,6 @@ stories:
   steps:
   - intent: ayuda_transparencia
   - action: utter_como_hacer_una_transparencia
-  - action: action_default_fallback
-  - intent: ayuda_transparencia
-  - action: utter_como_hacer_transparencias
-  - action: action_default_fallback
   - intent: pregunta_concepto
     entities:
     - concepto: patrones arquitectonicos
@@ -315,7 +310,6 @@ stories:
   - action: action_dispatch_patrones
   - intent: despedida
   - action: utter_despedida
-  - action: action_default_fallback
 
 - story: interactive_story_13
   steps:
