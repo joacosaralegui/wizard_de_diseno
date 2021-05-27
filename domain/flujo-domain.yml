@@ -15,14 +15,10 @@ intents:
     use_entities: true
 - chitchat:
     use_entities: true
-- negacion:
-    use_entities: true
-- despedida:
-    use_entities: true
-- afirmacion:
-    use_entities: true
-- entendio:
-    use_entities: true
+- negacion
+- despedida
+- afirmacion
+- entendio
 entities: []
 slots: {}
 responses:

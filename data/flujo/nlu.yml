@@ -40,6 +40,9 @@ nlu:
   examples: |
     - bueno me tengo que ir hasta luego
     - nos vemos, muy buena charla
+    - chau
+    - adios
+    - nos vemos
     - chau nos estamos viendo
     - hasta la proxima estamos en contacto
     - adios, charlaremos pronto
