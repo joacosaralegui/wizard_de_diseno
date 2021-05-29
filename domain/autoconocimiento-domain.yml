@@ -21,7 +21,15 @@ responses:
   utter_hablar_de_habilidades:
   - text: Puedo ayudarte a diseñar, analizar y opinar de tus diseños. Además de enseñarte sobre todo lo que sé respecto al área de diseño.
   utter_aceptacion_ayuda:
-  - text: Puedo ayudarte en eso, contame un poco más.
+  - text: Okey, contame un poco más.
+  utter_conocimiento_patrones:
+  - text: Bueno, antes de seguir... Tenes conocimeintos de patrones?
+  utter_conocimiento_requeriento:
+  - text: Bueno, antes de seguir... Sabes para sirven los requerimientos?
+  utter_solicitud_problema:
+  - text: Dale, contame de que se trata tu problema?
+  utter_solicitud_requerimiento:
+  - text: Bueno, para arrancar necesito requerimientos funcionales, tenes algunos?
 actions: []
 forms: {}
 e2e_actions: []
