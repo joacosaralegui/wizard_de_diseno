@@ -20,7 +20,9 @@ intents:
 - afirmacion
 - entendio
 entities: []
-slots: {}
+slots: 
+  slot_problema:
+    type: text
 responses:
   utter_saludo:
   - text: Hola! Soy DesignWizard. Qué te pinta hacer hoy?
@@ -74,7 +76,8 @@ responses:
   - text: Ya habra tiempo para descansar, ahora es momento de seguir aprendiendo
   utter_nombre:
   - text: Mi nombre es Wizard, podes decirme "El mago".
-  utter_no_me_tomes_el_pelo:
+  utter_no_me_tomes_el- action_sugerencia_patron
+_pelo:
   - text: Dale pa, hablemos de diseño o no me molestes.
   utter_afirmacion_nombre:
   - text: Si, soy wizard, también conocido como "El mago"
@@ -90,12 +93,13 @@ responses:
   - text: Me percibo como máquina.
   utter_familia:
   - text: No tengo parientes, salí de la nada.
-actions:
-- action_clarificacion
-- action_default_fallback
-- action_ejemplo
-- utter_chitchat
-- utter_de_nada
-- utter_saludo
-forms: {}
+actions: 
+  - action_sugerencia_patron
+
+forms: 
+  problema_patron_form:
+    required_slots:
+        slot_problema:
+        - type: from_text
+          intent: None
 e2e_actions: []
