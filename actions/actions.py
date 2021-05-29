@@ -10,6 +10,8 @@ from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.events import FollowupAction
 
+from .analisis_de_patrones import get_recomendacion
+
 # Setup wikipedia
 import wikipedia
 wikipedia.set_lang("es")
@@ -117,3 +119,19 @@ class ActionDefaultFallback(Action):
         dispatcher.utter_message(summary)
         
         return [FollowupAction("action_listen")]
+
+class ActionSugerenciaPatron(Action):
+
+    def name(self) -> Text:
+        return "action_sugerencia_patron"
+
+    def run(
+            self,
+            dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any],
+        ) -> List[Dict[Text, Any]]:
+
+        text = tracker.latest_message['text']
+        utter = get_recomendacion(text)
+        return[dispatcher.utter_message(text=utter)]
