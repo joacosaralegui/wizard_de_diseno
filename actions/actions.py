@@ -12,6 +12,7 @@ from rasa_sdk.events import FollowupAction
 from rasa_sdk.forms import FormValidationAction
 
 from .analisis_de_patrones import get_recomendacion
+from .modelado import update_graph
 
 # Setup wikipedia
 import wikipedia
@@ -152,3 +153,20 @@ class ActionExplicacionPatron(Action):
 
         dispatcher.utter_message(response="utter_pregunta_concepto/patron")
 
+class ActionModelado(Action):
+
+    def name(self) -> Text:
+        return "action_modelado"
+
+    def run(
+            self,
+            dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any],
+        ) -> List[Dict[Text, Any]]:
+
+        text = tracker.get_slot('requerimiento')
+        utter, image = update_graph(tracker.sender_id, text)
+        dispatcher.utter_message(text=utter)
+        dispatcher.utter_message(image=image)
+        return[]

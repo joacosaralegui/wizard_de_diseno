@@ -143,3 +143,5 @@ train_test_split/
 rasa.db
 
 settings.json
+actions/images/
+actions/models/

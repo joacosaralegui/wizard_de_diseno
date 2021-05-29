@@ -38,6 +38,10 @@ responses:
   - text: Bueno, antes de seguir... Sabes para sirven los requerimientos?
   utter_ask_problema:
   - text: Dale, contame de que se trata tu problema?
+  utter_ask_requerimiento:
+  - text: Pasame un requerimiento
+  - text: Contame uno de los requerimientos
+  - text: venga un requerimiento a ver
   utter_solicitud_requerimiento:
   - text: Bueno, para arrancar necesito requerimientos funcionales, tenes algunos?
   utter_no_me_tomes_el_pelo:

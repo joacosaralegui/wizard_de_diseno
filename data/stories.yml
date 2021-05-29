@@ -351,6 +351,17 @@ stories:
     - problema: necesito ayuda con un problema de patrones
   - action: action_sugerencia_patron
 
+
+- story: pedido de ayuda a partir de requerimientos
+  steps:
+  - intent: saludo
+  - action: utter_saludo
+  - intent: wizard_pedido_ayuda_experto_modelado
+  - action: requerimiento_form
+  - slot_was_set:
+    - requerimiento: el usuario debe poder cargar en el sistema un id
+  - action: action_modelado
+
   # - story: pedido de ayuda guiado/con conocimiento patron
   # steps:
   # - intent: saludo

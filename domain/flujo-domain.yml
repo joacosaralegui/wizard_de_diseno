@@ -30,6 +30,11 @@ slots:
     initial_value: null
     auto_fill: false
     influence_conversation: true
+  requerimiento:
+    type: text
+    initial_value: null
+    auto_fill: false
+    influence_conversation: true
 responses:
   utter_saludo:
   - text: Hola! Soy DesignWizard. Qué te pinta hacer hoy?
@@ -96,6 +101,7 @@ responses:
 actions:
 - action_sugerencia_patron
 - action_clarificacion
+- action_modelado
 - action_default_fallback
 - action_ejemplo
 - utter_chitchat
@@ -107,5 +113,11 @@ forms:
     - wizard_pedido_ayuda_guiada_patrones
     required_slots:
       problema:
+        - type: from_text
+  requerimiento_form:
+    ignored_intents: 
+    - wizard_pedido_ayuda_experto_modelado
+    required_slots:
+      requerimiento:
         - type: from_text
 e2e_actions: []

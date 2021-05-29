@@ -33,7 +33,7 @@ def get_categoria(text):
 
 def get_recomendacion(text):
   """
-  Dado un praoblema sugiere un patrón
+  Dado un problema sugiere un patrón
   """
   categoria = get_categoria(text)
   return conocimiento[categoria]
