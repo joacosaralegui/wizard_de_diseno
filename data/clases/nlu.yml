@@ -15,7 +15,7 @@ nlu:
     - Cual es la manera de hablar en una presentacion
     - Como tengo que dar la presentacion frente a Marcelo
     - nada, tenemos que ahcer una presentacion el martes y estamos pintados
-
+    - tenemos que hacer un sistema al estilo mercado libre, con compra y venta de productos
 - intent: concepto_transparencia
   examples: |
     - Que es una transparencia
@@ -23,7 +23,6 @@ nlu:
     - Que significa transparencia
     - Es lo mismo transparencia y filmina ?
     - Las transparencia son las filminas de power point ?
-
 - intent: concepto_millenial
   examples: |
     - Que es ser millenial
@@ -31,7 +30,6 @@ nlu:
     - Que onda los milenial
     - Porque nos dicen milenial?
     - Que significa que mi generacion sea milenial?
-
 - intent: concepto_centennial
   examples: |
     - Que es ser centennial

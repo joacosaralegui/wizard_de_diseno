@@ -4,11 +4,12 @@
 # See this guide on how to implement these action:
 # https://rasa.com/docs/rasa/custom-actions
 
-from typing import Any, Text, Dict, List
+from typing import Any, Text, Dict, List, Optional
 
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.events import FollowupAction
+from rasa_sdk.forms import FormValidationAction
 
 from .analisis_de_patrones import get_recomendacion
 
@@ -132,6 +133,22 @@ class ActionSugerenciaPatron(Action):
             domain: Dict[Text, Any],
         ) -> List[Dict[Text, Any]]:
 
-        text = tracker.latest_message['text']
+        text = tracker.get_slot('problema')
         utter = get_recomendacion(text)
-        return[dispatcher.utter_message(text=utter)]
+        dispatcher.utter_message(text=utter)
+        return[]
+
+
+class ActionExplicacionPatron(Action):
+    def name(self) -> Text:
+        return "action_explicacion_patron"
+
+    def run(
+            self,
+            dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any],
+        ) -> List[Dict[Text, Any]]:
+
+        dispatcher.utter_message(response="utter_pregunta_concepto/patron")
+

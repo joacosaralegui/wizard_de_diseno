@@ -29,7 +29,7 @@ def get_categoria(text):
   Saca solo el intent del análisis NLU
   """
   out = rasa_output(text)
-  return out['intent']
+  return out['intent']['name']
 
 def get_recomendacion(text):
   """

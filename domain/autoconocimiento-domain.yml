@@ -13,6 +13,16 @@ intents:
     use_entities: true
 - wizard_pedido_ayuda:
     use_entities: true
+- wizard_pedido_ayuda_guiada_patrones:
+    use_entities: true
+- wizard_pedido_ayuda_guiada_modelado:
+    use_entities: true
+- wizard_pedido_ayuda_experto_patrones:
+    use_entities: true
+- wizard_pedido_ayuda_experto_modelado:
+    use_entities: true
+- nlu_fallback:
+    use_entities: true
 entities: []
 slots: {}
 responses:
@@ -26,10 +36,12 @@ responses:
   - text: Bueno, antes de seguir... Tenes conocimeintos de patrones?
   utter_conocimiento_requeriento:
   - text: Bueno, antes de seguir... Sabes para sirven los requerimientos?
-  utter_solicitud_problema:
+  utter_ask_problema:
   - text: Dale, contame de que se trata tu problema?
   utter_solicitud_requerimiento:
   - text: Bueno, para arrancar necesito requerimientos funcionales, tenes algunos?
+  utter_no_me_tomes_el_pelo:
+  - text: Dale pa, hablemos de diseño o no me molestes.
 actions: []
 forms: {}
 e2e_actions: []

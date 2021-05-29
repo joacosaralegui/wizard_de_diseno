@@ -15,6 +15,7 @@ nlu:
     - buenos díass
     - como va
     - hola locura
+    - hola
 - intent: afirmacion
   examples: |
     - si
@@ -26,6 +27,7 @@ nlu:
     - sisi perfecto
 - intent: negacion
   examples: |
+    - no
     - no creo que sea asi
     - nono
     - a mi no me parece
@@ -83,7 +85,6 @@ nlu:
     - fantastico no podria estar mejor
     - estoy bien
     - me encuentro bien
-    
 - intent: chitchat/mal
   examples: |
     - me encuentro triste

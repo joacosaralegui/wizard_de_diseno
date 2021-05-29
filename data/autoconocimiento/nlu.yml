@@ -39,7 +39,6 @@ nlu:
     - ¿Me das una mano?
     - ¿Te puedo preguntar cualquier cosa?
     - Necesito ayuda con las clases de diseño
-
 - intent: wizard_pedido_ayuda_guiada_patrones
   examples: |
     - Quiero analizar un patron
@@ -47,17 +46,16 @@ nlu:
     - Que patron puedo usar para implementar un sistema?
     - Vos me podes ayudar para saber que patron tengo ue usar para mi problema?
     - No se como analizar un patron
-
+    - necesito ayuda para definir el patron de un problema
 - intent: wizard_pedido_ayuda_guiada_modelado
   examples: |
     - Necesito ayuda para modelar mi sistema
     - Quiero modelar un sistema
     - Me ayudas a modelar un sistema
     - Che, me das una mano para modelar?
-    - Quiero modelar 
+    - Quiero modelar
     - No se como modelar
-    - No entiendo como modelar 
-
+    - No entiendo como modelar
 - intent: wizard_pedido_ayuda_experto_patrones
   examples: |
     - Si te doy una descripcion de mi problema, me ayudas a saber que patron tengo que seguir?
@@ -65,11 +63,10 @@ nlu:
     - Tenes idea que patrones usar para una idea concreta
     - Me diron la descripcion de un problema, me das una mano para elegir un patron?
     - Como se que patron usar para una descripcion de problema
-    
 - intent: wizard_pedido_ayuda_experto_modelado
   examples: |
     - Tengo requerimientos, me ayudas con el modelado?
     - Che, tengo un problema, sabes como lo puedo modelar?
-    - Me ayudas a armar mi sistema? Tengo requerimeintos 
-    - Tengo un problema de objetos, como lo modelo? 
+    - Me ayudas a armar mi sistema? Tengo requerimeintos
+    - Tengo un problema de objetos, como lo modelo?
     - Tengo un sistema, no se como empezar a modelarlo

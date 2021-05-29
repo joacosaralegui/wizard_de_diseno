@@ -5,7 +5,7 @@ session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
 intents:
-- ejemplo: 
+- ejemplo:
     use_entities: true
 - no_entendio:
     use_entities: true
@@ -15,14 +15,21 @@ intents:
     use_entities: true
 - chitchat:
     use_entities: true
-- negacion
-- despedida
-- afirmacion
-- entendio
+- negacion:
+    use_entities: true
+- despedida:
+    use_entities: true
+- afirmacion:
+    use_entities: true
+- entendio:
+    use_entities: true
 entities: []
-slots: 
-  slot_problema:
+slots:
+  problema:
     type: text
+    initial_value: null
+    auto_fill: false
+    influence_conversation: true
 responses:
   utter_saludo:
   - text: Hola! Soy DesignWizard. Qué te pinta hacer hoy?
@@ -76,30 +83,29 @@ responses:
   - text: Ya habra tiempo para descansar, ahora es momento de seguir aprendiendo
   utter_nombre:
   - text: Mi nombre es Wizard, podes decirme "El mago".
-  utter_no_me_tomes_el- action_sugerencia_patron
-_pelo:
-  - text: Dale pa, hablemos de diseño o no me molestes.
   utter_afirmacion_nombre:
   - text: Si, soy wizard, también conocido como "El mago"
   utter_inteligencia:
-  - text: Sé de todo, mucho más que vos seguro, aunque me especializo en diseño.
-  utter_cumpleaños:
-  - text: No sé que día cumplo, sinceramente me importa poco.
-  utter_edad:
-  - text: Soy grande como el Diego.
+  - text: Sé de toslot_problemae como el Diego.
   utter_no_se:
   - text: No recuerdo.
   utter_genero:
   - text: Me percibo como máquina.
   utter_familia:
   - text: No tengo parientes, salí de la nada.
-actions: 
-  - action_sugerencia_patron
-
-forms: 
+actions:
+- action_sugerencia_patron
+- action_clarificacion
+- action_default_fallback
+- action_ejemplo
+- utter_chitchat
+- utter_de_nada
+- utter_saludo
+forms:
   problema_patron_form:
+    ignored_intents: 
+    - wizard_pedido_ayuda_guiada_patrones
     required_slots:
-        slot_problema:
+      problema:
         - type: from_text
-          intent: None
 e2e_actions: []
