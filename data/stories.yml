@@ -340,3 +340,71 @@ stories:
   - action: action_ejemplo
   - intent: gracias
   - action: utter_de_nada
+
+- story: pedido de ayuda guiado/sin conocimiento patron
+  steps:
+  - intent: saludo
+  - action: utter_saludo
+  - intent: wizard_pedido_ayuda_guiada_patrones
+  - action: utter_conocimiento_patrones
+  - intent: negacion
+  - action: action_explicacion_patron # cierra con una pregunta.. entendiste?
+  - intent: afirmacion #ver negacion
+  - action: utter_solicitud_problema
+  - intent: #descripcion del problema...
+  - action: action_sugerencia_patron
+
+  - story: pedido de ayuda guiado/con conocimiento patron
+  steps:
+  - intent: saludo
+  - action: utter_saludo
+  - intent: wizard_pedido_ayuda_guiada_patrones
+  - action: utter_conocimiento_patrones
+  - intent: afimacion
+  - action: utter_solicitud_problema
+  - intent: #descripcion del problema...
+  - action: #pasa a la caja 
+
+  - story: pedido de ayuda experto patron
+  steps:
+  - intent: saludo
+  - action: utter_saludo
+  - intent: wizard_pedido_ayuda_experto_patrones
+  - action: utter_solicitud_problema
+  - intent: #descripcion del problema...
+  - action: #pasa a la caja 
+  # ver como integrar la caja con la siguiente respuesta
+
+  - story: pedido de ayuda guiado/sin conocimiento modelado
+  steps:
+  - intent: saludo
+  - action: utter_saludo
+  - intent: wizard_pedido_ayuda_guiada_modelado
+  - action: utter_conocimiento_requeriento
+  - intent: negacion
+  - action: action_explicacion_requerimiento # cierra con una pregunta.. entendiste?
+  - intent: afirmacion #ver negacion
+  - action: utter_solicitud_requerimiento 
+  - intent: #tiene los requerientos
+            # ver que pasa cueando no tiene requerimientos
+  - action: #pasa a la caja 
+
+  - story: pedido de ayuda guiado/con conocimiento modelado
+  steps:
+  - intent: saludo
+  - action: utter_saludo
+  - intent: wizard_pedido_ayuda_guiada_modelado
+  - action: utter_conocimiento_requeriento
+  - intent: afimacion
+  - action: utter_solicitud_requerimiento 
+  - intent: #tiene los requerientos
+  - action: #pasa a la caja 
+
+  - story: pedido de ayuda experto modelado
+  steps:
+  - intent: saludo
+  - action: utter_saludo
+  - intent: wizard_pedido_ayuda_experto_modelado
+  - action: utter_solicitud_requerimiento 
+  - intent: #tiene los requerientos
+  - action: #pasa a la caja 
