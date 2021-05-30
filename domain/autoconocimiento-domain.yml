@@ -19,6 +19,8 @@ intents:
     use_entities: true
 - nlu_fallback:
     use_entities: true
+- wizard_pedido_patrones:
+    use_entities: true
 entities: []
 slots: {}
 responses:

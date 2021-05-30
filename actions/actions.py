@@ -60,7 +60,11 @@ class ActionDispatchPatrones(Action):
         domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         
         ultimo_intent = tracker.get_intent_of_latest_message()
-        ultima_entidad = tracker.latest_message['entities'][0]['value']
+        try:
+            ultima_entidad = tracker.latest_message['entities'][0]['value']
+        except: 
+            dispatcher.utter_message(text='Es una buena pregunta, la verdad que no tengo idea.')
+            return []
         utter_a_responder = 'utter_'+ ultimo_intent + '/' + ultima_entidad
         
         lista_acciones = domain['responses']
@@ -117,7 +121,7 @@ class ActionDefaultFallback(Action):
             summary = wikipedia.summary(text, sentences=1)
         except:
             # TODO: add otras opciones!! (UTTER??)
-            summary = "Que pregunta más amplia. No tenes algo más específico?"
+            summary = "La verdad que no sé... porqué no hablamos de otra cosa?"
         dispatcher.utter_message(summary)
         
         return [FollowupAction("action_listen")]

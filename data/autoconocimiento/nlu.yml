@@ -39,7 +39,7 @@ nlu:
     - ¿Me das una mano?
     - ¿Te puedo preguntar cualquier cosa?
     - Necesito ayuda con las clases de diseño
-- intent: wizard_pedido_patrones
+- intent: wizard_pedido_ayuda_patrones
   examples: |
     - Quiero analizar un patron
     - Necesito ayuda para resolver un problema con patrones
