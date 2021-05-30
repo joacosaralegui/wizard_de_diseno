@@ -145,3 +145,4 @@ rasa.db
 settings.json
 actions/images/
 actions/models/
+actions/models.zip
