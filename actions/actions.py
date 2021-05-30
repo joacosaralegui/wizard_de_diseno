@@ -19,8 +19,8 @@ import wikipedia
 wikipedia.set_lang("es")
 
 # Extrae los ultimos intents que tengan "pregunta_" en el nombre
-def get_ultimas_preguntas(events):
-    return [e['parse_data']['response_selector']['default']['response']['intent_response_key'] for e in events if e['event'] == 'user' and 'pregunta_' in e['parse_data']['intent']['name']]
+def get_ultimos_utter_pregunta(events):
+    return [e['metadata']['utter_action'] for e in events if e['event'] == 'bot' and 'utter_action' in e['metadata'] and 'pregunta_' in e['metadata']['utter_action']]
 
 class ActionClarification(Action):
     """Esta funcion se encarga de buscar un utter de clarificacion en base al intent detectado, 
@@ -32,11 +32,11 @@ class ActionClarification(Action):
         tracker: Tracker,
         domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         
-        ultimas_preguntas = get_ultimas_preguntas(tracker.events)
+        ultimos_utter = get_ultimos_utter_pregunta(tracker.events)
         
-        if ultimas_preguntas:
-            ultima_pregunta = ultimas_preguntas[0]
-            accion_a_responder = 'utter_' + ultima_pregunta + '_clarificacion'
+        if ultimos_utter:
+            ultimo_utter = ultimos_utter[0]
+            accion_a_responder = 'utter_' + ultimo_utter + '_clarificacion'
             print('action de clarificacion a buscar: ' + accion_a_responder)
             
             lista_acciones = domain['responses']
@@ -80,12 +80,12 @@ class ActionEjemplo(Action):
     def run(self, dispatcher: CollectingDispatcher,
         tracker: Tracker,
         domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-
-        ultimas_preguntas = get_ultimas_preguntas(tracker.events)
+         
+        ultimos_utter = get_ultimos_utter_pregunta(tracker.events)
         
-        if ultimas_preguntas:
-            ultima_pregunta = ultimas_preguntas[0]
-            accion_a_responder = 'utter_' + ultima_pregunta + '_ejemplo'
+        if ultimos_utter:
+            ultimo_utter = ultimos_utter[0]
+            accion_a_responder = 'utter_' + ultimo_utter + '_ejemplo'
             print('action de ejemplo a buscar: ' + accion_a_responder)
             
             lista_acciones = domain['responses']

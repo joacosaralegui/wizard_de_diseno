@@ -39,7 +39,7 @@ nlu:
     - ¿Me das una mano?
     - ¿Te puedo preguntar cualquier cosa?
     - Necesito ayuda con las clases de diseño
-- intent: wizard_pedido_ayuda_guiada_patrones
+- intent: wizard_pedido_patrones
   examples: |
     - Quiero analizar un patron
     - Necesito ayuda para resolver un problema con patrones
@@ -47,7 +47,14 @@ nlu:
     - Vos me podes ayudar para saber que patron tengo ue usar para mi problema?
     - No se como analizar un patron
     - necesito ayuda para definir el patron de un problema
-- intent: wizard_pedido_ayuda_guiada_modelado
+    - Mira, tengo que encontrar qué patrón usan en MercadoLibre
+    - Si te doy una descripcion de mi problema, me ayudas a saber que patron tengo que seguir?
+    - Tengo un problema, que patron me recomendas?
+    - Tenes idea que patrones usar para una idea concreta
+    - Me diron la descripcion de un problema, me das una mano para elegir un patron?
+    - Como se que patron usar para una descripcion de problema
+    - necesito ayuda para descubrir el patron que usan en mercado libre
+- intent: wizard_pedido_ayuda_modelado
   examples: |
     - Necesito ayuda para modelar mi sistema
     - Quiero modelar un sistema
@@ -56,17 +63,11 @@ nlu:
     - Quiero modelar
     - No se como modelar
     - No entiendo como modelar
-- intent: wizard_pedido_ayuda_experto_patrones
-  examples: |
-    - Si te doy una descripcion de mi problema, me ayudas a saber que patron tengo que seguir?
-    - Tengo un problema, que patron me recomendas?
-    - Tenes idea que patrones usar para una idea concreta
-    - Me diron la descripcion de un problema, me das una mano para elegir un patron?
-    - Como se que patron usar para una descripcion de problema
-- intent: wizard_pedido_ayuda_experto_modelado
-  examples: |
     - Tengo requerimientos, me ayudas con el modelado?
     - Che, tengo un problema, sabes como lo puedo modelar?
     - Me ayudas a armar mi sistema? Tengo requerimeintos
     - Tengo un problema de objetos, como lo modelo?
     - Tengo un sistema, no se como empezar a modelarlo
+- intent: nlu_fallback
+  examples: |
+    - mira, mercado libre es un servicio más que nada de envio de productos a traves de una pagina online que hace ventas de productos

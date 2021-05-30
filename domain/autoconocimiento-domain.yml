@@ -13,13 +13,9 @@ intents:
     use_entities: true
 - wizard_pedido_ayuda:
     use_entities: true
-- wizard_pedido_ayuda_guiada_patrones:
+- wizard_pedido_ayuda_patrones:
     use_entities: true
-- wizard_pedido_ayuda_guiada_modelado:
-    use_entities: true
-- wizard_pedido_ayuda_experto_patrones:
-    use_entities: true
-- wizard_pedido_ayuda_experto_modelado:
+- wizard_pedido_ayuda_modelado:
     use_entities: true
 - nlu_fallback:
     use_entities: true
@@ -37,7 +33,7 @@ responses:
   utter_conocimiento_requeriento:
   - text: Bueno, antes de seguir... Sabes para sirven los requerimientos?
   utter_ask_problema:
-  - text: Dale, contame de que se trata tu problema?
+  - text: Contame un poco que funciones cumple el sistema.. que és, que hace?
   utter_ask_requerimiento:
   - text: Pasame un requerimiento
   - text: Contame uno de los requerimientos

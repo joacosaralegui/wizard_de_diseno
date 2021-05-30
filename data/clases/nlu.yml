@@ -16,6 +16,7 @@ nlu:
     - Como tengo que dar la presentacion frente a Marcelo
     - nada, tenemos que ahcer una presentacion el martes y estamos pintados
     - tenemos que hacer un sistema al estilo mercado libre, con compra y venta de productos
+    - Bueno, es una aplicación que hace envíos de paquetes a todo el país. Vos tenes un carrito de compras y ahi pones productos y se envian
 - intent: concepto_transparencia
   examples: |
     - Que es una transparencia

@@ -26,12 +26,12 @@ intents:
 entities: []
 slots:
   problema:
-    type: text
+    type: rasa.shared.core.slots.TextSlot
     initial_value: null
     auto_fill: false
     influence_conversation: true
   requerimiento:
-    type: text
+    type: rasa.shared.core.slots.TextSlot
     initial_value: null
     auto_fill: false
     influence_conversation: true
@@ -109,15 +109,15 @@ actions:
 - utter_saludo
 forms:
   problema_patron_form:
-    ignored_intents: 
+    ignored_intents:
     - wizard_pedido_ayuda_guiada_patrones
     required_slots:
       problema:
-        - type: from_text
+      - type: from_text
   requerimiento_form:
-    ignored_intents: 
+    ignored_intents:
     - wizard_pedido_ayuda_experto_modelado
     required_slots:
       requerimiento:
-        - type: from_text
+      - type: from_text
 e2e_actions: []

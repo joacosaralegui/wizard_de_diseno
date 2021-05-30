@@ -1,0 +1,22 @@
+version: "2.0"
+stories:
+- story: interactive_story_1
+  steps:
+  - intent: saludo
+  - action: utter_saludo
+  - intent: conocimiento_wizard_no_especifico
+  - action: utter_no_me_tomes_el_pelo
+  - intent: negacion
+  - action: utter_despedida
+  - intent: despedida
+  - action: utter_despedida
+- story: interactive_story_2
+  steps:
+  - intent: saludo
+  - action: utter_saludo
+  - intent: wizard_conocimiento_ambiguo
+  - action: utter_hablar_de_disenio
+  - intent: wizard_conocimiento_especifico
+  - action: utter_hablar_de_habilidades
+  - intent: gracias
+  - action: utter_de_nada

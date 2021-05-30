@@ -7,6 +7,7 @@ nlu:
     - me das un ejemplo
     - me das ejemplos?
     - tenes algun ejemplo de eso?
+    - mm y donde se usan?
 - intent: saludo
   examples: |
     - hola genio
@@ -16,6 +17,7 @@ nlu:
     - como va
     - hola locura
     - hola
+    - Hola
 - intent: afirmacion
   examples: |
     - si
@@ -37,7 +39,6 @@ nlu:
     - de ninguna manera
     - nada de eso
     - ni loco
-    - ni a palo
 - intent: despedida
   examples: |
     - bueno me tengo que ir hasta luego
