@@ -70,7 +70,7 @@ responses:
   utter_pregunta_concepto/diferencia_req_func_no_func:
   - text: Un requisito funcional describe lo que debe hacer un sistema, mientras que los requisitos no funcionales imponen restricciones sobre cómo lo hará el sistema.
   utter_pregunta_patrones/capas:
-  - image: https://miro.medium.com/max/568/1*4xX_WQQuD2u0PMK5bcWFkQ.png
+  - image: https://miro.medium.com/max/376/1*jMWk_JqqyyloVPhTs_Zd1A.png
     text: 'Este patrón se puede utilizar para estructurar programas que se pueden descomponer en grupos de subtareas, cada una de las cuales se encuentra en un nivel particular de abstracción. Cada capa proporciona servicios a la siguiente capa superior.\n Las 4 capas más comúnmente encontradas de un sistema de información general son las siguientes: Capa de presentación, Capa de aplicación, Capa de lógica de negocios, Capa de acceso a datos.'
   utter_pregunta_patrones/cliente-servidor:
   - image: https://miro.medium.com/max/568/1*4xX_WQQuD2u0PMK5bcWFkQ.png
