@@ -1,2 +1,15 @@
 version: "2.0"
 stories:
+- story: interactive_story_1
+  steps:
+  - intent: saludo
+  - action: utter_saludo
+  - intent: wizard_pedido_ayuda_modelado
+  - action: requerimiento_form
+  - active_loop: requerimiento_form
+  - slot_was_set:
+    - requerimiento: tengo un sistema que registra clientes con el nombre
+  - active_loop: null
+  - action: action_modelado
+  - intent: gracias
+  - action: utter_de_nada

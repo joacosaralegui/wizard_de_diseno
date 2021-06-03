@@ -1,14 +1,2 @@
 version: "2.0"
 nlu:
-- intent: saludo
-  examples: |
-    - hola
-- intent: pregunta_concepto
-  examples: |
-    - necesito ayuda con los [patrones de diseño]{"entity": "concepto", "value": "patron_arquitectonico"}
-- intent: no_entendio
-  examples: |
-    - no entiendo
-- intent: gracias
-  examples: |
-    - Gracias

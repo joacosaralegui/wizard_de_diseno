@@ -110,13 +110,13 @@ actions:
 forms:
   problema_patron_form:
     ignored_intents:
-    - wizard_pedido_ayuda_guiada_patrones
+    - wizard_pedido_ayuda_patrones
     required_slots:
       problema:
       - type: from_text
   requerimiento_form:
     ignored_intents:
-    - wizard_pedido_ayuda_experto_modelado
+    - wizard_pedido_ayuda_modelado
     required_slots:
       requerimiento:
       - type: from_text

@@ -22,7 +22,12 @@ intents:
 - wizard_pedido_patrones:
     use_entities: true
 entities: []
-slots: {}
+slots:
+  requested_slot:
+    type: rasa.shared.core.slots.UnfeaturizedSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
 responses:
   utter_hablar_de_disenio:
   - text: Hablemos de diseño, ¿te parece?.

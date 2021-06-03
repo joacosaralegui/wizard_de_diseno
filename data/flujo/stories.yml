@@ -24,11 +24,8 @@ stories:
   - action: utter_saludo
   - intent: wizard_pedido_ayuda_patrones
   - action: problema_patron_form
-  - active_loop: problema_patron_form
   - slot_was_set:
     - problema: mira, mercado libre es un servicio más que nada de envio de productos a traves de una pagina online que hace ventas de productos
-  - action: problema_patron_form
-  - active_loop: null
   - action: action_sugerencia_patron
   - intent: pregunta_patrones
     entities:
