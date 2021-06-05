@@ -59,3 +59,17 @@ class ActionModelado(Action):
         dispatcher.utter_message(text=utter)
         dispatcher.utter_message(image=image)
         return[]
+
+class ActionModeladoRechazo(Action):
+
+    def name(self) -> Text:
+        return "action_modelado_rechazo"
+
+    def run(
+            self,
+            dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any],
+        ) -> List[Dict[Text, Any]]:
+
+        return[]

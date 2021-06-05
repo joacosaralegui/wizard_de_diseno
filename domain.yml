@@ -26,3 +26,4 @@ responses:
 actions:
 - action_default_fallback
 - action_modelado
+- action_modelado_rechazo
