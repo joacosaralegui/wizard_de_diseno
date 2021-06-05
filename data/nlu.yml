@@ -1,2 +1,31 @@
 version: "2.0"
 nlu:
+- intent: pedido_ayuda_modelado
+  examples: |
+    - Necesito ayuda para modelar una solucion
+    - Me ayudas a modelar una solución?
+    - Che, necesito una mano para diseñar una solución
+    - Danos una mano para analizar un problema
+
+- intent: basta
+  examples: |
+    - Listo
+    - Eso es todo
+    - Ese era el ultimo
+    - Termine
+    - Ya termine
+
+- intent: negacion
+  examples: |
+    - Nop
+    - No
+    - No hay más
+    - Ninguno
+    - Nada
+
+- intent: requerimiento
+  examples: |
+    - El sistema tiene usuarios que se comunican a través de mensajes privados
+    - Los usuarios deben tener una ventana donde ver su estado de cuenta
+    - El registro maestro de clientes tendrá asociado un límite de crédito. 
+    - El sistema permitirá aprobar, cambiar o actualizar planes y cronogramas de proyecto.

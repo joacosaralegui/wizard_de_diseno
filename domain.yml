@@ -1,0 +1,28 @@
+version: '2.0'
+ 
+intents:
+- pedido_ayuda_modelado
+- basta 
+- negacion
+- requerimiento
+
+responses:
+  utter_saludo:
+  - text: Hola! Soy DesignWizard. Qué te pinta hacer hoy?
+  - text: Hola! Soy DesignWizard y estoy para ayudarte, por donde queres empezar?
+  - text: Me llamo DesignWizard y soy un genio en lo que de disenio se trate, en que te puedo ayudar?
+  - text: Buenas, mi nombre es DesignWizard, en que te puedo ayudar?
+  utter_como_no:
+  - text: Dale, de una
+  - text: Obvio que si
+  - text: Dale, ningun problema
+  utter_pedir_requerimiento:
+  - text: Dame un requerimiento
+  - text: Pasame los requerimientos
+  - text: Dame mas data
+  utter_feedback:
+  - text: que te pareció?
+
+actions:
+- action_default_fallback
+- action_modelado

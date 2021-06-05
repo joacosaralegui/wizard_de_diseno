@@ -1,17 +1,12 @@
 version: "2.0"
 
 rules:
-- rule: respond to chitchat
-  steps:
-  - intent: chitchat
-  - action: utter_chitchat
-
-- rule: respond to gracias
-  steps:
-  - intent: gracias
-  - action: utter_de_nada
-
 - rule: fallback wikipedia
   steps:
   - intent: nlu_fallback
   - action: action_default_fallback
+
+- rule: analizar requerimientos
+  steps:
+  - intent: requerimiento
+  - action: action_modelado

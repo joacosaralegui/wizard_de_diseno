@@ -1,8 +1,8 @@
 SYSTEM = "Sistema"
 
 class Entity:
-    colors = {"MODEL":"blue","SYSTEM":"red","PROVIDER":"yellow","PROPERTY":"cyan"}
-    shapes = {"MODEL":"box","SYSTEM":"oval","PROVIDER":"box","PROPERTY":"house"}
+    colors = {"MODEL":"blue","SYSTEM":"red","PROVIDER":"yellow","PROPERTY":"cyan","COMPONENT":"bisque"}
+    shapes = {"MODEL":"box","SYSTEM":"oval","PROVIDER":"box","PROPERTY":"house","COMPONENT":"diamond"}
 
     def __init__(self, entity_object):
         self.category = entity_object['entity']

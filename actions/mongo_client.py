@@ -8,6 +8,7 @@ arquitecturas = db.arquitecturas
 
 #insertar un solo doc
 def save_arqui(id,arqui):
+    # TODO: guardar com lista de arquis
     result = arquitecturas.update_one(
         {'id':id},
         {'$setOnInsert': {'id':id},
@@ -16,4 +17,9 @@ def save_arqui(id,arqui):
     return result.modified_count
 
 def load_arqui(id):
+    # TODO: traer la ultimad e la lista
     return arquitecturas.find_one({'id':id})
+
+
+# TODO: descartar_arqui(id):
+# tirar la ultima

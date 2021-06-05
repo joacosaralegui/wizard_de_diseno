@@ -27,6 +27,18 @@ class GraphManager:
             self.update_graph_with_star_entities(entities)
         elif intent == "simple_chain" or intent == "double_chain":
             self.update_graph_with_chained_entities(entities)  
+        elif intent == "star_and_double_chain":
+            cut_index = len(entities)-2
+
+            if len(entities) > cut_index + 1:
+                self.update_graph_with_star_entities(entities[:cut_index+1])
+                self.update_graph_with_chained_entities(entities[cut_index:])  
+        elif intent == "star_and_simple_chain":
+            cut_index = len(entities)-1
+
+            if len(entities) > cut_index:
+                self.update_graph_with_star_entities(entities[:cut_index+1])
+                self.update_graph_with_chained_entities(entities[cut_index:])  
         else:
             nodes = [e for e in entities if e.is_node()]
             if "simple" in intent and len(nodes) > 1:
