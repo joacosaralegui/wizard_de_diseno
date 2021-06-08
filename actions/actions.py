@@ -12,7 +12,7 @@ from rasa_sdk.events import FollowupAction
 from rasa_sdk.forms import FormValidationAction
 
 from .analisis_de_patrones import get_recomendacion
-from .modelado import update_graph
+from .modelado import update_graph, remove_graph
 
 # Setup wikipedia
 import wikipedia
@@ -72,4 +72,8 @@ class ActionModeladoRechazo(Action):
             domain: Dict[Text, Any],
         ) -> List[Dict[Text, Any]]:
 
+        utter, image = remove_graph(tracker.sender_id)
+        dispatcher.utter_message(text=utter)
+        dispatcher.utter_message(image=image)
         return[]
+
