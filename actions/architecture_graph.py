@@ -6,9 +6,24 @@ from datetime import datetime
 from .mongo_client import load_arqui, save_arqui,remove_arqui
 
 class GraphManager:
+    """
+    Esta clase administra los grafos que modelan las arquitecturas y se encarga
+    de generarlos, actualizarlos y eliminarlos
+    Almacena una serie de grafos para un ID particular, que puede ser ID de usuario, 
+    proyecto o cualquier otro contexto
+    El tiempo de vida del manager es dentro de una unica custom action que busca
+    hacer 1 actualizacion a partir de un unico requerimiento o elimiar algo
+    No soporta multiples acciones a la vez
+    """
+    
     def __init__(self, id):
+        """
+        Inicializa el Manager. 
+        Carga el id del usuario y su grafo de arqui si lo tiene asociado
+        Si no lo tiene, crea un grafo nuevo.
+        """
         self.id = id
-        # Fetch graph or create
+
         graph = load_arqui(id)
         if graph:
             self.graph = pgv.AGraph(string=graph['arqui'])
@@ -16,9 +31,15 @@ class GraphManager:
             self.graph = self.create_new()
 
     def create_new(self):
+        """
+        Crear grafo nuevo
+        """
         return pgv.AGraph(strict=False,directed=True)
 
     def save(self):
+        """
+        Almacenar nueva version de la arqui en mongodb
+        """
         return save_arqui(self.id, self.graph.to_string())
 
     def remove_last(self):
@@ -26,6 +47,12 @@ class GraphManager:
         return
 
     def update_graph_with_new_entities(self,entities,intent):
+        """
+        De acuerdo a la estructura clasificada en el intent,
+        cargamos las entidades de una manera específica 
+        en el grafo
+        """
+        # TODO: hacer un refactor de esta funcion, es un asquito
         print(intent)
         if intent == "star":
             self.update_graph_with_star_entities(entities)
@@ -58,18 +85,27 @@ class GraphManager:
 
 
     def get_image_file(self):
+        """
+        Genera una imagen para representar el estado actual de la arquitectura
+        """
         filename = 'actions/images/file'+ str(datetime.now()) +'.png'
-        self.draw_in_file(filename)
-        return filename
-
-    def draw_in_file(self,filename):
         self.graph.layout(prog='dot') 
         self.graph.draw(filename) 
+        return filename
+
 
     def add_node(self,node):
+        """
+        Agregar nodo al grafo
+        """
         self.graph.add_node(node.name,color=node.get_color(),shape=node.get_shape())
 
     def update_name_if_similar_found_in_graph(self,node_to_add):
+        """
+        Si encontramos en el grafo un nodo con nombre similar al que queremos agregar, 
+        le cambiamos el nombre al nodo a agregar para que sea el mismo del que ya esta
+        """
+        # TODO: si alguno incluye a otro entonces tmb los podriamos tomar como iguales
         closest = {'node':None,'distance':3}
         for node_to_compare in self.graph.nodes():
             calculated_distance = enchant.utils.levenshtein(node_to_compare, node_to_add.name)
@@ -79,14 +115,19 @@ class GraphManager:
         if closest['node'] != None:
             node_to_add.name = closest['node'].name
 
-    def get_closest_node(self,reference_node,nodes):
-        prev_node = nodes[0]
-        if reference_node.start < prev_node.start:
+    def get_closest_node(self,ref_entity,node_entities):
+        """
+        Dado una entidad de referencia buscar la entidad nodo mas cercana
+        de acuerdo a la posicion en el texto del requerimiento
+        Esta función busca asignar propiedades al nodo mas cercano en distancia  del texto del req
+        """
+        prev_node = node_entities[0]
+        if ref_entity.start < prev_node.start:
             return prev_node
         else:
-            for node in nodes[1:]:
-                if reference_node.end < node.start:
-                    if abs(reference_node.start - prev_node.end) <  abs(reference_node.end - node.start):
+            for node in node_entities[1:]:
+                if ref_entity.end < node.start:
+                    if abs(ref_entity.start - prev_node.end) <  abs(ref_entity.end - node.start):
                         return prev_node
                     else:
                         return node
@@ -95,14 +136,25 @@ class GraphManager:
             return prev_node
 
     def enough_nodes(self,nodes):
-        return len(nodes) >= 2
+        """
+        Chequeo si tengo al menos dos nodos,sino no puedo armar nada en el grafo 
+        """
+        return len(nodes) > 1
 
     def update_edge_label(self,edge,entity):
+        """
+        actualizar un label de arista con el nombre de una entidad
+        Si ya tiene una, agregar la nueva
+        """
         label = edge.attr['label']
         if entity.name not in label:
             edge.attr['label'] += ", " + entity.name
 
     def add_labeled_edge(self,node1,node2,entity):
+        """
+        Agregar una arista entre dos nodos. 
+        Si la arista ya existe, simplemente actualizar la etiqueta
+        """
         if self.graph.has_edge(node1.name,node2.name):
             edge = self.graph.get_edge(node1.name, node2.name) 
             self.update_edge_label(edge,entity)
@@ -110,9 +162,17 @@ class GraphManager:
             self.graph.add_edge(node1.name, node2.name, label=entity.name)  
 
     def add_edge(self,node1,node2):
-        self.graph.add_edge(node1.name, node2.name)  
+        """
+        Agregar arista sin etiqueta entre dos nodos
+        """
+        if not self.graph.has_edge(node1.name,node2.name):
+            self.graph.add_edge(node1.name, node2.name)  
 
-    def find_nodes_connected_by_event(self,event,nodes):     
+    def find_nodes_connected_by_event(self,event,nodes):   
+        """
+        Dado un evento, definir que dos nodos/entidades conecta
+        Se hace en relacion a la posicion de las entidades en el texto
+        """  
         i = 0
         first_node,second_node = nodes[i],nodes[i+1]
         while i < len(nodes)-2:
@@ -124,11 +184,17 @@ class GraphManager:
         return first_node,second_node           
 
     def update_nodes(self,nodes):
+        """
+        Agrega nodos pero primero actualizar los nombres si ya estan en el grafo
+        """
         for node in nodes:
             self.update_name_if_similar_found_in_graph(node)
             self.add_node(node)
 
     def update_events(self,nodes,entities):
+        """
+        Para los nodos 
+        """
         events = [e for e in entities if e.is_event()]
         for event in events:
             node1,node2 = self.find_nodes_connected_by_event(event,nodes)          
