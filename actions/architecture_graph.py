@@ -3,7 +3,7 @@ import enchant
 import os 
 from rasa_sdk.events import SlotSet
 from datetime import datetime
-from .mongo_client import load_arqui, save_arqui,remove_arqui
+from .mongo_client import load_arqui, save_arqui, remove_arqui
 
 class GraphManager:
     """
@@ -26,7 +26,7 @@ class GraphManager:
 
         graph = load_arqui(id)
         if graph:
-            self.graph = pgv.AGraph(string=graph['arqui'])
+            self.graph = pgv.AGraph(string=graph)
         else:
             self.graph = self.create_new()
 
@@ -43,8 +43,8 @@ class GraphManager:
         return save_arqui(self.id, self.graph.to_string())
 
     def remove_last(self):
-        # TODO: eliminar grafo
-        return
+        remove_arqui(self.id)
+        self.__init__(self.id)
 
     def update_graph_with_new_entities(self,entities,intent):
         """

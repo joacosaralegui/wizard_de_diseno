@@ -33,11 +33,16 @@ def update_graph(id,text):
     graph_image_file = graph_manager.get_image_file()
     return "Qué te parece esto?",os.path.abspath(graph_image_file)
 
+
 def remove_graph(id):
-    # Update graph
+    # Remove last graph
     graph_manager = GraphManager(id)
     graph_manager.remove_last()
-    return graph_manager.get_image_file()
+
+    # Image
+    graph_image_file = graph_manager.get_image_file()
+    return "Ahí lo corregí. Cómo avanzamos ahora?",os.path.abspath(graph_image_file)
+    
 
 #
 # Helper functions  

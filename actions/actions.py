@@ -72,7 +72,8 @@ class ActionModeladoRechazo(Action):
             domain: Dict[Text, Any],
         ) -> List[Dict[Text, Any]]:
 
-        remove_graph(tracker.sender_id)
-        dispatcher.utter_message(text="Okey. Ahi saque lo ultimo. Como lo harias vos?")
-
+        utter, image = remove_graph(tracker.sender_id)
+        dispatcher.utter_message(text=utter)
+        dispatcher.utter_message(image=image)
         return[]
+
