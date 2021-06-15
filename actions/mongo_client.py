@@ -21,17 +21,14 @@ def save_arqui(user_id,arqui):
 # TODO: traer la lista y sacar la utima. Chequear si la lista esta vacia!! Devolver none
 def load_arqui(user_id):
     arquis = arquitecturas.find({'user_id':user_id},{'arquis':{'$exists':True,'$not':{'$size':0}}})
-    if arquis != None: 
+    if arquis.count() > 0: 
         return arquitecturas.find_one({'user_id':user_id},{'arquis':{'$slice': -1},'user_id':0,'_id':0})['arquis'][0]
    
-
 # TODO: consultar si el user_id tiene una lista de arquis y no esta vacia, sacar la ultima
 def remove_arqui(user_id):
     arquis = arquitecturas.find({'user_id':user_id},{'arquis':{'$exists':True,'$not':{'$size':0}}})
-    if arquis != None: 
+    if arquis.count() > 0: 
         return arquitecturas.update_one({'user_id':user_id},{'$pop':{'arquis':1}}) #el pop elimina de la lista 1(ultimo), -1(primero)
-    
-
 
 if __name__=="__main__":
     arqui1 = {"x":1}
